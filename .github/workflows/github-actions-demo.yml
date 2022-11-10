@@ -26,5 +26,6 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
+          personal_token: ${{ secrets.personal_token }}
           PUBLISH_BRANCH: CF-PAGES
           publish_dir: ./public
