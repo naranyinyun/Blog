@@ -14,7 +14,7 @@ slug: "bdst"
 # Hugo+GitHub+Cloudflare
 ## Hugo
 只需如往常一样使用Hugo  
-如果你的主题是通过`git clone`安装的,请进入主题目录删除`.Git`文件夹
+如果你的主题是通过`git clone`安装的,请进入主题目录删除`.Git`文件夹  
 ## Github
 把你的站点文件全部上传到GitHub,无需使用`hugo`来`Build`站点  
 ### Github Action
@@ -54,9 +54,9 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
@@ -64,7 +64,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.101.0' # hugo版本,可更改
+          hugo-version: 'latest'
           # extended: true
 
       - name: Build
