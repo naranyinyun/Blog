@@ -403,9 +403,9 @@ Github Action 重中之重,如果没有GitHub Action,把站点上传到GitHub将
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">jobs:
 </span></span><span class="line"><span class="cl">  deploy:
-</span></span><span class="line"><span class="cl">    runs-on: ubuntu-18.04
+</span></span><span class="line"><span class="cl">    runs-on: ubuntu-22.04
 </span></span><span class="line"><span class="cl">    steps:
-</span></span><span class="line"><span class="cl">      - uses: actions/checkout@v2
+</span></span><span class="line"><span class="cl">      - uses: actions/checkout@v3
 </span></span><span class="line"><span class="cl">        with:
 </span></span><span class="line"><span class="cl">          submodules: true  # Fetch Hugo themes (true OR recursive)
 </span></span><span class="line"><span class="cl">          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
@@ -413,7 +413,7 @@ Github Action 重中之重,如果没有GitHub Action,把站点上传到GitHub将
 </span></span><span class="line"><span class="cl">      - name: Setup Hugo
 </span></span><span class="line"><span class="cl">        uses: peaceiris/actions-hugo@v2
 </span></span><span class="line"><span class="cl">        with:
-</span></span><span class="line"><span class="cl">          hugo-version: &#39;0.101.0&#39; # hugo版本,可更改
+</span></span><span class="line"><span class="cl">          hugo-version: &#39;latest&#39;
 </span></span><span class="line"><span class="cl">          # extended: true
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">      - name: Build
