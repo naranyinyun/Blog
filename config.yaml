@@ -2,7 +2,7 @@ baseurl: https://example.com
 languageCode: zh-cn
 theme: hugo-theme-stack
 paginate: 5
-title: Nalan-Blog
+title: Blog-Nalanyinyun
 
 languages:
     en:
@@ -12,7 +12,7 @@ languages:
         weight: 1
     zh-cn:
         languageName: 中文
-        title: Nalan-Blog
+        title: Blog-Nalanyinyun
         description: Record everything i know
         weight: 2
 
