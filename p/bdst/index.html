@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='我为什么把在本地构建的Hugo搬到GitHub上? 本来都在本地没什么,有时我也有多端编辑的需要,但大多是先写Markdown再传到电脑上 就这样,我的博客快乐的运行了半年
+直到今年九月,我用来存站点文件的硬盘坏了
+这一坏,啥都没了,我的站点没有备份
+这才下定决心把东西都搬到云端
+Hugo&#43;GitHub&#43;Cloudflare Hugo 只需如往常一样使用Hugo
+如果你的主题是通过git clone安装的,请进入主题目录删除.Git文件夹
+Github 把你的站点文件全部上传到GitHub,无需使用hugo来Build站点
+Github Action 重中之重,如果没有GitHub Action,把站点上传到GitHub将毫无意义 新建一个仓库用于存储站点
+配置Github-Tokens:
+打开 Settings 打开 Developer settings 展开 Personal access tokens 选择 Tokens(classic) 点击 Generate new tokens 点击 Generate new tokens(classic) 授予 repo 和 workflow 许可并调整过期时间 保存 Token 一会儿要用 配置Secrets:
+进入仓库并打开 settings 展开 Secrets 点击 Actions 点击 New repository secret 键入 PERSONAL_TOKEN 至name 键入 刚才配置的 Token 至 Secrets 点击 Add secret 在你的站点目录新建.github/workflows/hugo-build.yml(文件名称随意)
+在文件中输入'>
+<title>使用Hugo&#43;Github Action&#43;Cloudflare Pages搭建博客</title>
+
+<link rel='canonical' href='https://example.com/p/bdst/'>
+
+<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='使用Hugo&#43;Github Action&#43;Cloudflare Pages搭建博客'>
+<meta property='og:description' content='我为什么把在本地构建的Hugo搬到GitHub上? 本来都在本地没什么,有时我也有多端编辑的需要,但大多是先写Markdown再传到电脑上 就这样,我的博客快乐的运行了半年
+直到今年九月,我用来存站点文件的硬盘坏了
+这一坏,啥都没了,我的站点没有备份
+这才下定决心把东西都搬到云端
+Hugo&#43;GitHub&#43;Cloudflare Hugo 只需如往常一样使用Hugo
+如果你的主题是通过git clone安装的,请进入主题目录删除.Git文件夹
+Github 把你的站点文件全部上传到GitHub,无需使用hugo来Build站点
+Github Action 重中之重,如果没有GitHub Action,把站点上传到GitHub将毫无意义 新建一个仓库用于存储站点
+配置Github-Tokens:
+打开 Settings 打开 Developer settings 展开 Personal access tokens 选择 Tokens(classic) 点击 Generate new tokens 点击 Generate new tokens(classic) 授予 repo 和 workflow 许可并调整过期时间 保存 Token 一会儿要用 配置Secrets:
+进入仓库并打开 settings 展开 Secrets 点击 Actions 点击 New repository secret 键入 PERSONAL_TOKEN 至name 键入 刚才配置的 Token 至 Secrets 点击 Add secret 在你的站点目录新建.github/workflows/hugo-build.yml(文件名称随意)
+在文件中输入'>
+<meta property='og:url' content='https://example.com/p/bdst/'>
+<meta property='og:site_name' content='Nalan-Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2022-11-11T20:32:27&#43;08:00'/><meta property='article:modified_time' content='2022-11-11T20:32:27&#43;08:00'/>
+<meta name="twitter:title" content="使用Hugo&#43;Github Action&#43;Cloudflare Pages搭建博客">
+<meta name="twitter:description" content="我为什么把在本地构建的Hugo搬到GitHub上? 本来都在本地没什么,有时我也有多端编辑的需要,但大多是先写Markdown再传到电脑上 就这样,我的博客快乐的运行了半年
+直到今年九月,我用来存站点文件的硬盘坏了
+这一坏,啥都没了,我的站点没有备份
+这才下定决心把东西都搬到云端
+Hugo&#43;GitHub&#43;Cloudflare Hugo 只需如往常一样使用Hugo
+如果你的主题是通过git clone安装的,请进入主题目录删除.Git文件夹
+Github 把你的站点文件全部上传到GitHub,无需使用hugo来Build站点
+Github Action 重中之重,如果没有GitHub Action,把站点上传到GitHub将毫无意义 新建一个仓库用于存储站点
+配置Github-Tokens:
+打开 Settings 打开 Developer settings 展开 Personal access tokens 选择 Tokens(classic) 点击 Generate new tokens 点击 Generate new tokens(classic) 授予 repo 和 workflow 许可并调整过期时间 保存 Token 一会儿要用 配置Secrets:
+进入仓库并打开 settings 展开 Secrets 点击 Actions 点击 New repository secret 键入 PERSONAL_TOKEN 至name 键入 刚才配置的 Token 至 Secrets 点击 Add secret 在你的站点目录新建.github/workflows/hugo-build.yml(文件名称随意)
+在文件中输入">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="/img/favicon.ico" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Nalan-Blog</a></h1>
+            <h2 class="site-description">Record ErveryThing I Know</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/naranyinyun/'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://example.com/en/" >English</option>
+                        
+                            <option value="https://example.com/" selected>中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#hugo">Hugo</a></li>
+    <li><a href="#github">Github</a>
+      <ol>
+        <li><a href="#github-action">Github Action</a></li>
+      </ol>
+    </li>
+    <li><a href="#cloudflare-pages">Cloudflare Pages</a></li>
+    <li><a href="#all-done">All Done</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/bdst/">使用Hugo&#43;Github Action&#43;Cloudflare Pages搭建博客</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 11, 2022</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="我为什么把在本地构建的hugo搬到github上">我为什么把在本地构建的Hugo搬到GitHub上?</h1>
+<p>本来都在本地没什么,有时我也有多端编辑的需要,但大多是先写Markdown再传到电脑上
+就这样,我的博客快乐的运行了半年<br>
+直到今年九月,我用来存站点文件的硬盘坏了<br>
+这一坏,啥都没了,我的站点没有备份<br>
+这才下定决心把东西都搬到云端</p>
+<h1 id="hugogithubcloudflare">Hugo+GitHub+Cloudflare</h1>
+<h2 id="hugo">Hugo</h2>
+<p>只需如往常一样使用Hugo<br>
+如果你的主题是通过<code>git clone</code>安装的,请进入主题目录删除<code>.Git</code>文件夹</p>
+<h2 id="github">Github</h2>
+<p>把你的站点文件全部上传到GitHub,无需使用<code>hugo</code>来<code>Build</code>站点</p>
+<h3 id="github-action">Github Action</h3>
+<p>重中之重,如果没有GitHub Action,把站点上传到GitHub将毫无意义
+新建一个仓库用于存储站点</p>
+<p>配置Github-Tokens:</p>
+<ol>
+<li>打开 Settings</li>
+<li>打开 Developer settings</li>
+<li>展开 Personal access tokens</li>
+<li>选择 Tokens(classic)</li>
+<li>点击 Generate new tokens</li>
+<li>点击 Generate new tokens(classic)</li>
+<li>授予 <code>repo</code> 和 <code>workflow</code> 许可并调整过期时间</li>
+<li>保存 Token 一会儿要用</li>
+</ol>
+<p>配置Secrets:</p>
+<ol>
+<li>进入仓库并打开 settings</li>
+<li>展开 Secrets</li>
+<li>点击 Actions</li>
+<li>点击 New repository secret</li>
+<li>键入 <code>PERSONAL_TOKEN</code> 至name</li>
+<li>键入 刚才配置的 Token 至 <code>Secrets</code></li>
+<li>点击 Add secret</li>
+</ol>
+<p>在你的站点目录新建<code>.github/workflows/hugo-build.yml</code>(文件名称随意)<br>
+在文件中输入</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">name: github pages
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">on:
+</span></span><span class="line"><span class="cl">  push:
+</span></span><span class="line"><span class="cl">    branches:
+</span></span><span class="line"><span class="cl">      - main  # 选择构建分支(站点源文件)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">jobs:
+</span></span><span class="line"><span class="cl">  deploy:
+</span></span><span class="line"><span class="cl">    runs-on: ubuntu-18.04
+</span></span><span class="line"><span class="cl">    steps:
+</span></span><span class="line"><span class="cl">      - uses: actions/checkout@v2
+</span></span><span class="line"><span class="cl">        with:
+</span></span><span class="line"><span class="cl">          submodules: true  # Fetch Hugo themes (true OR recursive)
+</span></span><span class="line"><span class="cl">          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      - name: Setup Hugo
+</span></span><span class="line"><span class="cl">        uses: peaceiris/actions-hugo@v2
+</span></span><span class="line"><span class="cl">        with:
+</span></span><span class="line"><span class="cl">          hugo-version: &#39;0.101.0&#39; # hugo版本,可更改
+</span></span><span class="line"><span class="cl">          # extended: true
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      - name: Build
+</span></span><span class="line"><span class="cl">        run: hugo
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      - name: Deploy
+</span></span><span class="line"><span class="cl">        uses: peaceiris/actions-gh-pages@v3
+</span></span><span class="line"><span class="cl">        with:
+</span></span><span class="line"><span class="cl">          personal_token: ${{ secrets.personal_token }}
+</span></span><span class="line"><span class="cl">          PUBLISH_BRANCH: CF-PAGES # 构建后推送到的分支
+</span></span><span class="line"><span class="cl">          publish_dir: ./public # 构建后存储到的文件夹
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>中文注释,在使用时编码必须为UTF-8,如报错可删去注释</strong>
+<strong>extended别删,大多数时候都会用到扩展版</strong></p>
+<p><code>Push</code>到<code>Main</code>即可测试是否可用</p>
+<h2 id="cloudflare-pages">Cloudflare Pages</h2>
+<p>配置Cloudflare Pages:</p>
+<ol>
+<li>点击 Pages</li>
+<li>点击 创建项目</li>
+<li>点击 连接到Git</li>
+<li>添加 账户并选择仓库</li>
+<li>选择 生产分支(Action构建后推送的分支)</li>
+<li>键入 啥也别键入,别碰构建设置</li>
+<li>点击 保存并部署</li>
+<li>处理 剩余事项</li>
+</ol>
+<h2 id="all-done">All Done</h2>
+<p>大功告成,你的Hugo站点已经部署到Cloudflare服务器,站点在全球均可访问!</p>
+<h1 id="tldr">TL;DR</h1>
+<p>你可以Fork<a class="link" href="https://github.com/naranyinyun/Blog"  target="_blank" rel="noopener"
+    >我的仓库</a>进行爆改<br>
+本仓库使用GPL 3.0协议,请您遵守开源许可</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2022 Nalan-Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
