@@ -4,5 +4,7 @@ date: {{ .Date }}
 draft: true
 slug: "{{ replace .Name "-" " " | title }}"
 image: 
+tags: 
+categories: 
 ---
 

@@ -3,6 +3,9 @@ title: "使用Hugo+Github Action+Cloudflare Pages搭建博客"
 date: 2022-11-11T20:32:27+08:00
 draft: false
 slug: "bdst"
+image: "https://tva3.sinaimg.cn/large/0076Ry2fly1fqld5uji19j31hc0u0e81.jpg"
+tags: ["Hugo","CI","Cloudflare"]
+categories: ["Web","Technology"]
 ---
 # 我为什么把在本地构建的Hugo搬到GitHub上?
 本来都在本地没什么,有时我也有多端编辑的需要  
