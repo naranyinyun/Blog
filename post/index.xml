@@ -12,7 +12,7 @@
         <pubDate>Fri, 11 Nov 2022 20:32:27 +0800</pubDate>
         
         <guid>https://example.com/p/bdst/</guid>
-        <description>&lt;h1 id=&#34;我为什么把在本地构建的hugo搬到github上&#34;&gt;我为什么把在本地构建的Hugo搬到GitHub上?&lt;/h1&gt;
+        <description>&lt;img src="https://tva3.sinaimg.cn/large/0076Ry2fly1fqld5uji19j31hc0u0e81.jpg" alt="Featured image of post 使用Hugo&#43;Github Action&#43;Cloudflare Pages搭建博客" /&gt;&lt;h1 id=&#34;我为什么把在本地构建的hugo搬到github上&#34;&gt;我为什么把在本地构建的Hugo搬到GitHub上?&lt;/h1&gt;
 &lt;p&gt;本来都在本地没什么,有时我也有多端编辑的需要&lt;br&gt;
 但大多是先写Markdown再传到电脑上&lt;br&gt;
 就这样,我的博客快乐的运行了半年&lt;br&gt;
@@ -148,7 +148,7 @@
         <pubDate>Thu, 10 Nov 2022 21:06:57 +0800</pubDate>
         
         <guid>https://example.com/p/bbdown/</guid>
-        <description>&lt;h1 id=&#34;配置bbdown&#34;&gt;配置BBdown&lt;/h1&gt;
+        <description>&lt;img src="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkfg4cj2j31hc0u01a9.jpg" alt="Featured image of post 如何在Windows环境下使用BBdown" /&gt;&lt;h1 id=&#34;配置bbdown&#34;&gt;配置BBdown&lt;/h1&gt;
 &lt;h2 id=&#34;本体&#34;&gt;本体&lt;/h2&gt;
 &lt;p&gt;从&lt;a class=&#34;link&#34; href=&#34;https://github.com/nilaoda/BBDown&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;BBdown&lt;/a&gt;的Github下载BBdown程序并添加环境变量(不加也行)&lt;/p&gt;

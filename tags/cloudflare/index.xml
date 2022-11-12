@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Blog-Nalanyinyun</title>
-        <link>https://example.com/</link>
-        <description>Recent content on Blog-Nalanyinyun</description>
+        <title>Cloudflare on Blog-Nalanyinyun</title>
+        <link>https://example.com/tags/cloudflare/</link>
+        <description>Recent content in Cloudflare on Blog-Nalanyinyun</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Fri, 11 Nov 2022 20:32:27 +0800</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 11 Nov 2022 20:32:27 +0800</lastBuildDate><atom:link href="https://example.com/tags/cloudflare/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>使用Hugo&#43;Github Action&#43;Cloudflare Pages搭建博客</title>
         <link>https://example.com/p/bdst/</link>
         <pubDate>Fri, 11 Nov 2022 20:32:27 +0800</pubDate>
@@ -141,96 +141,6 @@
     &gt;我的仓库&lt;/a&gt;进行爆改&lt;br&gt;
 本仓库使用GPL 3.0协议,请您遵守开源许可&lt;/p&gt;
 </description>
-        </item>
-        <item>
-        <title>如何在Windows环境下使用BBdown</title>
-        <link>https://example.com/p/bbdown/</link>
-        <pubDate>Thu, 10 Nov 2022 21:06:57 +0800</pubDate>
-        
-        <guid>https://example.com/p/bbdown/</guid>
-        <description>&lt;img src="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkfg4cj2j31hc0u01a9.jpg" alt="Featured image of post 如何在Windows环境下使用BBdown" /&gt;&lt;h1 id=&#34;配置bbdown&#34;&gt;配置BBdown&lt;/h1&gt;
-&lt;h2 id=&#34;本体&#34;&gt;本体&lt;/h2&gt;
-&lt;p&gt;从&lt;a class=&#34;link&#34; href=&#34;https://github.com/nilaoda/BBDown&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;BBdown&lt;/a&gt;的Github下载BBdown程序并添加环境变量(不加也行)&lt;/p&gt;
-&lt;h2 id=&#34;依赖&#34;&gt;依赖&lt;/h2&gt;
-&lt;p&gt;使用BBdown需要FFmpeg或mp4box&lt;br&gt;
-从&lt;a class=&#34;link&#34; href=&#34;https://ffmpeg.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;FFmpeg&lt;/a&gt;下载FFmpeg并配置环境变量(必须配置)&lt;/p&gt;
-&lt;h1 id=&#34;使用bbdown&#34;&gt;使用BBdown&lt;/h1&gt;
-&lt;p&gt;打开Powershell/CMD&lt;br&gt;
-我这里没有添加环境变量,所以在BBdown所在目录打开Powershell/CMD&lt;br&gt;
-运行BBdown&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./bbdown
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;登录BiliBili&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./bbdown login
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;用法&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./BBDown &amp;lt;url&amp;gt; [command] [options]
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;常用指令&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--audio-only 只下载音频
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--video-only 只下载视频
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-ia 交互式选择清晰度(最常用)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h1 id=&#34;用于测试action的实例内容-无需在意&#34;&gt;用于测试Action的实例内容 无需在意&lt;/h1&gt;
-&lt;p&gt;test
-PR测试&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>About</title>
-        <link>https://example.com/about/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://example.com/about/</guid>
-        <description>&lt;p&gt;你好,我是纳兰音韵
-(还没想好写什么)&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Links</title>
-        <link>https://example.com/links/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://example.com/links/</guid>
-        <description>&lt;p&gt;感谢所有支持我们的人&lt;br&gt;
-群星闪烁&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Search</title>
-        <link>https://example.com/search/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://example.com/search/</guid>
-        <description></description>
         </item>
         
     </channel>
