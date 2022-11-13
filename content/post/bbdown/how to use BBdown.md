@@ -35,6 +35,5 @@ categories: ["Technology"]
 -ia 交互式选择清晰度(最常用)
 ```
 
-# 用于测试Action的实例内容 无需在意
-test 
-PR测试
+
+<meting-js server="netease" type="song" id="1377642003"></meting-js>

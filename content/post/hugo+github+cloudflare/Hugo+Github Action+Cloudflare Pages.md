@@ -47,7 +47,7 @@ categories: ["Web","Technology"]
 
 在你的站点目录新建`.github/workflows/hugo-build.yml`(文件名称随意)  
 在文件中输入  
-```
+{{< highlight go "linenos=table,hl_lines=8 15-17,linenostart=0" >}}
 name: github pages
 
 on:
@@ -79,8 +79,8 @@ jobs:
           personal_token: ${{ secrets.personal_token }}
           PUBLISH_BRANCH: CF-PAGES # 构建后推送到的分支
           publish_dir: ./public # 构建后存储到的文件夹
-```
-**中文注释,在使用时编码必须为UTF-8,如报错可删去注释**
+{{< / highlight >}}
+**中文注释,在使用时编码必须为UTF-8,如报错可删去注释**  
 **extended别删,大多数时候都会用到扩展版**
 
 `Push`到`Main`即可测试是否可用
@@ -101,4 +101,6 @@ jobs:
 
 # TL;DR
 你可以Fork[我的仓库](https://github.com/naranyinyun/Blog)进行爆改  
-本仓库使用GPL 3.0协议,请您遵守开源许可
+本仓库使用GPL 3.0协议,请您遵守开源许可  
+
+<meting-js server="netease" type="song" id="1356059919"></meting-js>
