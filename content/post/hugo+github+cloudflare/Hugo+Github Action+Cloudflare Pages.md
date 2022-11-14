@@ -47,7 +47,7 @@ categories: ["Web","Technology"]
 
 在你的站点目录新建`.github/workflows/hugo-build.yml`(文件名称随意)  
 在文件中输入  
-{{< highlight go "linenos=table,hl_lines=8 15-17,linenostart=0" >}}
+{{< highlight yaml >}}
 name: github pages
 
 on:
