@@ -6,7 +6,15 @@
         <description>Recent content in Tags on Blog-Nalanyinyun</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Fri, 11 Nov 2022 20:32:27 +0800</lastBuildDate><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 14 Nov 2022 20:41:03 +0800</lastBuildDate><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Android</title>
+        <link>https://example.com/tags/android/</link>
+        <pubDate>Mon, 14 Nov 2022 20:41:03 +0800</pubDate>
+        
+        <guid>https://example.com/tags/android/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>CI</title>
         <link>https://example.com/tags/ci/</link>
         <pubDate>Fri, 11 Nov 2022 20:32:27 +0800</pubDate>

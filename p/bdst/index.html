@@ -386,24 +386,23 @@ Github Action 重中之重,如果没有GitHub Action,把站点上传到GitHub将
 在文件中输入<br>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 0
-</span><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
 </span><span class="lnt"> 5
 </span><span class="lnt"> 6
-</span><span class="hl"><span class="lnt"> 7
-</span></span><span class="lnt"> 8
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
 </span><span class="lnt">12
 </span><span class="lnt">13
-</span><span class="hl"><span class="lnt">14
-</span></span><span class="hl"><span class="lnt">15
-</span></span><span class="hl"><span class="lnt">16
-</span></span><span class="lnt">17
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
 </span><span class="lnt">18
 </span><span class="lnt">19
 </span><span class="lnt">20
@@ -417,39 +416,40 @@ Github Action 重中之重,如果没有GitHub Action,把站点上传到GitHub将
 </span><span class="lnt">28
 </span><span class="lnt">29
 </span><span class="lnt">30
+</span><span class="lnt">31
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">name</span><span class="p">:</span> <span class="nx">github</span> <span class="nx">pages</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">on</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">push</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">branches</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">      <span class="o">-</span> <span class="nx">main</span>  <span class="err">#</span> <span class="nx">选择构建分支</span><span class="p">(</span><span class="nx">站点源文件</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line hl"><span class="cl"><span class="nx">jobs</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">deploy</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">runs</span><span class="o">-</span><span class="nx">on</span><span class="p">:</span> <span class="nx">ubuntu</span><span class="o">-</span><span class="mf">22.04</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">steps</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">      <span class="o">-</span> <span class="nx">uses</span><span class="p">:</span> <span class="nx">actions</span><span class="o">/</span><span class="nx">checkout</span><span class="err">@</span><span class="nx">v3</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">with</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">          <span class="nx">submodules</span><span class="p">:</span> <span class="kc">true</span>  <span class="err">#</span> <span class="nx">Fetch</span> <span class="nx">Hugo</span> <span class="nf">themes</span> <span class="p">(</span><span class="kc">true</span> <span class="nx">OR</span> <span class="nx">recursive</span><span class="p">)</span>
-</span></span><span class="line hl"><span class="cl">          <span class="nx">fetch</span><span class="o">-</span><span class="nx">depth</span><span class="p">:</span> <span class="mi">0</span>    <span class="err">#</span> <span class="nx">Fetch</span> <span class="nx">all</span> <span class="nx">history</span> <span class="k">for</span> <span class="p">.</span><span class="nx">GitInfo</span> <span class="nx">and</span> <span class="p">.</span><span class="nx">Lastmod</span>
-</span></span><span class="line hl"><span class="cl">
-</span></span><span class="line hl"><span class="cl">      <span class="o">-</span> <span class="nx">name</span><span class="p">:</span> <span class="nx">Setup</span> <span class="nx">Hugo</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">uses</span><span class="p">:</span> <span class="nx">peaceiris</span><span class="o">/</span><span class="nx">actions</span><span class="o">-</span><span class="nx">hugo</span><span class="err">@</span><span class="nx">v2</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">with</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">          <span class="nx">hugo</span><span class="o">-</span><span class="nx">version</span><span class="p">:</span> <span class="err">&#39;</span><span class="nx">latest</span><span class="err">&#39;</span>
-</span></span><span class="line"><span class="cl">          <span class="err">#</span> <span class="nx">extended</span><span class="p">:</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">      <span class="o">-</span> <span class="nx">name</span><span class="p">:</span> <span class="nx">Build</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">run</span><span class="p">:</span> <span class="nx">hugo</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">      <span class="o">-</span> <span class="nx">name</span><span class="p">:</span> <span class="nx">Deploy</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">uses</span><span class="p">:</span> <span class="nx">peaceiris</span><span class="o">/</span><span class="nx">actions</span><span class="o">-</span><span class="nx">gh</span><span class="o">-</span><span class="nx">pages</span><span class="err">@</span><span class="nx">v3</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">with</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">          <span class="nx">personal_token</span><span class="p">:</span> <span class="err">$</span><span class="p">{{</span> <span class="nx">secrets</span><span class="p">.</span><span class="nx">personal_token</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">          <span class="nx">PUBLISH_BRANCH</span><span class="p">:</span> <span class="nx">CF</span><span class="o">-</span><span class="nx">PAGES</span> <span class="err">#</span> <span class="nx">构建后推送到的分支</span>
-</span></span><span class="line"><span class="cl">          <span class="nx">publish_dir</span><span class="p">:</span> <span class="p">.</span><span class="o">/</span><span class="nx">public</span> <span class="err">#</span> <span class="nx">构建后存储到的文件夹</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">github pages</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">main </span><span class="w"> </span><span class="c"># 选择构建分支(站点源文件)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">jobs</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">deploy</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-22.04</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">submodules</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">  </span><span class="c"># Fetch Hugo themes (true OR recursive)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">fetch-depth</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">    </span><span class="c"># Fetch all history for .GitInfo and .Lastmod</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Setup Hugo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-hugo@v2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">hugo-version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;latest&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="c"># extended: true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Build</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">hugo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Deploy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-gh-pages@v3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">personal_token</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.personal_token }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">PUBLISH_BRANCH</span><span class="p">:</span><span class="w"> </span><span class="l">CF-PAGES</span><span class="w"> </span><span class="c"># 构建后推送到的分支</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">publish_dir</span><span class="p">:</span><span class="w"> </span><span class="l">./public</span><span class="w"> </span><span class="c"># 构建后存储到的文件夹</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
 <strong>中文注释,在使用时编码必须为UTF-8,如报错可删去注释</strong><br>
@@ -517,6 +517,25 @@ Github Action 重中之重,如果没有GitHub Action,把站点上传到GitHub将
     <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/gsi/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxkjjz8vbj31hc0u0k80.jpg" loading="lazy" data-key="GSI" data-hash="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxkjjz8vbj31hc0u0k80.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Android GSI 介绍</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="has-image">
