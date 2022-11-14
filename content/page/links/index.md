@@ -9,6 +9,14 @@ links:
     description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
     website: https://www.typescriptlang.org
     image: ts-logo-128.jpg
+  - title: Nalanyinyun
+    description: A kawaii otome
+    website: https://nalanyinyun.ml
+    image: nalan.ico
+  - title: Cloudflare
+    description: A global network built for the cloud
+    website: https://cloudflare.com
+    image: CF.jpg
 menu:
     main: 
         weight: -50
