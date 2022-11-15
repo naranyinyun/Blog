@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>short on Blog-Nalanyinyun</title>
+        <link>https://example.com/tags/short/</link>
+        <description>Recent content in short on Blog-Nalanyinyun</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Tue, 15 Nov 2022 20:55:56 +0800</lastBuildDate><atom:link href="https://example.com/tags/short/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>如何使用第三方Recovery禁用Magisk模块</title>
+        <link>https://example.com/p/magisk/</link>
+        <pubDate>Tue, 15 Nov 2022 20:55:56 +0800</pubDate>
+        
+        <guid>https://example.com/p/magisk/</guid>
+        <description>&lt;img src="https://tva2.sinaimg.cn/large/0072Vf1pgy1foxk76lzl8j31hc0u0dxk.jpg" alt="Featured image of post 如何使用第三方Recovery禁用Magisk模块" /&gt;&lt;h1 id=&#34;快速禁用magisk模块&#34;&gt;快速禁用Magisk模块&lt;/h1&gt;
+&lt;h2 id=&#34;magisk模块标识&#34;&gt;Magisk模块标识&lt;/h2&gt;
+&lt;p&gt;Magisk模块位于&lt;code&gt;/data/adb/modules&lt;/code&gt;&lt;br&gt;
+在此目录下的所有文件夹均对应模块&lt;br&gt;
+模块目录中共有三种标识,均为文件,我们也从这下手&lt;br&gt;
+标识:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;skip_mount(若存在,Magisk不会挂载system)&lt;/li&gt;
+&lt;li&gt;disable(若存在,模块在下次启动时会被禁用)&lt;/li&gt;
+&lt;li&gt;remove(若存在,模块在下次启动时会被禁用)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;在第三方recovey中管理模块&#34;&gt;在第三方Recovey中管理模块&lt;/h2&gt;
+&lt;p&gt;在&lt;code&gt;/data/adb/modules&lt;/code&gt;中的模块文件夹打开终端,当然,也可以使用&lt;code&gt;Adb shell&lt;/code&gt;&lt;br&gt;
+输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;touch disbale
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;即可禁用此模块(使用&lt;code&gt;touch&lt;/code&gt;创建&lt;code&gt;disable&lt;/code&gt;)&lt;br&gt;
+同理,输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;touch remove
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;即可移除模块&lt;/p&gt;
+&lt;p&gt;&lt;font color=&#34;red&#34;&gt;不要直接删除模块文件夹,可能会导致无法修复的问题&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&#34;通过adb移除所有模块&#34;&gt;通过ADB移除所有模块&lt;/h2&gt;
+&lt;p&gt;启动ADB工具,并输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;adb wait-for-device shell magisk --remove-modules
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;再连接设备,并开机(System)&lt;br&gt;
+若还是无法启动,强制重启一次即可&lt;/p&gt;
+&lt;meting-js server=&#34;netease&#34; type=&#34;song&#34; id=&#34;1992552055&#34;&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

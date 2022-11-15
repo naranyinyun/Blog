@@ -1,46 +1,55 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='配置BBdown 本体 从BBdown的Github下载BBdown程序并添加环境变量(不加也行)
-依赖 使用BBdown需要FFmpeg或mp4box
-从FFmpeg下载FFmpeg并配置环境变量(必须配置)
-使用BBdown 打开Powershell/CMD
-我这里没有添加环境变量,所以在BBdown所在目录打开Powershell/CMD
-运行BBdown
-1 ./bbdown 登录BiliBili
-1 ./bbdown login 用法
-1 ./BBDown &amp;lt;url&amp;gt; [command] [options] 常用指令
-1 2 3 --audio-only 只下载音频 --video-only 只下载视频 -ia 交互式选择清晰度(最常用) '>
-<title>如何在Windows环境下使用BBdown</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='快速禁用Magisk模块 Magisk模块标识 Magisk模块位于/data/adb/modules
+在此目录下的所有文件夹均对应模块
+模块目录中共有三种标识,均为文件,我们也从这下手
+标识:
+skip_mount(若存在,Magisk不会挂载system) disable(若存在,模块在下次启动时会被禁用) remove(若存在,模块在下次启动时会被禁用) 在第三方Recovey中管理模块 在/data/adb/modules中的模块文件夹打开终端,当然,也可以使用Adb shell
+输入
+1 touch disbale 即可禁用此模块(使用touch创建disable)
+同理,输入
+1 touch remove 即可移除模块
+不要直接删除模块文件夹,可能会导致无法修复的问题
+通过ADB移除所有模块 启动ADB工具,并输入
+1 adb wait-for-device shell magisk --remove-modules 再连接设备,并开机(System)
+若还是无法启动,强制重启一次即可'>
+<title>如何使用第三方Recovery禁用Magisk模块</title>
 
-<link rel='canonical' href='https://example.com/p/bbdown/'>
+<link rel='canonical' href='https://example.com/p/magisk/'>
 
-<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='如何在Windows环境下使用BBdown'>
-<meta property='og:description' content='配置BBdown 本体 从BBdown的Github下载BBdown程序并添加环境变量(不加也行)
-依赖 使用BBdown需要FFmpeg或mp4box
-从FFmpeg下载FFmpeg并配置环境变量(必须配置)
-使用BBdown 打开Powershell/CMD
-我这里没有添加环境变量,所以在BBdown所在目录打开Powershell/CMD
-运行BBdown
-1 ./bbdown 登录BiliBili
-1 ./bbdown login 用法
-1 ./BBDown &amp;lt;url&amp;gt; [command] [options] 常用指令
-1 2 3 --audio-only 只下载音频 --video-only 只下载视频 -ia 交互式选择清晰度(最常用) '>
-<meta property='og:url' content='https://example.com/p/bbdown/'>
+<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='如何使用第三方Recovery禁用Magisk模块'>
+<meta property='og:description' content='快速禁用Magisk模块 Magisk模块标识 Magisk模块位于/data/adb/modules
+在此目录下的所有文件夹均对应模块
+模块目录中共有三种标识,均为文件,我们也从这下手
+标识:
+skip_mount(若存在,Magisk不会挂载system) disable(若存在,模块在下次启动时会被禁用) remove(若存在,模块在下次启动时会被禁用) 在第三方Recovey中管理模块 在/data/adb/modules中的模块文件夹打开终端,当然,也可以使用Adb shell
+输入
+1 touch disbale 即可禁用此模块(使用touch创建disable)
+同理,输入
+1 touch remove 即可移除模块
+不要直接删除模块文件夹,可能会导致无法修复的问题
+通过ADB移除所有模块 启动ADB工具,并输入
+1 adb wait-for-device shell magisk --remove-modules 再连接设备,并开机(System)
+若还是无法启动,强制重启一次即可'>
+<meta property='og:url' content='https://example.com/p/magisk/'>
 <meta property='og:site_name' content='Blog-Nalanyinyun'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='BiliBili' /><meta property='article:tag' content='CLI' /><meta property='article:tag' content='Windows' /><meta property='article:published_time' content='2022-11-10T21:06:57&#43;08:00'/><meta property='article:modified_time' content='2022-11-10T21:06:57&#43;08:00'/><meta property='og:image' content='https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkfg4cj2j31hc0u01a9.jpg' />
-<meta name="twitter:title" content="如何在Windows环境下使用BBdown">
-<meta name="twitter:description" content="配置BBdown 本体 从BBdown的Github下载BBdown程序并添加环境变量(不加也行)
-依赖 使用BBdown需要FFmpeg或mp4box
-从FFmpeg下载FFmpeg并配置环境变量(必须配置)
-使用BBdown 打开Powershell/CMD
-我这里没有添加环境变量,所以在BBdown所在目录打开Powershell/CMD
-运行BBdown
-1 ./bbdown 登录BiliBili
-1 ./bbdown login 用法
-1 ./BBDown &amp;lt;url&amp;gt; [command] [options] 常用指令
-1 2 3 --audio-only 只下载音频 --video-only 只下载视频 -ia 交互式选择清晰度(最常用) "><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkfg4cj2j31hc0u01a9.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Android' /><meta property='article:tag' content='Magisk' /><meta property='article:tag' content='short' /><meta property='article:published_time' content='2022-11-15T20:55:56&#43;08:00'/><meta property='article:modified_time' content='2022-11-15T20:55:56&#43;08:00'/><meta property='og:image' content='https://tva2.sinaimg.cn/large/0072Vf1pgy1foxk76lzl8j31hc0u0dxk.jpg' />
+<meta name="twitter:title" content="如何使用第三方Recovery禁用Magisk模块">
+<meta name="twitter:description" content="快速禁用Magisk模块 Magisk模块标识 Magisk模块位于/data/adb/modules
+在此目录下的所有文件夹均对应模块
+模块目录中共有三种标识,均为文件,我们也从这下手
+标识:
+skip_mount(若存在,Magisk不会挂载system) disable(若存在,模块在下次启动时会被禁用) remove(若存在,模块在下次启动时会被禁用) 在第三方Recovey中管理模块 在/data/adb/modules中的模块文件夹打开终端,当然,也可以使用Adb shell
+输入
+1 touch disbale 即可禁用此模块(使用touch创建disable)
+同理,输入
+1 touch remove 即可移除模块
+不要直接删除模块文件夹,可能会导致无法修复的问题
+通过ADB移除所有模块 启动ADB工具,并输入
+1 adb wait-for-device shell magisk --remove-modules 再连接设备,并开机(System)
+若还是无法启动,强制重启一次即可"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://tva2.sinaimg.cn/large/0072Vf1pgy1foxk76lzl8j31hc0u0dxk.jpg' />
     <link rel="shortcut icon" href="/img/favicon.ico" />
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
@@ -251,8 +260,9 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#本体">本体</a></li>
-    <li><a href="#依赖">依赖</a></li>
+    <li><a href="#magisk模块标识">Magisk模块标识</a></li>
+    <li><a href="#在第三方recovey中管理模块">在第三方Recovey中管理模块</a></li>
+    <li><a href="#通过adb移除所有模块">通过ADB移除所有模块</a></li>
   </ol>
 </nav>
         </div>
@@ -267,9 +277,9 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/bbdown/">
+            <a href="/p/magisk/">
                 
-                    <img src="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkfg4cj2j31hc0u01a9.jpg" loading="lazy" alt="Featured image of post 如何在Windows环境下使用BBdown" />
+                    <img src="https://tva2.sinaimg.cn/large/0072Vf1pgy1foxk76lzl8j31hc0u0dxk.jpg" loading="lazy" alt="Featured image of post 如何使用第三方Recovery禁用Magisk模块" />
                 
             </a>
         </div>
@@ -288,7 +298,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/bbdown/">如何在Windows环境下使用BBdown</a>
+            <a href="/p/magisk/">如何使用第三方Recovery禁用Magisk模块</a>
         </h2>
     
         
@@ -310,7 +320,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Nov 10, 2022</time>
+                <time class="article-time--published">Nov 15, 2022</time>
             </div>
         
 
@@ -326,58 +336,53 @@
     <section class="article-content">
     
     
-    <h1 id="配置bbdown">配置BBdown</h1>
-<h2 id="本体">本体</h2>
-<p>从<a class="link" href="https://github.com/nilaoda/BBDown"  target="_blank" rel="noopener"
-    >BBdown</a>的Github下载BBdown程序并添加环境变量(不加也行)</p>
-<h2 id="依赖">依赖</h2>
-<p>使用BBdown需要FFmpeg或mp4box<br>
-从<a class="link" href="https://ffmpeg.org/"  target="_blank" rel="noopener"
-    >FFmpeg</a>下载FFmpeg并配置环境变量(必须配置)</p>
-<h1 id="使用bbdown">使用BBdown</h1>
-<p>打开Powershell/CMD<br>
-我这里没有添加环境变量,所以在BBdown所在目录打开Powershell/CMD<br>
-运行BBdown</p>
+    <h1 id="快速禁用magisk模块">快速禁用Magisk模块</h1>
+<h2 id="magisk模块标识">Magisk模块标识</h2>
+<p>Magisk模块位于<code>/data/adb/modules</code><br>
+在此目录下的所有文件夹均对应模块<br>
+模块目录中共有三种标识,均为文件,我们也从这下手<br>
+标识:</p>
+<ul>
+<li>skip_mount(若存在,Magisk不会挂载system)</li>
+<li>disable(若存在,模块在下次启动时会被禁用)</li>
+<li>remove(若存在,模块在下次启动时会被禁用)</li>
+</ul>
+<h2 id="在第三方recovey中管理模块">在第三方Recovey中管理模块</h2>
+<p>在<code>/data/adb/modules</code>中的模块文件夹打开终端,当然,也可以使用<code>Adb shell</code><br>
+输入</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">./bbdown
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">touch disbale
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>登录BiliBili</p>
+</div><p>即可禁用此模块(使用<code>touch</code>创建<code>disable</code>)<br>
+同理,输入</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">./bbdown login
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">touch remove
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>用法</p>
+</div><p>即可移除模块</p>
+<p><font color="red">不要直接删除模块文件夹,可能会导致无法修复的问题</font></p>
+<h2 id="通过adb移除所有模块">通过ADB移除所有模块</h2>
+<p>启动ADB工具,并输入</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">./BBDown &lt;url&gt; [command] [options]
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">adb wait-for-device shell magisk --remove-modules
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>常用指令</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">--audio-only 只下载音频
-</span></span><span class="line"><span class="cl">--video-only 只下载视频
-</span></span><span class="line"><span class="cl">-ia 交互式选择清晰度(最常用)
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><meting-js server="netease" type="song" id="1377642003"></meting-js></p>
+</div><p>再连接设备,并开机(System)<br>
+若还是无法启动,强制重启一次即可</p>
+<meting-js server="netease" type="song" id="1992552055">
 
 </section>
 
@@ -386,11 +391,11 @@
     
     <section class="article-tags">
         
-            <a href="/tags/bilibili/">BiliBili</a>
+            <a href="/tags/android/">Android</a>
         
-            <a href="/tags/cli/">CLI</a>
+            <a href="/tags/magisk/">Magisk</a>
         
-            <a href="/tags/windows/">Windows</a>
+            <a href="/tags/short/">short</a>
         
     </section>
 
@@ -421,25 +426,6 @@
     <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
-            
-                
-<article class="has-image">
-    <a href="/p/magisk/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="https://tva2.sinaimg.cn/large/0072Vf1pgy1foxk76lzl8j31hc0u0dxk.jpg" loading="lazy" data-key="Magisk" data-hash="https://tva2.sinaimg.cn/large/0072Vf1pgy1foxk76lzl8j31hc0u0dxk.jpg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">如何使用第三方Recovery禁用Magisk模块</h2>
-        </div>
-    </a>
-</article>
-
             
                 
 <article class="has-image">
@@ -474,6 +460,25 @@
 
         <div class="article-details">
             <h2 class="article-title">使用Hugo&#43;Github Action&#43;Cloudflare Pages搭建博客</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/bbdown/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkfg4cj2j31hc0u01a9.jpg" loading="lazy" data-key="bbdown" data-hash="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkfg4cj2j31hc0u01a9.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">如何在Windows环境下使用BBdown</h2>
         </div>
     </a>
 </article>
