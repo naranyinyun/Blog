@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Technology on Blog-Nalanyinyun</title>
-        <link>https://example.com/categories/technology/</link>
+        <link>https://blog.nalanyinyun.ml/categories/technology/</link>
         <description>Recent content in Technology on Blog-Nalanyinyun</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Wed, 16 Nov 2022 20:52:36 +0800</lastBuildDate><atom:link href="https://example.com/categories/technology/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 16 Nov 2022 20:52:36 +0800</lastBuildDate><atom:link href="https://blog.nalanyinyun.ml/categories/technology/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>在Hugo中添加Meting-JS和Aplayer</title>
-        <link>https://example.com/p/aplayer/</link>
+        <link>https://blog.nalanyinyun.ml/p/aplayer/</link>
         <pubDate>Wed, 16 Nov 2022 20:52:36 +0800</pubDate>
         
-        <guid>https://example.com/p/aplayer/</guid>
+        <guid>https://blog.nalanyinyun.ml/p/aplayer/</guid>
         <description>&lt;img src="https://tva2.sinaimg.cn/large/0072Vf1pgy1foxkbxnphoj31hc0u0tpt.jpg" alt="Featured image of post 在Hugo中添加Meting-JS和Aplayer" /&gt;&lt;h1 id=&#34;meting-js-and-aplayer&#34;&gt;Meting-Js And Aplayer&lt;/h1&gt;
 &lt;h2 id=&#34;添加-meting-js&#34;&gt;添加 Meting-Js&lt;/h2&gt;
 &lt;p&gt;在当前主题的&lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;部分填入以下内容&lt;br&gt;
@@ -129,10 +129,10 @@
         </item>
         <item>
         <title>如何使用第三方Recovery禁用Magisk模块</title>
-        <link>https://example.com/p/magisk/</link>
+        <link>https://blog.nalanyinyun.ml/p/magisk/</link>
         <pubDate>Tue, 15 Nov 2022 20:55:56 +0800</pubDate>
         
-        <guid>https://example.com/p/magisk/</guid>
+        <guid>https://blog.nalanyinyun.ml/p/magisk/</guid>
         <description>&lt;img src="https://tva2.sinaimg.cn/large/0072Vf1pgy1foxk76lzl8j31hc0u0dxk.jpg" alt="Featured image of post 如何使用第三方Recovery禁用Magisk模块" /&gt;&lt;h1 id=&#34;快速禁用magisk模块&#34;&gt;快速禁用Magisk模块&lt;/h1&gt;
 &lt;h2 id=&#34;magisk模块标识&#34;&gt;Magisk模块标识&lt;/h2&gt;
 &lt;p&gt;Magisk模块位于&lt;code&gt;/data/adb/modules&lt;/code&gt;&lt;br&gt;
@@ -184,10 +184,10 @@
         </item>
         <item>
         <title>Android GSI 介绍</title>
-        <link>https://example.com/p/gsi/</link>
+        <link>https://blog.nalanyinyun.ml/p/gsi/</link>
         <pubDate>Mon, 14 Nov 2022 20:41:03 +0800</pubDate>
         
-        <guid>https://example.com/p/gsi/</guid>
+        <guid>https://blog.nalanyinyun.ml/p/gsi/</guid>
         <description>&lt;img src="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxkjjz8vbj31hc0u0k80.jpg" alt="Featured image of post Android GSI 介绍" /&gt;&lt;h1 id=&#34;gsi&#34;&gt;GSI&lt;/h1&gt;
 &lt;h2 id=&#34;什么是gsi&#34;&gt;什么是GSI&lt;/h2&gt;
 &lt;p&gt;GSI,中文名&amp;quot;通用系统镜像&amp;quot;,可以在支持Treble的设备上刷入GSI以便体验最新的Android操作系统&lt;br&gt;
@@ -297,10 +297,10 @@ Google的GSI是AOSP未经修改的,可在各种Android设备上运行&lt;/p&gt;
         </item>
         <item>
         <title>使用Hugo&#43;Github Action&#43;Cloudflare Pages搭建博客</title>
-        <link>https://example.com/p/bdst/</link>
+        <link>https://blog.nalanyinyun.ml/p/bdst/</link>
         <pubDate>Fri, 11 Nov 2022 20:32:27 +0800</pubDate>
         
-        <guid>https://example.com/p/bdst/</guid>
+        <guid>https://blog.nalanyinyun.ml/p/bdst/</guid>
         <description>&lt;img src="https://tva3.sinaimg.cn/large/0076Ry2fly1fqld5uji19j31hc0u0e81.jpg" alt="Featured image of post 使用Hugo&#43;Github Action&#43;Cloudflare Pages搭建博客" /&gt;&lt;h1 id=&#34;我为什么把在本地构建的hugo搬到github上&#34;&gt;我为什么把在本地构建的Hugo搬到GitHub上?&lt;/h1&gt;
 &lt;p&gt;本来都在本地没什么,有时我也有多端编辑的需要&lt;br&gt;
 但大多是先写Markdown再传到电脑上&lt;br&gt;
@@ -434,10 +434,10 @@ Google的GSI是AOSP未经修改的,可在各种Android设备上运行&lt;/p&gt;
         </item>
         <item>
         <title>如何在Windows环境下使用BBdown</title>
-        <link>https://example.com/p/bbdown/</link>
+        <link>https://blog.nalanyinyun.ml/p/bbdown/</link>
         <pubDate>Thu, 10 Nov 2022 21:06:57 +0800</pubDate>
         
-        <guid>https://example.com/p/bbdown/</guid>
+        <guid>https://blog.nalanyinyun.ml/p/bbdown/</guid>
         <description>&lt;img src="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkfg4cj2j31hc0u01a9.jpg" alt="Featured image of post 如何在Windows环境下使用BBdown" /&gt;&lt;h1 id=&#34;配置bbdown&#34;&gt;配置BBdown&lt;/h1&gt;
 &lt;h2 id=&#34;本体&#34;&gt;本体&lt;/h2&gt;
 &lt;p&gt;从&lt;a class=&#34;link&#34; href=&#34;https://github.com/nilaoda/BBDown&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

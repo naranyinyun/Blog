@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>CLI on Blog-Nalanyinyun</title>
-        <link>https://example.com/tags/cli/</link>
+        <link>https://blog.nalanyinyun.ml/tags/cli/</link>
         <description>Recent content in CLI on Blog-Nalanyinyun</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Thu, 10 Nov 2022 21:06:57 +0800</lastBuildDate><atom:link href="https://example.com/tags/cli/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 10 Nov 2022 21:06:57 +0800</lastBuildDate><atom:link href="https://blog.nalanyinyun.ml/tags/cli/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>如何在Windows环境下使用BBdown</title>
-        <link>https://example.com/p/bbdown/</link>
+        <link>https://blog.nalanyinyun.ml/p/bbdown/</link>
         <pubDate>Thu, 10 Nov 2022 21:06:57 +0800</pubDate>
         
-        <guid>https://example.com/p/bbdown/</guid>
+        <guid>https://blog.nalanyinyun.ml/p/bbdown/</guid>
         <description>&lt;img src="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkfg4cj2j31hc0u01a9.jpg" alt="Featured image of post 如何在Windows环境下使用BBdown" /&gt;&lt;h1 id=&#34;配置bbdown&#34;&gt;配置BBdown&lt;/h1&gt;
 &lt;h2 id=&#34;本体&#34;&gt;本体&lt;/h2&gt;
 &lt;p&gt;从&lt;a class=&#34;link&#34; href=&#34;https://github.com/nilaoda/BBDown&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

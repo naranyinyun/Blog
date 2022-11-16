@@ -2,102 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://blog.nalanyinyun.ml/</loc>
     <lastmod>2022-11-16T20:52:36+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/en/"
+                href="https://blog.nalanyinyun.ml/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://example.com/"
+                href="https://blog.nalanyinyun.ml/"
                 />
   </url><url>
-    <loc>https://example.com/categories/</loc>
+    <loc>https://blog.nalanyinyun.ml/categories/</loc>
     <lastmod>2022-11-16T20:52:36+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/en/categories/"
+                href="https://blog.nalanyinyun.ml/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://example.com/categories/"
+                href="https://blog.nalanyinyun.ml/categories/"
                 />
   </url><url>
-    <loc>https://example.com/tags/hugo/</loc>
+    <loc>https://blog.nalanyinyun.ml/tags/hugo/</loc>
     <lastmod>2022-11-16T20:52:36+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/post/</loc>
+    <loc>https://blog.nalanyinyun.ml/post/</loc>
     <lastmod>2022-11-16T20:52:36+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/</loc>
+    <loc>https://blog.nalanyinyun.ml/tags/</loc>
     <lastmod>2022-11-16T20:52:36+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/en/tags/"
+                href="https://blog.nalanyinyun.ml/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://example.com/tags/"
+                href="https://blog.nalanyinyun.ml/tags/"
                 />
   </url><url>
-    <loc>https://example.com/categories/technology/</loc>
+    <loc>https://blog.nalanyinyun.ml/categories/technology/</loc>
     <lastmod>2022-11-16T20:52:36+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/categories/web/</loc>
+    <loc>https://blog.nalanyinyun.ml/categories/web/</loc>
     <lastmod>2022-11-16T20:52:36+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/p/aplayer/</loc>
+    <loc>https://blog.nalanyinyun.ml/p/aplayer/</loc>
     <lastmod>2022-11-16T20:52:36+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/android/</loc>
+    <loc>https://blog.nalanyinyun.ml/tags/android/</loc>
     <lastmod>2022-11-15T20:55:56+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/magisk/</loc>
+    <loc>https://blog.nalanyinyun.ml/tags/magisk/</loc>
     <lastmod>2022-11-15T20:55:56+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/short/</loc>
+    <loc>https://blog.nalanyinyun.ml/tags/short/</loc>
     <lastmod>2022-11-15T20:55:56+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/p/magisk/</loc>
+    <loc>https://blog.nalanyinyun.ml/p/magisk/</loc>
     <lastmod>2022-11-15T20:55:56+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/p/gsi/</loc>
+    <loc>https://blog.nalanyinyun.ml/p/gsi/</loc>
     <lastmod>2022-11-14T20:41:03+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/ci/</loc>
+    <loc>https://blog.nalanyinyun.ml/tags/ci/</loc>
     <lastmod>2022-11-11T20:32:27+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/cloudflare/</loc>
+    <loc>https://blog.nalanyinyun.ml/tags/cloudflare/</loc>
     <lastmod>2022-11-11T20:32:27+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/p/bdst/</loc>
+    <loc>https://blog.nalanyinyun.ml/p/bdst/</loc>
     <lastmod>2022-11-11T20:32:27+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/bilibili/</loc>
+    <loc>https://blog.nalanyinyun.ml/tags/bilibili/</loc>
     <lastmod>2022-11-10T21:06:57+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/cli/</loc>
+    <loc>https://blog.nalanyinyun.ml/tags/cli/</loc>
     <lastmod>2022-11-10T21:06:57+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/windows/</loc>
+    <loc>https://blog.nalanyinyun.ml/tags/windows/</loc>
     <lastmod>2022-11-10T21:06:57+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/p/bbdown/</loc>
+    <loc>https://blog.nalanyinyun.ml/p/bbdown/</loc>
     <lastmod>2022-11-10T21:06:57+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/about/</loc>
+    <loc>https://blog.nalanyinyun.ml/about/</loc>
   </url><url>
-    <loc>https://example.com/links/</loc>
+    <loc>https://blog.nalanyinyun.ml/links/</loc>
   </url><url>
-    <loc>https://example.com/page/</loc>
+    <loc>https://blog.nalanyinyun.ml/page/</loc>
   </url><url>
-    <loc>https://example.com/search/</loc>
+    <loc>https://blog.nalanyinyun.ml/search/</loc>
   </url>
 </urlset>

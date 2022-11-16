@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>CI on Blog-Nalanyinyun</title>
-        <link>https://example.com/tags/ci/</link>
+        <link>https://blog.nalanyinyun.ml/tags/ci/</link>
         <description>Recent content in CI on Blog-Nalanyinyun</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Fri, 11 Nov 2022 20:32:27 +0800</lastBuildDate><atom:link href="https://example.com/tags/ci/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 11 Nov 2022 20:32:27 +0800</lastBuildDate><atom:link href="https://blog.nalanyinyun.ml/tags/ci/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>使用Hugo&#43;Github Action&#43;Cloudflare Pages搭建博客</title>
-        <link>https://example.com/p/bdst/</link>
+        <link>https://blog.nalanyinyun.ml/p/bdst/</link>
         <pubDate>Fri, 11 Nov 2022 20:32:27 +0800</pubDate>
         
-        <guid>https://example.com/p/bdst/</guid>
+        <guid>https://blog.nalanyinyun.ml/p/bdst/</guid>
         <description>&lt;img src="https://tva3.sinaimg.cn/large/0076Ry2fly1fqld5uji19j31hc0u0e81.jpg" alt="Featured image of post 使用Hugo&#43;Github Action&#43;Cloudflare Pages搭建博客" /&gt;&lt;h1 id=&#34;我为什么把在本地构建的hugo搬到github上&#34;&gt;我为什么把在本地构建的Hugo搬到GitHub上?&lt;/h1&gt;
 &lt;p&gt;本来都在本地没什么,有时我也有多端编辑的需要&lt;br&gt;
 但大多是先写Markdown再传到电脑上&lt;br&gt;
