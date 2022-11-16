@@ -1,55 +1,40 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='我为什么把在本地构建的Hugo搬到GitHub上? 本来都在本地没什么,有时我也有多端编辑的需要
-但大多是先写Markdown再传到电脑上
-就这样,我的博客快乐的运行了半年
-直到今年九月,我用来存站点文件的硬盘坏了
-这一坏,啥都没了,我的站点没有备份
-这才下定决心把东西都搬到云端
-Hugo&#43;GitHub&#43;Cloudflare Hugo 只需如往常一样使用Hugo
-如果你的主题是通过git clone安装的,请进入主题目录删除.Git文件夹
-Github 把你的站点文件全部上传到GitHub,无需使用hugo来Build站点
-Github Action 重中之重,如果没有GitHub Action,把站点上传到GitHub将毫无意义 新建一个仓库用于存储站点
-配置Github-Tokens:
-打开 Settings 打开 Developer settings 展开 Personal access tokens 选择 Tokens(classic) 点击 Generate new tokens 点击 Generate new tokens(classic) 授予 repo 和 workflow 许可并调整过期时间 保存 Token 一会儿要用 配置Secrets:
-进入仓库并打开 settings 展开 Secrets 点击 Actions 点击 New repository secret 键入 PERSONAL_TOKEN 至name 键入 刚才配置的 Token 至 Secrets 点击 Add secret 在你的站点目录新建.github/workflows/hugo-build.yml(文件名称随意)'>
-<title>使用Hugo&#43;Github Action&#43;Cloudflare Pages搭建博客</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Meting-Js And Aplayer 添加 Meting-Js 在当前主题的&amp;lt;head&amp;gt;部分填入以下内容
+通过CDN引入(Jsdelivr):
+1 2 &amp;lt;!-- require MetingJS --&amp;gt; &amp;lt;script src=&amp;#34;https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 通过Unpkg CDN引入:
+1 2 &amp;lt;!-- require MetingJS --&amp;gt; &amp;lt;script src=&amp;#34;https://unpkg.com/meting@2.0.1/dist/Meting.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 添加Aplayer 在主题的head部分填入以下内容
+通过Jsdeliver CDN引入
+1 2 3 &amp;lt;!-- require APlayer --&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css&amp;#34;&amp;gt; &amp;lt;script src=&amp;#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 通过cdnjs CDN引入
+1 2 3 &amp;lt;!-- require APlayer --&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css&amp;#34;&amp;gt; &amp;lt;script src=&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 通过Unpkg CDN引入
+1 2 3 &amp;lt;!-- require APlayer --&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css&amp;#34;&amp;gt; &amp;lt;script src=&amp;#34;https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 更改Goldmark 在站点根目录中config.'>
+<title>在Hugo中添加Meting-JS和Aplayer</title>
 
-<link rel='canonical' href='https://example.com/p/bdst/'>
+<link rel='canonical' href='https://example.com/p/aplayer/'>
 
-<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='使用Hugo&#43;Github Action&#43;Cloudflare Pages搭建博客'>
-<meta property='og:description' content='我为什么把在本地构建的Hugo搬到GitHub上? 本来都在本地没什么,有时我也有多端编辑的需要
-但大多是先写Markdown再传到电脑上
-就这样,我的博客快乐的运行了半年
-直到今年九月,我用来存站点文件的硬盘坏了
-这一坏,啥都没了,我的站点没有备份
-这才下定决心把东西都搬到云端
-Hugo&#43;GitHub&#43;Cloudflare Hugo 只需如往常一样使用Hugo
-如果你的主题是通过git clone安装的,请进入主题目录删除.Git文件夹
-Github 把你的站点文件全部上传到GitHub,无需使用hugo来Build站点
-Github Action 重中之重,如果没有GitHub Action,把站点上传到GitHub将毫无意义 新建一个仓库用于存储站点
-配置Github-Tokens:
-打开 Settings 打开 Developer settings 展开 Personal access tokens 选择 Tokens(classic) 点击 Generate new tokens 点击 Generate new tokens(classic) 授予 repo 和 workflow 许可并调整过期时间 保存 Token 一会儿要用 配置Secrets:
-进入仓库并打开 settings 展开 Secrets 点击 Actions 点击 New repository secret 键入 PERSONAL_TOKEN 至name 键入 刚才配置的 Token 至 Secrets 点击 Add secret 在你的站点目录新建.github/workflows/hugo-build.yml(文件名称随意)'>
-<meta property='og:url' content='https://example.com/p/bdst/'>
+<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='在Hugo中添加Meting-JS和Aplayer'>
+<meta property='og:description' content='Meting-Js And Aplayer 添加 Meting-Js 在当前主题的&amp;lt;head&amp;gt;部分填入以下内容
+通过CDN引入(Jsdelivr):
+1 2 &amp;lt;!-- require MetingJS --&amp;gt; &amp;lt;script src=&amp;#34;https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 通过Unpkg CDN引入:
+1 2 &amp;lt;!-- require MetingJS --&amp;gt; &amp;lt;script src=&amp;#34;https://unpkg.com/meting@2.0.1/dist/Meting.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 添加Aplayer 在主题的head部分填入以下内容
+通过Jsdeliver CDN引入
+1 2 3 &amp;lt;!-- require APlayer --&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css&amp;#34;&amp;gt; &amp;lt;script src=&amp;#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 通过cdnjs CDN引入
+1 2 3 &amp;lt;!-- require APlayer --&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css&amp;#34;&amp;gt; &amp;lt;script src=&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 通过Unpkg CDN引入
+1 2 3 &amp;lt;!-- require APlayer --&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css&amp;#34;&amp;gt; &amp;lt;script src=&amp;#34;https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 更改Goldmark 在站点根目录中config.'>
+<meta property='og:url' content='https://example.com/p/aplayer/'>
 <meta property='og:site_name' content='Blog-Nalanyinyun'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:tag' content='CI' /><meta property='article:tag' content='Cloudflare' /><meta property='article:published_time' content='2022-11-11T20:32:27&#43;08:00'/><meta property='article:modified_time' content='2022-11-11T20:32:27&#43;08:00'/><meta property='og:image' content='https://tva3.sinaimg.cn/large/0076Ry2fly1fqld5uji19j31hc0u0e81.jpg' />
-<meta name="twitter:title" content="使用Hugo&#43;Github Action&#43;Cloudflare Pages搭建博客">
-<meta name="twitter:description" content="我为什么把在本地构建的Hugo搬到GitHub上? 本来都在本地没什么,有时我也有多端编辑的需要
-但大多是先写Markdown再传到电脑上
-就这样,我的博客快乐的运行了半年
-直到今年九月,我用来存站点文件的硬盘坏了
-这一坏,啥都没了,我的站点没有备份
-这才下定决心把东西都搬到云端
-Hugo&#43;GitHub&#43;Cloudflare Hugo 只需如往常一样使用Hugo
-如果你的主题是通过git clone安装的,请进入主题目录删除.Git文件夹
-Github 把你的站点文件全部上传到GitHub,无需使用hugo来Build站点
-Github Action 重中之重,如果没有GitHub Action,把站点上传到GitHub将毫无意义 新建一个仓库用于存储站点
-配置Github-Tokens:
-打开 Settings 打开 Developer settings 展开 Personal access tokens 选择 Tokens(classic) 点击 Generate new tokens 点击 Generate new tokens(classic) 授予 repo 和 workflow 许可并调整过期时间 保存 Token 一会儿要用 配置Secrets:
-进入仓库并打开 settings 展开 Secrets 点击 Actions 点击 New repository secret 键入 PERSONAL_TOKEN 至name 键入 刚才配置的 Token 至 Secrets 点击 Add secret 在你的站点目录新建.github/workflows/hugo-build.yml(文件名称随意)"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://tva3.sinaimg.cn/large/0076Ry2fly1fqld5uji19j31hc0u0e81.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2022-11-16T20:52:36&#43;08:00'/><meta property='article:modified_time' content='2022-11-16T20:52:36&#43;08:00'/><meta property='og:image' content='https://tva2.sinaimg.cn/large/0072Vf1pgy1foxkbxnphoj31hc0u0tpt.jpg' />
+<meta name="twitter:title" content="在Hugo中添加Meting-JS和Aplayer">
+<meta name="twitter:description" content="Meting-Js And Aplayer 添加 Meting-Js 在当前主题的&amp;lt;head&amp;gt;部分填入以下内容
+通过CDN引入(Jsdelivr):
+1 2 &amp;lt;!-- require MetingJS --&amp;gt; &amp;lt;script src=&amp;#34;https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 通过Unpkg CDN引入:
+1 2 &amp;lt;!-- require MetingJS --&amp;gt; &amp;lt;script src=&amp;#34;https://unpkg.com/meting@2.0.1/dist/Meting.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 添加Aplayer 在主题的head部分填入以下内容
+通过Jsdeliver CDN引入
+1 2 3 &amp;lt;!-- require APlayer --&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css&amp;#34;&amp;gt; &amp;lt;script src=&amp;#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 通过cdnjs CDN引入
+1 2 3 &amp;lt;!-- require APlayer --&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css&amp;#34;&amp;gt; &amp;lt;script src=&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 通过Unpkg CDN引入
+1 2 3 &amp;lt;!-- require APlayer --&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css&amp;#34;&amp;gt; &amp;lt;script src=&amp;#34;https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 更改Goldmark 在站点根目录中config."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://tva2.sinaimg.cn/large/0072Vf1pgy1foxkbxnphoj31hc0u0tpt.jpg' />
     <link rel="shortcut icon" href="/img/favicon.ico" />
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
@@ -260,14 +245,10 @@ Github Action 重中之重,如果没有GitHub Action,把站点上传到GitHub将
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#hugo">Hugo</a></li>
-    <li><a href="#github">Github</a>
-      <ol>
-        <li><a href="#github-action">Github Action</a></li>
-      </ol>
-    </li>
-    <li><a href="#cloudflare-pages">Cloudflare Pages</a></li>
-    <li><a href="#all-done">All Done</a></li>
+    <li><a href="#添加-meting-js">添加 Meting-Js</a></li>
+    <li><a href="#添加aplayer">添加Aplayer</a></li>
+    <li><a href="#更改goldmark">更改Goldmark</a></li>
+    <li><a href="#使用meting-js">使用Meting-JS</a></li>
   </ol>
 </nav>
         </div>
@@ -282,9 +263,9 @@ Github Action 重中之重,如果没有GitHub Action,把站点上传到GitHub将
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/bdst/">
+            <a href="/p/aplayer/">
                 
-                    <img src="https://tva3.sinaimg.cn/large/0076Ry2fly1fqld5uji19j31hc0u0e81.jpg" loading="lazy" alt="Featured image of post 使用Hugo&#43;Github Action&#43;Cloudflare Pages搭建博客" />
+                    <img src="https://tva2.sinaimg.cn/large/0072Vf1pgy1foxkbxnphoj31hc0u0tpt.jpg" loading="lazy" alt="Featured image of post 在Hugo中添加Meting-JS和Aplayer" />
                 
             </a>
         </div>
@@ -294,12 +275,12 @@ Github Action 重中之重,如果没有GitHub Action,把站点上传到GitHub将
     
     <header class="article-category">
         
-            <a href="/categories/web/" >
-                Web
-            </a>
-        
             <a href="/categories/technology/" >
                 Technology
+            </a>
+        
+            <a href="/categories/web/" >
+                Web
             </a>
         
     </header>
@@ -307,7 +288,7 @@ Github Action 重中之重,如果没有GitHub Action,把站点上传到GitHub将
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/bdst/">使用Hugo&#43;Github Action&#43;Cloudflare Pages搭建博客</a>
+            <a href="/p/aplayer/">在Hugo中添加Meting-JS和Aplayer</a>
         </h2>
     
         
@@ -329,7 +310,7 @@ Github Action 重中之重,如果没有GitHub Action,把站点上传到GitHub将
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Nov 11, 2022</time>
+                <time class="article-time--published">Nov 16, 2022</time>
             </div>
         
 
@@ -345,135 +326,119 @@ Github Action 重中之重,如果没有GitHub Action,把站点上传到GitHub将
     <section class="article-content">
     
     
-    <h1 id="我为什么把在本地构建的hugo搬到github上">我为什么把在本地构建的Hugo搬到GitHub上?</h1>
-<p>本来都在本地没什么,有时我也有多端编辑的需要<br>
-但大多是先写Markdown再传到电脑上<br>
-就这样,我的博客快乐的运行了半年<br>
-直到今年九月,我用来存站点文件的硬盘坏了<br>
-这一坏,啥都没了,我的站点没有备份<br>
-这才下定决心把东西都搬到云端</p>
-<h1 id="hugogithubcloudflare">Hugo+GitHub+Cloudflare</h1>
-<h2 id="hugo">Hugo</h2>
-<p>只需如往常一样使用Hugo<br>
-如果你的主题是通过<code>git clone</code>安装的,请进入主题目录删除<code>.Git</code>文件夹</p>
-<h2 id="github">Github</h2>
-<p>把你的站点文件全部上传到GitHub,无需使用<code>hugo</code>来<code>Build</code>站点</p>
-<h3 id="github-action">Github Action</h3>
-<p>重中之重,如果没有GitHub Action,把站点上传到GitHub将毫无意义
-新建一个仓库用于存储站点</p>
-<p>配置Github-Tokens:</p>
-<ol>
-<li>打开 Settings</li>
-<li>打开 Developer settings</li>
-<li>展开 Personal access tokens</li>
-<li>选择 Tokens(classic)</li>
-<li>点击 Generate new tokens</li>
-<li>点击 Generate new tokens(classic)</li>
-<li>授予 <code>repo</code> 和 <code>workflow</code> 许可并调整过期时间</li>
-<li>保存 Token 一会儿要用</li>
-</ol>
-<p>配置Secrets:</p>
-<ol>
-<li>进入仓库并打开 settings</li>
-<li>展开 Secrets</li>
-<li>点击 Actions</li>
-<li>点击 New repository secret</li>
-<li>键入 <code>PERSONAL_TOKEN</code> 至name</li>
-<li>键入 刚才配置的 Token 至 <code>Secrets</code></li>
-<li>点击 Add secret</li>
-</ol>
-<p>在你的站点目录新建<code>.github/workflows/hugo-build.yml</code>(文件名称随意)<br>
-在文件中输入<br>
+    <h1 id="meting-js-and-aplayer">Meting-Js And Aplayer</h1>
+<h2 id="添加-meting-js">添加 Meting-Js</h2>
+<p>在当前主题的<code>&lt;head&gt;</code>部分填入以下内容<br>
+通过CDN引入(Jsdelivr):</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">github pages</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">main </span><span class="w"> </span><span class="c"># 选择构建分支(站点源文件)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">jobs</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">deploy</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-22.04</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v3</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">submodules</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">  </span><span class="c"># Fetch Hugo themes (true OR recursive)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">fetch-depth</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">    </span><span class="c"># Fetch all history for .GitInfo and .Lastmod</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Setup Hugo</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-hugo@v2</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">hugo-version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;latest&#39;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="c"># extended: true</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Build</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">hugo</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Deploy</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-gh-pages@v3</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">personal_token</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.personal_token }}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">PUBLISH_BRANCH</span><span class="p">:</span><span class="w"> </span><span class="l">CF-PAGES</span><span class="w"> </span><span class="c"># 构建后推送到的分支</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">publish_dir</span><span class="p">:</span><span class="w"> </span><span class="l">./public</span><span class="w"> </span><span class="c"># 构建后存储到的文件夹</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- require MetingJS --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
-<strong>中文注释,在使用时编码必须为UTF-8,如报错可删去注释</strong><br>
-<strong>extended别删,大多数时候都会用到扩展版</strong></p>
-<p><code>Push</code>到<code>Main</code>即可测试是否可用</p>
-<h2 id="cloudflare-pages">Cloudflare Pages</h2>
-<p>配置Cloudflare Pages:</p>
-<ol>
-<li>点击 Pages</li>
-<li>点击 创建项目</li>
-<li>点击 连接到Git</li>
-<li>添加 账户并选择仓库</li>
-<li>选择 生产分支(Action构建后推送的分支)</li>
-<li>键入 啥也别键入,别碰构建设置</li>
-<li>点击 保存并部署</li>
-<li>处理 剩余事项</li>
-</ol>
-<h2 id="all-done">All Done</h2>
-<p>大功告成,你的Hugo站点已经部署到Cloudflare服务器,站点在全球均可访问!</p>
-<h1 id="tldr">TL;DR</h1>
-<p>你可以Fork<a class="link" href="https://github.com/naranyinyun/Blog"  target="_blank" rel="noopener"
-    >我的仓库</a>进行爆改<br>
-本仓库使用GPL 3.0协议,请您遵守开源许可</p>
-<p><meting-js server="netease" type="song" id="1356059919"></meting-js></p>
+<p>通过Unpkg CDN引入:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- require MetingJS --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://unpkg.com/meting@2.0.1/dist/Meting.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="添加aplayer">添加Aplayer</h2>
+<p>在主题的<code>head</code>部分填入以下内容<br>
+通过Jsdeliver CDN引入</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- require APlayer --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>通过cdnjs CDN引入</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- require APlayer --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>通过Unpkg CDN引入</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- require APlayer --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="更改goldmark">更改Goldmark</h2>
+<p>在站点根目录中<code>config.toml</code>中寻找并修改以下内容(添加)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">goldmark</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">goldmark</span><span class="p">.</span><span class="nx">renderer</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">unsafe</span> <span class="p">=</span> <span class="kc">true</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p><code>config.yaml</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">markup</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">goldmark</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">renderer</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">unsafe</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="使用meting-js">使用Meting-JS</h2>
+<p>参考 <a class="link" href="https://github.com/metowolf/MetingJS"  target="_blank" rel="noopener"
+    >https://github.com/metowolf/MetingJS</a><br>
+实例:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">meting-js</span> <span class="na">server</span><span class="o">=</span><span class="s">&#34;netease&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;song&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;1889184941&#34;</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<h1 id="外部资源链接">外部资源链接</h1>
+<p><a class="link" href="https://github.com/metowolf/MetingJS"  target="_blank" rel="noopener"
+    >Meting-JS</a><br>
+<a class="link" href="https://aplayer.js.org/#/"  target="_blank" rel="noopener"
+    >Aplayer</a></p>
+<meting-js server="netease" type="song" id="22707008">
 
 </section>
 
@@ -483,10 +448,6 @@ Github Action 重中之重,如果没有GitHub Action,把站点上传到GitHub将
     <section class="article-tags">
         
             <a href="/tags/hugo/">Hugo</a>
-        
-            <a href="/tags/ci/">CI</a>
-        
-            <a href="/tags/cloudflare/">Cloudflare</a>
         
     </section>
 
@@ -520,18 +481,18 @@ Github Action 重中之重,如果没有GitHub Action,把站点上传到GitHub将
             
                 
 <article class="has-image">
-    <a href="/p/aplayer/">
+    <a href="/p/bdst/">
         
         
             <div class="article-image">
                 
-                    <img src="https://tva2.sinaimg.cn/large/0072Vf1pgy1foxkbxnphoj31hc0u0tpt.jpg" loading="lazy" data-key="Aplayer" data-hash="https://tva2.sinaimg.cn/large/0072Vf1pgy1foxkbxnphoj31hc0u0tpt.jpg"/>
+                    <img src="https://tva3.sinaimg.cn/large/0076Ry2fly1fqld5uji19j31hc0u0e81.jpg" loading="lazy" data-key="bdst" data-hash="https://tva3.sinaimg.cn/large/0076Ry2fly1fqld5uji19j31hc0u0e81.jpg"/>
                 
             </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">在Hugo中添加Meting-JS和Aplayer</h2>
+            <h2 class="article-title">使用Hugo&#43;Github Action&#43;Cloudflare Pages搭建博客</h2>
         </div>
     </a>
 </article>

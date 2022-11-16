@@ -2,11 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com/tags/android/</loc>
-    <lastmod>2022-11-15T20:55:56+08:00</lastmod>
-  </url><url>
     <loc>https://example.com/</loc>
-    <lastmod>2022-11-15T20:55:56+08:00</lastmod>
+    <lastmod>2022-11-16T20:52:36+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -19,7 +16,7 @@
                 />
   </url><url>
     <loc>https://example.com/categories/</loc>
-    <lastmod>2022-11-15T20:55:56+08:00</lastmod>
+    <lastmod>2022-11-16T20:52:36+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -31,17 +28,14 @@
                 href="https://example.com/categories/"
                 />
   </url><url>
-    <loc>https://example.com/tags/magisk/</loc>
-    <lastmod>2022-11-15T20:55:56+08:00</lastmod>
+    <loc>https://example.com/tags/hugo/</loc>
+    <lastmod>2022-11-16T20:52:36+08:00</lastmod>
   </url><url>
     <loc>https://example.com/post/</loc>
-    <lastmod>2022-11-15T20:55:56+08:00</lastmod>
-  </url><url>
-    <loc>https://example.com/tags/short/</loc>
-    <lastmod>2022-11-15T20:55:56+08:00</lastmod>
+    <lastmod>2022-11-16T20:52:36+08:00</lastmod>
   </url><url>
     <loc>https://example.com/tags/</loc>
-    <lastmod>2022-11-15T20:55:56+08:00</lastmod>
+    <lastmod>2022-11-16T20:52:36+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -54,6 +48,21 @@
                 />
   </url><url>
     <loc>https://example.com/categories/technology/</loc>
+    <lastmod>2022-11-16T20:52:36+08:00</lastmod>
+  </url><url>
+    <loc>https://example.com/categories/web/</loc>
+    <lastmod>2022-11-16T20:52:36+08:00</lastmod>
+  </url><url>
+    <loc>https://example.com/p/aplayer/</loc>
+    <lastmod>2022-11-16T20:52:36+08:00</lastmod>
+  </url><url>
+    <loc>https://example.com/tags/android/</loc>
+    <lastmod>2022-11-15T20:55:56+08:00</lastmod>
+  </url><url>
+    <loc>https://example.com/tags/magisk/</loc>
+    <lastmod>2022-11-15T20:55:56+08:00</lastmod>
+  </url><url>
+    <loc>https://example.com/tags/short/</loc>
     <lastmod>2022-11-15T20:55:56+08:00</lastmod>
   </url><url>
     <loc>https://example.com/p/magisk/</loc>
@@ -66,12 +75,6 @@
     <lastmod>2022-11-11T20:32:27+08:00</lastmod>
   </url><url>
     <loc>https://example.com/tags/cloudflare/</loc>
-    <lastmod>2022-11-11T20:32:27+08:00</lastmod>
-  </url><url>
-    <loc>https://example.com/tags/hugo/</loc>
-    <lastmod>2022-11-11T20:32:27+08:00</lastmod>
-  </url><url>
-    <loc>https://example.com/categories/web/</loc>
     <lastmod>2022-11-11T20:32:27+08:00</lastmod>
   </url><url>
     <loc>https://example.com/p/bdst/</loc>
