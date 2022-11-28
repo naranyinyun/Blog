@@ -1,3 +1,4 @@
+https://img.shields.io/github/workflow/status/naranyinyun/Blog/Hugo%20Build
 # 这是什么
 这是一个基于Hugo的博客，她使用的主题是Stack，部署在Cloudflare Pages上
 # 为什么仓库是公开的
