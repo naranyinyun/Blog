@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='快速禁用Magisk模块 Magisk模块标识 Magisk模块位于/data/adb/modules
-在此目录下的所有文件夹均对应模块
-模块目录中共有三种标识,均为文件,我们也从这下手
-标识:
-skip_mount(若存在,Magisk不会挂载system) disable(若存在,模块在下次启动时会被禁用) remove(若存在,模块在下次启动时会被禁用) 在第三方Recovey中管理模块 在/data/adb/modules中的模块文件夹打开终端,当然,也可以使用Adb shell
-输入
-1 touch disable 即可禁用此模块(使用touch创建disable)
-同理,输入
-1 touch remove 即可移除模块
-不要直接删除模块文件夹,可能会导致无法修复的问题
-通过ADB移除所有模块 启动ADB工具,并输入
-1 adb wait-for-device shell magisk --remove-modules 再连接设备,并开机(System)
-若还是无法启动,强制重启一次即可'>
-<title>如何使用第三方Recovery禁用Magisk模块</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Hugo 为什么选择 Hugo? 关于此问题的答案, 你可以在网上找到太多太多
+比如 Hugo 是使用 Go 语言编写的，相较于使用 Javascript 的 Hexo 和使用 Ruby 的 Jekyll,Hugo 的速度可以说吊打，无论是创建，构建
+但对于我来说，Hugo 的绝大多数优点都抵不过这一个
+简单
+没错, Hugo 的配置, 使用, 乃至他的文件结构都易于理解且方便使用
+配置主题没有那么多繁琐的步骤, 自行修改也极其方便
+Hugo 自带的 Web 服务器也易于调试, 几乎可以实时的显示你的更改
+Hugo 的文档也十分干净, 不像 Jekyll, 他们的文档写的好像歧视 Windows 用户
+为什么不是 Hugo Hugo 在部署博客方面无疑是极强的, 但部分人觉得他的一大问题就是社区太小, 或者说中文社区太小
+这就要求你在使用 Hugo 的时候必须有基础的英文能力, 一些调试经验和智慧的大脑
+他的主题不能说少, 但和 Hexo 相比就相形见绌了, Hexo 在中文社区的火爆程度可以用烂大街形容
+大部分的独立博客都是基于 Hexo 的 但这都是和其他框架比, 该说说我遇见的糟心事了 另外, Hugo 能够对上眼的主题太少了, 我能对上眼的就三个,Doks,kagome 和 Stack
+最近, 我想找一个个人主页主题来彻底替代 Jekyll, 没什么, 我就是单纯的不喜欢这个框架'>
+<title>我和 Hugo 的爱恨情仇</title>
 
-<link rel='canonical' href='https://blog.nalanyinyun.ml/p/magisk/'>
+<link rel='canonical' href='https://blog.nalanyinyun.ml/p/why-hugo/'>
 
-<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='如何使用第三方Recovery禁用Magisk模块'>
-<meta property='og:description' content='快速禁用Magisk模块 Magisk模块标识 Magisk模块位于/data/adb/modules
-在此目录下的所有文件夹均对应模块
-模块目录中共有三种标识,均为文件,我们也从这下手
-标识:
-skip_mount(若存在,Magisk不会挂载system) disable(若存在,模块在下次启动时会被禁用) remove(若存在,模块在下次启动时会被禁用) 在第三方Recovey中管理模块 在/data/adb/modules中的模块文件夹打开终端,当然,也可以使用Adb shell
-输入
-1 touch disable 即可禁用此模块(使用touch创建disable)
-同理,输入
-1 touch remove 即可移除模块
-不要直接删除模块文件夹,可能会导致无法修复的问题
-通过ADB移除所有模块 启动ADB工具,并输入
-1 adb wait-for-device shell magisk --remove-modules 再连接设备,并开机(System)
-若还是无法启动,强制重启一次即可'>
-<meta property='og:url' content='https://blog.nalanyinyun.ml/p/magisk/'>
+<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='我和 Hugo 的爱恨情仇'>
+<meta property='og:description' content='Hugo 为什么选择 Hugo? 关于此问题的答案, 你可以在网上找到太多太多
+比如 Hugo 是使用 Go 语言编写的，相较于使用 Javascript 的 Hexo 和使用 Ruby 的 Jekyll,Hugo 的速度可以说吊打，无论是创建，构建
+但对于我来说，Hugo 的绝大多数优点都抵不过这一个
+简单
+没错, Hugo 的配置, 使用, 乃至他的文件结构都易于理解且方便使用
+配置主题没有那么多繁琐的步骤, 自行修改也极其方便
+Hugo 自带的 Web 服务器也易于调试, 几乎可以实时的显示你的更改
+Hugo 的文档也十分干净, 不像 Jekyll, 他们的文档写的好像歧视 Windows 用户
+为什么不是 Hugo Hugo 在部署博客方面无疑是极强的, 但部分人觉得他的一大问题就是社区太小, 或者说中文社区太小
+这就要求你在使用 Hugo 的时候必须有基础的英文能力, 一些调试经验和智慧的大脑
+他的主题不能说少, 但和 Hexo 相比就相形见绌了, Hexo 在中文社区的火爆程度可以用烂大街形容
+大部分的独立博客都是基于 Hexo 的 但这都是和其他框架比, 该说说我遇见的糟心事了 另外, Hugo 能够对上眼的主题太少了, 我能对上眼的就三个,Doks,kagome 和 Stack
+最近, 我想找一个个人主页主题来彻底替代 Jekyll, 没什么, 我就是单纯的不喜欢这个框架'>
+<meta property='og:url' content='https://blog.nalanyinyun.ml/p/why-hugo/'>
 <meta property='og:site_name' content='Blog-Nalanyinyun'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Android' /><meta property='article:tag' content='Magisk' /><meta property='article:tag' content='short' /><meta property='article:published_time' content='2022-11-15T20:55:56&#43;08:00'/><meta property='article:modified_time' content='2022-11-15T20:55:56&#43;08:00'/><meta property='og:image' content='https://tva2.sinaimg.cn/large/0072Vf1pgy1foxk76lzl8j31hc0u0dxk.jpg' />
-<meta name="twitter:title" content="如何使用第三方Recovery禁用Magisk模块">
-<meta name="twitter:description" content="快速禁用Magisk模块 Magisk模块标识 Magisk模块位于/data/adb/modules
-在此目录下的所有文件夹均对应模块
-模块目录中共有三种标识,均为文件,我们也从这下手
-标识:
-skip_mount(若存在,Magisk不会挂载system) disable(若存在,模块在下次启动时会被禁用) remove(若存在,模块在下次启动时会被禁用) 在第三方Recovey中管理模块 在/data/adb/modules中的模块文件夹打开终端,当然,也可以使用Adb shell
-输入
-1 touch disable 即可禁用此模块(使用touch创建disable)
-同理,输入
-1 touch remove 即可移除模块
-不要直接删除模块文件夹,可能会导致无法修复的问题
-通过ADB移除所有模块 启动ADB工具,并输入
-1 adb wait-for-device shell magisk --remove-modules 再连接设备,并开机(System)
-若还是无法启动,强制重启一次即可"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://tva2.sinaimg.cn/large/0072Vf1pgy1foxk76lzl8j31hc0u0dxk.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2022-12-02T12:54:25&#43;08:00'/><meta property='article:modified_time' content='2022-12-02T12:54:25&#43;08:00'/><meta property='og:image' content='https://tva4.sinaimg.cn/large/0072Vf1pgy1foxli0u4b3j31hc0u0qoj.jpg' />
+<meta name="twitter:title" content="我和 Hugo 的爱恨情仇">
+<meta name="twitter:description" content="Hugo 为什么选择 Hugo? 关于此问题的答案, 你可以在网上找到太多太多
+比如 Hugo 是使用 Go 语言编写的，相较于使用 Javascript 的 Hexo 和使用 Ruby 的 Jekyll,Hugo 的速度可以说吊打，无论是创建，构建
+但对于我来说，Hugo 的绝大多数优点都抵不过这一个
+简单
+没错, Hugo 的配置, 使用, 乃至他的文件结构都易于理解且方便使用
+配置主题没有那么多繁琐的步骤, 自行修改也极其方便
+Hugo 自带的 Web 服务器也易于调试, 几乎可以实时的显示你的更改
+Hugo 的文档也十分干净, 不像 Jekyll, 他们的文档写的好像歧视 Windows 用户
+为什么不是 Hugo Hugo 在部署博客方面无疑是极强的, 但部分人觉得他的一大问题就是社区太小, 或者说中文社区太小
+这就要求你在使用 Hugo 的时候必须有基础的英文能力, 一些调试经验和智慧的大脑
+他的主题不能说少, 但和 Hexo 相比就相形见绌了, Hexo 在中文社区的火爆程度可以用烂大街形容
+大部分的独立博客都是基于 Hexo 的 但这都是和其他框架比, 该说说我遇见的糟心事了 另外, Hugo 能够对上眼的主题太少了, 我能对上眼的就三个,Doks,kagome 和 Stack
+最近, 我想找一个个人主页主题来彻底替代 Jekyll, 没什么, 我就是单纯的不喜欢这个框架"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://tva4.sinaimg.cn/large/0072Vf1pgy1foxli0u4b3j31hc0u0qoj.jpg' />
     <link rel="shortcut icon" href="/img/favicon.ico" />
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
@@ -260,9 +260,10 @@ skip_mount(若存在,Magisk不会挂载system) disable(若存在,模块在下次
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#magisk模块标识">Magisk模块标识</a></li>
-    <li><a href="#在第三方recovey中管理模块">在第三方Recovey中管理模块</a></li>
-    <li><a href="#通过adb移除所有模块">通过ADB移除所有模块</a></li>
+    <li><a href="#为什么选择-hugo">为什么选择 Hugo?</a></li>
+    <li><a href="#为什么不是-hugo">为什么不是 Hugo</a></li>
+    <li><a href="#hugonodejs-和-doks">Hugo,NodeJS 和 Doks</a></li>
+    <li><a href="#我为什么还用-hugo">我为什么还用 Hugo</a></li>
   </ol>
 </nav>
         </div>
@@ -277,9 +278,9 @@ skip_mount(若存在,Magisk不会挂载system) disable(若存在,模块在下次
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/magisk/">
+            <a href="/p/why-hugo/">
                 
-                    <img src="https://tva2.sinaimg.cn/large/0072Vf1pgy1foxk76lzl8j31hc0u0dxk.jpg" loading="lazy" alt="Featured image of post 如何使用第三方Recovery禁用Magisk模块" />
+                    <img src="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxli0u4b3j31hc0u0qoj.jpg" loading="lazy" alt="Featured image of post 我和 Hugo 的爱恨情仇" />
                 
             </a>
         </div>
@@ -298,7 +299,7 @@ skip_mount(若存在,Magisk不会挂载system) disable(若存在,模块在下次
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/magisk/">如何使用第三方Recovery禁用Magisk模块</a>
+            <a href="/p/why-hugo/">我和 Hugo 的爱恨情仇</a>
         </h2>
     
         
@@ -320,7 +321,7 @@ skip_mount(若存在,Magisk不会挂载system) disable(若存在,模块在下次
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Nov 15, 2022</time>
+                <time class="article-time--published">Dec 02, 2022</time>
             </div>
         
 
@@ -336,53 +337,65 @@ skip_mount(若存在,Magisk不会挂载system) disable(若存在,模块在下次
     <section class="article-content">
     
     
-    <h1 id="快速禁用magisk模块">快速禁用Magisk模块</h1>
-<h2 id="magisk模块标识">Magisk模块标识</h2>
-<p>Magisk模块位于<code>/data/adb/modules</code><br>
-在此目录下的所有文件夹均对应模块<br>
-模块目录中共有三种标识,均为文件,我们也从这下手<br>
-标识:</p>
-<ul>
-<li>skip_mount(若存在,Magisk不会挂载system)</li>
-<li>disable(若存在,模块在下次启动时会被禁用)</li>
-<li>remove(若存在,模块在下次启动时会被禁用)</li>
-</ul>
-<h2 id="在第三方recovey中管理模块">在第三方Recovey中管理模块</h2>
-<p>在<code>/data/adb/modules</code>中的模块文件夹打开终端,当然,也可以使用<code>Adb shell</code><br>
-输入</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">touch disable
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>即可禁用此模块(使用<code>touch</code>创建<code>disable</code>)<br>
-同理,输入</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">touch remove
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>即可移除模块</p>
-<p><font color="red">不要直接删除模块文件夹,可能会导致无法修复的问题</font></p>
-<h2 id="通过adb移除所有模块">通过ADB移除所有模块</h2>
-<p>启动ADB工具,并输入</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">adb wait-for-device shell magisk --remove-modules
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>再连接设备,并开机(System)<br>
-若还是无法启动,强制重启一次即可</p>
-<meting-js server="netease" type="song" id="1992552055">
+    <h1 id="hugo">Hugo</h1>
+<h2 id="为什么选择-hugo">为什么选择 Hugo?</h2>
+<p>关于此问题的答案, 你可以在网上找到太多太多<br>
+比如 Hugo 是使用 Go 语言编写的，相较于使用 Javascript 的 Hexo 和使用 Ruby 的 Jekyll,Hugo 的速度可以说吊打，无论是创建，构建<br>
+但对于我来说，Hugo 的绝大多数优点都抵不过这一个<br>
+<code>简单</code><br>
+没错, Hugo 的配置, 使用, 乃至他的文件结构都易于理解且方便使用<br>
+配置主题没有那么多繁琐的步骤, 自行修改也极其方便<br>
+Hugo 自带的 Web 服务器也易于调试, 几乎可以实时的显示你的更改<br>
+Hugo 的文档也十分干净, 不像 Jekyll, 他们的文档写的好像歧视 Windows 用户</p>
+<h2 id="为什么不是-hugo">为什么不是 Hugo</h2>
+<p>Hugo 在部署博客方面无疑是极强的, 但部分人觉得他的一大问题就是社区太小, 或者说中文社区太小<br>
+这就要求你在使用 Hugo 的时候必须有基础的英文能力, 一些调试经验和智慧的大脑<br>
+他的主题不能说少, 但和 Hexo 相比就相形见绌了, Hexo 在中文社区的火爆程度可以用烂大街形容<br>
+大部分的独立博客都是基于 Hexo 的
+但这都是和其他框架比, 该说说我遇见的糟心事了
+另外, Hugo 能够对上眼的主题太少了, 我能对上眼的就三个,<a class="link" href="https://getdoks.org/"  target="_blank" rel="noopener"
+    >Doks</a>,<a class="link" href="https://github.com/miiiku/hugo-theme-kagome"  target="_blank" rel="noopener"
+    >kagome</a> 和 <a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack"  target="_blank" rel="noopener"
+    >Stack</a><br>
+最近, 我想找一个个人主页主题来彻底替代 Jekyll, 没什么, 我就是单纯的不喜欢这个框架<br>
+但是我找来找去, 发现一件事:<br>
+<strong>这咋都是博客主题</strong><br>
+到现在也没有换掉 Jekyll&hellip;</p>
+<h2 id="hugonodejs-和-doks">Hugo,NodeJS 和 Doks</h2>
+<p><a class="link" href="https://getdoks.org/"  target="_blank" rel="noopener"
+    >Doks</a> 是一个现代化的文档主题, 基于 Hugo<br>
+但是在部署他的过程中, 要使用 NodeJS, 或者说 NPM<br>
+现在的 NPM 性能问题没那么严重了, 但我还是不愿意使用<br>
+<code>Clone</code>,<code>npm install</code><br>
+然后问题就来了,<code>NPM</code> 卡住了&hellip;, 卡住了&hellip;<br>
+Highlight-JS 这个玩意根本就不在 NPM 的服务器上, 我看他卡了 5 分钟才去访问链接看一下<br>
+OK 完全没问题, 这都可以我自行解决, 更糟心的还在后面<br>
+<code>npm run start</code><br>
+他启动了 Hugo 的预览服务器, 和我自己 <code>hugo server</code> 的效果一样<br>
+但是我在改文件的过程中发现了一件事:<br>
+我在改文件, Hugo 也检测到文件更改重新生成站点<br>
+但是浏览器上的内容纹丝不动<br>
+我甚至直接把文件删了, 他还是没反应<br>
+我重新启动了一下 Hugo 服务器, 好了<br>
+然后我继续改文件, 改到路径的时候 - 意外发生了<br>
+404, 没错, 404, 我试着用 URL 直接访问根目录里的文件, 还是 404<br>
+显然, 这玩意根本就没同步我的更改<br>
+那我改了半天改个寂寞呢<br>
+后来又是一样的毛病, 一直持续到我受不了了<br>
+我自己在根目录运行了 <code>hugo server</code><br>
+他居然好使了, 我也不知是谁的毛病, 但是我觉得嫌疑最大的是 NodeJS, 我用 <code>yarn run start</code> 他还是一样不同步更改<br>
+我实在是被折腾烦了, 就直接 <code>npm run build</code>, 部署到 Cloudflare Pages, 一看正常了<br>
+就挺无语的</p>
+<h2 id="我为什么还用-hugo">我为什么还用 Hugo</h2>
+<p>因为 Hugo 的设计, 操作都十分契合我 ~~ 懒得学~~<br>
+即使他和 NodeJS 一起用的时候很糟心<br>
+但我依旧不会忘记</p>
+<blockquote>
+<p>在那个寒冷的冬夜<br>
+在 Hexo 无情折磨我的那个冬夜<br>
+是 Hugo<br>
+带给了我黎明一般的曙光</p>
+</blockquote>
 
 </section>
 
@@ -391,11 +404,7 @@ skip_mount(若存在,Magisk不会挂载system) disable(若存在,模块在下次
     
     <section class="article-tags">
         
-            <a href="/tags/android/">Android</a>
-        
-            <a href="/tags/magisk/">Magisk</a>
-        
-            <a href="/tags/short/">short</a>
+            <a href="/tags/hugo/">Hugo</a>
         
     </section>
 
@@ -426,44 +435,6 @@ skip_mount(若存在,Magisk不会挂载system) disable(若存在,模块在下次
     <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
-            
-                
-<article class="has-image">
-    <a href="/p/gsi/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxkjjz8vbj31hc0u0k80.jpg" loading="lazy" data-key="GSI" data-hash="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxkjjz8vbj31hc0u0k80.jpg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Android GSI 介绍</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/why-hugo/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxli0u4b3j31hc0u0qoj.jpg" loading="lazy" data-key="Why Hugo" data-hash="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxli0u4b3j31hc0u0qoj.jpg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">我和 Hugo 的爱恨情仇</h2>
-        </div>
-    </a>
-</article>
-
             
                 
 <article class="has-image">
@@ -498,6 +469,44 @@ skip_mount(若存在,Magisk不会挂载system) disable(若存在,模块在下次
 
         <div class="article-details">
             <h2 class="article-title">使用Hugo&#43;Github Action&#43;Cloudflare Pages搭建博客</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/magisk/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://tva2.sinaimg.cn/large/0072Vf1pgy1foxk76lzl8j31hc0u0dxk.jpg" loading="lazy" data-key="Magisk" data-hash="https://tva2.sinaimg.cn/large/0072Vf1pgy1foxk76lzl8j31hc0u0dxk.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">如何使用第三方Recovery禁用Magisk模块</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/gsi/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxkjjz8vbj31hc0u0k80.jpg" loading="lazy" data-key="GSI" data-hash="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxkjjz8vbj31hc0u0k80.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Android GSI 介绍</h2>
         </div>
     </a>
 </article>
