@@ -21,7 +21,7 @@ Magisk模块位于`/data/adb/modules`
 在`/data/adb/modules`中的模块文件夹打开终端,当然,也可以使用`Adb shell`  
 输入  
 ```
-touch disbale
+touch disable
 ```
 即可禁用此模块(使用`touch`创建`disable`)  
 同理,输入
