@@ -21,8 +21,8 @@ Hugo 的文档也十分干净, 不像 Jekyll, 他们的文档写的好像歧视 
 Hugo 在部署博客方面无疑是极强的, 但部分人觉得他的一大问题就是社区太小, 或者说中文社区太小  
 这就要求你在使用 Hugo 的时候必须有基础的英文能力, 一些调试经验和智慧的大脑  
 他的主题不能说少, 但和 Hexo 相比就相形见绌了, Hexo 在中文社区的火爆程度可以用烂大街形容   
-大部分的独立博客都是基于 Hexo 的
-但这都是和其他框架比, 该说说我遇见的糟心事了
+大部分的独立博客都是基于 Hexo 的  
+但这都是和其他框架比, 该说说我遇见的糟心事了  
 另外, Hugo 能够对上眼的主题太少了, 我能对上眼的就三个,[Doks](https://getdoks.org/),[kagome](https://github.com/miiiku/hugo-theme-kagome) 和 [Stack](https://github.com/CaiJimmy/hugo-theme-stack)  
 最近, 我想找一个个人主页主题来彻底替代 Jekyll, 没什么, 我就是单纯的不喜欢这个框架  
 但是我找来找去, 发现一件事:  
