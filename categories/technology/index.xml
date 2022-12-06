@@ -52,7 +52,7 @@ GFW 还没有屏蔽 Pixiv 的服务器 IP&lt;br&gt;
 但问题是，服务器返回的默认证书不一定可用，甚至在接收到错误的&lt;code&gt;Server Name&lt;/code&gt;时会直接拒绝连接&lt;br&gt;
 而不同于服务器，虚拟服务器如果没有接收到有效&lt;code&gt;Server Name&lt;/code&gt;就没法知道你要访问哪个服务&lt;/p&gt;
 &lt;p&gt;晚安，&amp;ldquo;自由之人&amp;rdquo;&lt;/p&gt;
-&lt;meiting-js server=&#34;netease&#34; type=&#34;song&#34; id=&#34;1872393298&#34;&gt;</description>
+&lt;meting-js server=&#34;netease&#34; type=&#34;song&#34; id=&#34;1872393298&#34;&gt;</description>
         </item>
         <item>
         <title>我和 Hugo 的爱恨情仇</title>
