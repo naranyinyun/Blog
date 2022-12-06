@@ -43,4 +43,4 @@ GFW 检测某个包是否违规就是通过检查`Server Name`判断是否阻断
 
 晚安，"自由之人"
 
-<meiting-js server="netease" type="song" id="1872393298">
+<meting-js server="netease" type="song" id="1872393298">
