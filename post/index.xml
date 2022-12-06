@@ -6,7 +6,55 @@
         <description>Recent content in Posts on Blog-Nalanyinyun</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Fri, 02 Dec 2022 12:54:25 +0800</lastBuildDate><atom:link href="https://blog.nalanyinyun.ml/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 06 Dec 2022 13:22:10 +0800</lastBuildDate><atom:link href="https://blog.nalanyinyun.ml/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>从 Pixiv 直连分析 GFW 和 SNI 阻断</title>
+        <link>https://blog.nalanyinyun.ml/p/d_c/</link>
+        <pubDate>Tue, 06 Dec 2022 13:22:10 +0800</pubDate>
+        
+        <guid>https://blog.nalanyinyun.ml/p/d_c/</guid>
+        <description>&lt;img src="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxk7rv2gpj31hc0u04e6.jpg" alt="Featured image of post 从 Pixiv 直连分析 GFW 和 SNI 阻断" /&gt;&lt;h1 id=&#34;gfw-的屏蔽手段&#34;&gt;GFW 的屏蔽手段&lt;/h1&gt;
+&lt;h2 id=&#34;dns-缓存污染-dns-投毒&#34;&gt;DNS 缓存污染 (DNS 投毒)&lt;/h2&gt;
+&lt;p&gt;GFW 监听所有在 53 端口上使用 UDP 的 DNS 请求，若发现查询域名与黑名单匹配，GFW 会伪装成 DNS 服务器并返回虚假查询结果&lt;br&gt;
+常见的有&lt;code&gt;127.0.0.1&lt;/code&gt;,&lt;code&gt;1.1.1.1&lt;/code&gt;,&lt;code&gt;0.0.0.0&lt;/code&gt;&lt;br&gt;
+可以通过使用 DoH 或 DoT 以规避 DNS 缓存污染&lt;/p&gt;
+&lt;h2 id=&#34;tcp-旁路阻断&#34;&gt;TCP 旁路阻断&lt;/h2&gt;
+&lt;p&gt;GFW 检测到建立 TCP 连接的 IP 处于黑名单时，会抢先在服务器返回 ACK 之前向客户端发送一个 TCP Reset 报文提前终止 TCP 连接&lt;/p&gt;
+&lt;h2 id=&#34;路由扩散技术封锁tcpudp&#34;&gt;路由扩散技术封锁TCP/UDP&lt;/h2&gt;
+&lt;p&gt;GFW 的路由扩散技术会向各个路由节点重分发错误的路由表，发往被屏蔽 IP 的所有报文都会被错误的路由表引入一个黑洞路由&lt;br&gt;
+但通过错误的路由表，也可以把报文引入一个服务器，服务器可以分析这些报文，也可以发送一个虚假的响应&lt;/p&gt;
+&lt;h1 id=&#34;sni-阻断和直连&#34;&gt;SNI 阻断和直连&lt;/h1&gt;
+&lt;p&gt;在 TLS1.3 中，客户端会首先向服务器发送一个&lt;code&gt;ClientHello&lt;/code&gt;包&lt;br&gt;
+SNI 允许客户端在&lt;code&gt;ClientHello&lt;/code&gt;中直接请求指定的域名证书&lt;br&gt;
+但 SNI 的有效负载没有加密，GFW 可以窃听其中的&lt;code&gt;Server Name&lt;/code&gt;来匹配黑名单决定是否阻断链接&lt;br&gt;
+我们用 WireShark 抓取一个&lt;code&gt;ClientHello&lt;/code&gt;看看 (访问本站，本站支持 TLS1.3,QUIC,ESNI)：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.nalanyinyun.ml/post/direct_connect/WireShark.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;WireShark&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;不难看到，&lt;code&gt;server name&lt;/code&gt;中直接写着域名，GFW 通过查看此内容就可以阻断连接&lt;br&gt;
+那看到这里，就有聪明的同学有疑问了：
+&amp;ldquo;既然 SNI 的有效负载是明文传输，那我给 SNI 的有效负载加密，不就可以绕过 SNI 阻断了吗&amp;rdquo;&lt;br&gt;
+没错，这种机制叫做 ESNI，目前 GFW 对 ESNI 的策略是全部阻断&amp;hellip;.&lt;/p&gt;
+&lt;h2 id=&#34;直连&#34;&gt;直连&lt;/h2&gt;
+&lt;p&gt;如果你在发给服务器的&lt;code&gt;Server Name&lt;/code&gt;中填一个根本不存在的域名或者其他乱七八糟的东西&lt;br&gt;
+服务器会返回给你一张默认的证书&lt;br&gt;
+欸，那就巧了，Pixiv 的默认证书是一张&lt;code&gt;*.pixiv.net&lt;/code&gt;的泛证书&lt;br&gt;
+GFW 还没有屏蔽 Pixiv 的服务器 IP&lt;br&gt;
+客户端就可以和服务器建立连接了&lt;/p&gt;
+&lt;h2 id=&#34;局限性&#34;&gt;局限性&lt;/h2&gt;
+&lt;p&gt;GFW 检测某个包是否违规就是通过检查&lt;code&gt;Server Name&lt;/code&gt;判断是否阻断连接&lt;br&gt;
+但问题是，服务器返回的默认证书不一定可用，甚至在接收到错误的&lt;code&gt;Server Name&lt;/code&gt;时会直接拒绝连接&lt;br&gt;
+而不同于服务器，虚拟服务器如果没有接收到有效&lt;code&gt;Server Name&lt;/code&gt;就没法知道你要访问哪个服务&lt;/p&gt;
+&lt;p&gt;晚安，&amp;ldquo;自由之人&amp;rdquo;&lt;/p&gt;
+&lt;meiting-js server=&#34;netease&#34; type=&#34;song&#34; id=&#34;1872393298&#34;&gt;</description>
+        </item>
+        <item>
         <title>我和 Hugo 的爱恨情仇</title>
         <link>https://blog.nalanyinyun.ml/p/why-hugo/</link>
         <pubDate>Fri, 02 Dec 2022 12:54:25 +0800</pubDate>
