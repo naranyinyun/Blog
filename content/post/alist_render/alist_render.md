@@ -29,7 +29,7 @@ categories: ["Technology"]
 |DB_HOST|填入 ElephantSQL 中的 Server 后的内容|
 |DB_NAME|填入 User & Default database 后的内容  |
 |DB_PASS|填入 Password 后的内容|
-|DB_PORT|5234|
+|DB_PORT|5432|
 |DB_SSL_MODE|verify-full 或 disable|
 |DB_TYPE|postgres|
 |DB_USER|与 DB_NAME 一致|
