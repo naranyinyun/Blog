@@ -9,58 +9,60 @@ categories: ["Technology"]
 ---
 
 # GSI
-## 什么是GSI
-GSI,中文名"通用系统镜像",可以在支持Treble的设备上刷入GSI以便体验最新的Android操作系统  
-Google的GSI是AOSP未经修改的,可在各种Android设备上运行
-## GSI要求
-刷入GSI的设备需符合以下要求:
-- Bootloader已解锁
-- 完全符合Treble要求
-- 出场时搭载Android9或更高版本
+## 什么是 GSI
+GSI，中文名"通用系统镜像",可以在支持 Treble 的设备上刷入 GSI 以便体验最新的 Android 操作系统  
+Google 的 GSI 是 AOSP 未经修改的，可在各种 Android 设备上运行
+## GSI 要求
+刷入 GSI 的设备需符合以下要求：
+- Bootloader 已解锁
+- 完全符合 Treble 要求
+- 出场时搭载 Android9 或更高版本
 
-搭载Android8或Android8.1的设备可能支持Treble,但在Android12及更高版本的GSI中,移除了对Android8或8.1的不完全Treble的兼容性  
-设备需支持VNDK才能跨版本刷入Android版本的GSI  
-### 检查GSI要求
-运行以下命令以检查设备是否支持Treble  
+搭载 Android8 或 Android8.1 的设备可能支持 Treble，但在 Android12 及更高版本的 GSI 中，移除了对 Android8 或 8.1 的不完全 Treble 的兼容性  
+设备需支持 VNDK 才能跨版本刷入 Android 版本的 GSI  
+### 检查 GSI 要求
+运行以下命令以检查设备是否支持 Treble  
 
-{{< highlight go >}}
+~~TMD Chroma 不支持 Shell 高亮~~
+
+```
 adb shell getprop ro.treble.enabled
-{{< / highlight >}}
+```
 
-返回为True则支持,False则表示不兼容GSI  
+返回为 True 则支持，False 则表示不兼容 GSI  
 
-运行以下命令检查设备是否支持VNDK
+运行以下命令检查设备是否支持 VNDK
 
-{{< highlight go >}}
+```
 adb shell cat /system/etc/ld.config.version_identifier.txt \
 | grep -A 20 "\[vendor\]"
-{{< / highlight >}}
+```
 
-在输出的vendor部分中查找namespace.default.isolated  
-若返回True,则代表设备可以安装跨版本的GSI,若返回false则不可  
+在输出的 vendor 部分中查找 namespace.default.isolated  
+若返回 True，则代表设备可以安装跨版本的 GSI，若返回 false 则不可  
 
-GSI的架构类型必须与设备一致,运行此命令检查架构类型  
+GSI 的架构类型必须与设备一致，运行此命令检查架构类型  
 
-{{< highlight shell >}}
+```
 adb shell getprop ro.product.cpu.abi
-{{< / highlight >}}
+```
 
 也可使用 [Treble Checker](https://play.google.com/store/apps/details?id=com.blackcurrantstudioz.TrebleCheck)或[Treble 信息](https://play.google.com/store/apps/details?id=tk.hack5.treblecheck) 查看上述信息
 
-## GSI选择
+## GSI 选择
 若您的设备支持A/B,或A-only但支持system-as-root,请选择文件名中带有"ab"字样的镜像  
-若您的设备支持动态分区,则可以使用DSU  
-若您的设备不支持system-as-root,也非A/B设备,请选择文件名中带有A-only字样的镜像  
+若您的设备支持动态分区，则可以使用 DSU  
+若您的设备不支持 system-as-root，也非 A/B 设备，请选择文件名中带有 A-only 字样的镜像  
 
-## 刷写GSI
-将GSI刷入至符合要求的任何Android设备  
-重启到Fastboot,动态分区设备重启到Fastbootd  
+## 刷写 GSI
+将 GSI 刷入至符合要求的任何 Android 设备  
+重启到 Fastboot，动态分区设备重启到 Fastbootd  
 
-擦除System  
+擦除 System  
 ```
 fastboot erase system
 ```
-刷入GSI  
+刷入 GSI  
 ```
 fastboot flash system system.img
 ```
@@ -74,7 +76,7 @@ fastboot -W
 Resizing 'system_a'    FAILED (remote: 'Not enough space to resize partition')
 fastboot: error: Command failed
 ```
-则说明系统分区空间不足,可能需要删除产品分区或扩容system  
+则说明系统分区空间不足，可能需要删除产品分区或扩容 system  
 
 更改导航栏模式输入
 ```
