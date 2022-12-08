@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Web on Blog-Nalanyinyun</title>
+        <link>https://blog.nalanyinyun.ml/tags/web/</link>
+        <description>Recent content in Web on Blog-Nalanyinyun</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Thu, 08 Dec 2022 21:06:19 +0800</lastBuildDate><atom:link href="https://blog.nalanyinyun.ml/tags/web/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>在 Render 上部署 Alist V3</title>
+        <link>https://blog.nalanyinyun.ml/p/alist_render/</link>
+        <pubDate>Thu, 08 Dec 2022 21:06:19 +0800</pubDate>
+        
+        <guid>https://blog.nalanyinyun.ml/p/alist_render/</guid>
+        <description>&lt;img src="https://tva3.sinaimg.cn/large/0072Vf1pgy1foxkd6lx6jj31kw0w0wyb.jpg" alt="Featured image of post 在 Render 上部署 Alist V3" /&gt;&lt;h1 id=&#34;deploy-alist-on-render&#34;&gt;Deploy Alist on Render&lt;/h1&gt;
+&lt;h2 id=&#34;alist&#34;&gt;Alist&lt;/h2&gt;
+&lt;p&gt;在 GitHub 上 fork &lt;a class=&#34;link&#34; href=&#34;https://github.com/alist-org/alist-render&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Alist 的仓库&lt;/a&gt;&lt;br&gt;
+最好在 fork 的时候改一下仓库名&lt;/p&gt;
+&lt;h2 id=&#34;database-postgres&#34;&gt;Database (Postgres)&lt;/h2&gt;
+&lt;p&gt;在 Render 上部署 Alist 需要一个远程数据库,这里我用的是&lt;a class=&#34;link&#34; href=&#34;https://www.elephantsql.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ElephantSQL&lt;/a&gt;  &lt;del&gt;不得不说,这网站插图风格十分诡异&lt;/del&gt;&lt;br&gt;
+在 ElephantSQL 上注册一个数据库，在 Detail 界面会得到一堆信息，这些一会儿要用&lt;/p&gt;
+&lt;h2 id=&#34;render&#34;&gt;Render&lt;/h2&gt;
+&lt;p&gt;注册一个 Render 账号，进入 Dashboard 之后：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;点击 New+&lt;/li&gt;
+&lt;li&gt;选择 Web Service&lt;/li&gt;
+&lt;li&gt;连接到你的 Github 账户&lt;/li&gt;
+&lt;li&gt;选择刚才 fork 的 Github 仓库 (Branch 选择 v3)&lt;/li&gt;
+&lt;li&gt;填写 Name，选择 Region 等基础信息
+剩下的都别碰，划到最底下，点击 Advanced&lt;br&gt;
+点击 Add Environment Variable
+你需要将以下表格中的环境变量依次填入：
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Key&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;DB_HOST&lt;/td&gt;
+&lt;td&gt;填入 ElephantSQL 中的 Server 后的内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DB_NAME&lt;/td&gt;
+&lt;td&gt;填入 User &amp;amp; Default database 后的内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DB_PASS&lt;/td&gt;
+&lt;td&gt;填入 Password 后的内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DB_PORT&lt;/td&gt;
+&lt;td&gt;5234&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DB_SSL_MODE&lt;/td&gt;
+&lt;td&gt;verify-full 或 disable&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DB_TYPE&lt;/td&gt;
+&lt;td&gt;postgres&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DB_USER&lt;/td&gt;
+&lt;td&gt;与 DB_NAME 一致&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PORT&lt;/td&gt;
+&lt;td&gt;8080 或 443&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CDN&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://unpkg.com/alist-web@$version/dist/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://unpkg.com/alist-web@$version/dist/&lt;/a&gt; (可不填 Jsdelivr已被污染,不再考虑)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;点击最下方 Create Web Server&lt;br&gt;
+完成，可选进行进一步配置，如配置自定义域名，在 Settings 中&lt;/p&gt;
+&lt;h3 id=&#34;一些提示&#34;&gt;一些提示&lt;/h3&gt;
+&lt;p&gt;IANA 把 5432 端口唯一分配给了 PostgresSQL&lt;br&gt;
+若环境变量中无 CDN，默认使用本地 dist，速度较慢，推荐使用 Unpkg&lt;br&gt;
+Render 每月有 750 小时的在线时间，&lt;strong&gt;不要使用 UptimeBot 等阻止 Render 休眠&lt;/strong&gt;&lt;br&gt;
+Render 前 500GB 流量免费，尽量不要开启下载代理&lt;/p&gt;
+&lt;h2 id=&#34;完成&#34;&gt;完成&lt;/h2&gt;
+&lt;p&gt;享受 Alist 的强大功能，如果需要配置自定义域，推荐使用 Cloudflare 以便使用 CDN 和 WAF&lt;/p&gt;
+&lt;meting-js server=&#34;netease&#34; type=&#34;song&#34; id=&#34;1857521048&#34;&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

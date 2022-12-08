@@ -1,81 +1,39 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='GSI 什么是GSI GSI,中文名&amp;quot;通用系统镜像&amp;quot;,可以在支持Treble的设备上刷入GSI以便体验最新的Android操作系统
-Google的GSI是AOSP未经修改的,可在各种Android设备上运行
-GSI要求 刷入GSI的设备需符合以下要求:
-Bootloader已解锁 完全符合Treble要求 出场时搭载Android9或更高版本 搭载Android8或Android8.1的设备可能支持Treble,但在Android12及更高版本的GSI中,移除了对Android8或8.1的不完全Treble的兼容性
-设备需支持VNDK才能跨版本刷入Android版本的GSI
-检查GSI要求 运行以下命令以检查设备是否支持Treble
-1 adb shell getprop ro.treble.enabled 返回为True则支持,False则表示不兼容GSI
-运行以下命令检查设备是否支持VNDK
-1 2 adb shell cat /system/etc/ld.config.version_identifier.txt \ | grep -A 20 &amp;#34;\[vendor\]&amp;#34; 在输出的vendor部分中查找namespace.default.isolated
-若返回True,则代表设备可以安装跨版本的GSI,若返回false则不可
-GSI的架构类型必须与设备一致,运行此命令检查架构类型
-1 adb shell getprop ro.product.cpu.abi 也可使用 Treble Checker或Treble 信息 查看上述信息
-GSI选择 若您的设备支持A/B,或A-only但支持system-as-root,请选择文件名中带有&amp;quot;ab&amp;quot;字样的镜像
-若您的设备支持动态分区,则可以使用DSU
-若您的设备不支持system-as-root,也非A/B设备,请选择文件名中带有A-only字样的镜像
-刷写GSI 将GSI刷入至符合要求的任何Android设备
-重启到Fastboot,动态分区设备重启到Fastbootd
-擦除System
-1 fastboot erase system 刷入GSI
-1 fastboot flash system system.img 擦除用户数据和其他一些分区数据
-1 fastboot -W 若出现以下错误
-1 2 Resizing &amp;#39;system_a&amp;#39; FAILED (remote: &amp;#39;Not enough space to resize partition&amp;#39;) fastboot: error: Command failed 则说明系统分区空间不足,可能需要删除产品分区或扩容system'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='GSI 什么是 GSI GSI，中文名&amp;quot;通用系统镜像&amp;quot;,可以在支持 Treble 的设备上刷入 GSI 以便体验最新的 Android 操作系统
+Google 的 GSI 是 AOSP 未经修改的，可在各种 Android 设备上运行
+GSI 要求 刷入 GSI 的设备需符合以下要求：
+Bootloader 已解锁 完全符合 Treble 要求 出场时搭载 Android9 或更高版本 搭载 Android8 或 Android8.1 的设备可能支持 Treble，但在 Android12 及更高版本的 GSI 中，移除了对 Android8 或 8.1 的不完全 Treble 的兼容性
+设备需支持 VNDK 才能跨版本刷入 Android 版本的 GSI
+检查 GSI 要求 运行以下命令以检查设备是否支持 Treble
+TMD Chroma 不支持 Shell 高亮
+1 adb shell getprop ro.treble.enabled 返回为 True 则支持，False 则表示不兼容 GSI'>
 <title>Android GSI 介绍</title>
 
 <link rel='canonical' href='https://blog.nalanyinyun.ml/p/gsi/'>
 
 <link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='Android GSI 介绍'>
-<meta property='og:description' content='GSI 什么是GSI GSI,中文名&amp;quot;通用系统镜像&amp;quot;,可以在支持Treble的设备上刷入GSI以便体验最新的Android操作系统
-Google的GSI是AOSP未经修改的,可在各种Android设备上运行
-GSI要求 刷入GSI的设备需符合以下要求:
-Bootloader已解锁 完全符合Treble要求 出场时搭载Android9或更高版本 搭载Android8或Android8.1的设备可能支持Treble,但在Android12及更高版本的GSI中,移除了对Android8或8.1的不完全Treble的兼容性
-设备需支持VNDK才能跨版本刷入Android版本的GSI
-检查GSI要求 运行以下命令以检查设备是否支持Treble
-1 adb shell getprop ro.treble.enabled 返回为True则支持,False则表示不兼容GSI
-运行以下命令检查设备是否支持VNDK
-1 2 adb shell cat /system/etc/ld.config.version_identifier.txt \ | grep -A 20 &amp;#34;\[vendor\]&amp;#34; 在输出的vendor部分中查找namespace.default.isolated
-若返回True,则代表设备可以安装跨版本的GSI,若返回false则不可
-GSI的架构类型必须与设备一致,运行此命令检查架构类型
-1 adb shell getprop ro.product.cpu.abi 也可使用 Treble Checker或Treble 信息 查看上述信息
-GSI选择 若您的设备支持A/B,或A-only但支持system-as-root,请选择文件名中带有&amp;quot;ab&amp;quot;字样的镜像
-若您的设备支持动态分区,则可以使用DSU
-若您的设备不支持system-as-root,也非A/B设备,请选择文件名中带有A-only字样的镜像
-刷写GSI 将GSI刷入至符合要求的任何Android设备
-重启到Fastboot,动态分区设备重启到Fastbootd
-擦除System
-1 fastboot erase system 刷入GSI
-1 fastboot flash system system.img 擦除用户数据和其他一些分区数据
-1 fastboot -W 若出现以下错误
-1 2 Resizing &amp;#39;system_a&amp;#39; FAILED (remote: &amp;#39;Not enough space to resize partition&amp;#39;) fastboot: error: Command failed 则说明系统分区空间不足,可能需要删除产品分区或扩容system'>
+<meta property='og:description' content='GSI 什么是 GSI GSI，中文名&amp;quot;通用系统镜像&amp;quot;,可以在支持 Treble 的设备上刷入 GSI 以便体验最新的 Android 操作系统
+Google 的 GSI 是 AOSP 未经修改的，可在各种 Android 设备上运行
+GSI 要求 刷入 GSI 的设备需符合以下要求：
+Bootloader 已解锁 完全符合 Treble 要求 出场时搭载 Android9 或更高版本 搭载 Android8 或 Android8.1 的设备可能支持 Treble，但在 Android12 及更高版本的 GSI 中，移除了对 Android8 或 8.1 的不完全 Treble 的兼容性
+设备需支持 VNDK 才能跨版本刷入 Android 版本的 GSI
+检查 GSI 要求 运行以下命令以检查设备是否支持 Treble
+TMD Chroma 不支持 Shell 高亮
+1 adb shell getprop ro.treble.enabled 返回为 True 则支持，False 则表示不兼容 GSI'>
 <meta property='og:url' content='https://blog.nalanyinyun.ml/p/gsi/'>
 <meta property='og:site_name' content='Blog-Nalanyinyun'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Android' /><meta property='article:published_time' content='2022-11-14T20:41:03&#43;08:00'/><meta property='article:modified_time' content='2022-11-14T20:41:03&#43;08:00'/><meta property='og:image' content='https://tva4.sinaimg.cn/large/0072Vf1pgy1foxkjjz8vbj31hc0u0k80.jpg' />
 <meta name="twitter:title" content="Android GSI 介绍">
-<meta name="twitter:description" content="GSI 什么是GSI GSI,中文名&amp;quot;通用系统镜像&amp;quot;,可以在支持Treble的设备上刷入GSI以便体验最新的Android操作系统
-Google的GSI是AOSP未经修改的,可在各种Android设备上运行
-GSI要求 刷入GSI的设备需符合以下要求:
-Bootloader已解锁 完全符合Treble要求 出场时搭载Android9或更高版本 搭载Android8或Android8.1的设备可能支持Treble,但在Android12及更高版本的GSI中,移除了对Android8或8.1的不完全Treble的兼容性
-设备需支持VNDK才能跨版本刷入Android版本的GSI
-检查GSI要求 运行以下命令以检查设备是否支持Treble
-1 adb shell getprop ro.treble.enabled 返回为True则支持,False则表示不兼容GSI
-运行以下命令检查设备是否支持VNDK
-1 2 adb shell cat /system/etc/ld.config.version_identifier.txt \ | grep -A 20 &amp;#34;\[vendor\]&amp;#34; 在输出的vendor部分中查找namespace.default.isolated
-若返回True,则代表设备可以安装跨版本的GSI,若返回false则不可
-GSI的架构类型必须与设备一致,运行此命令检查架构类型
-1 adb shell getprop ro.product.cpu.abi 也可使用 Treble Checker或Treble 信息 查看上述信息
-GSI选择 若您的设备支持A/B,或A-only但支持system-as-root,请选择文件名中带有&amp;quot;ab&amp;quot;字样的镜像
-若您的设备支持动态分区,则可以使用DSU
-若您的设备不支持system-as-root,也非A/B设备,请选择文件名中带有A-only字样的镜像
-刷写GSI 将GSI刷入至符合要求的任何Android设备
-重启到Fastboot,动态分区设备重启到Fastbootd
-擦除System
-1 fastboot erase system 刷入GSI
-1 fastboot flash system system.img 擦除用户数据和其他一些分区数据
-1 fastboot -W 若出现以下错误
-1 2 Resizing &amp;#39;system_a&amp;#39; FAILED (remote: &amp;#39;Not enough space to resize partition&amp;#39;) fastboot: error: Command failed 则说明系统分区空间不足,可能需要删除产品分区或扩容system"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="GSI 什么是 GSI GSI，中文名&amp;quot;通用系统镜像&amp;quot;,可以在支持 Treble 的设备上刷入 GSI 以便体验最新的 Android 操作系统
+Google 的 GSI 是 AOSP 未经修改的，可在各种 Android 设备上运行
+GSI 要求 刷入 GSI 的设备需符合以下要求：
+Bootloader 已解锁 完全符合 Treble 要求 出场时搭载 Android9 或更高版本 搭载 Android8 或 Android8.1 的设备可能支持 Treble，但在 Android12 及更高版本的 GSI 中，移除了对 Android8 或 8.1 的不完全 Treble 的兼容性
+设备需支持 VNDK 才能跨版本刷入 Android 版本的 GSI
+检查 GSI 要求 运行以下命令以检查设备是否支持 Treble
+TMD Chroma 不支持 Shell 高亮
+1 adb shell getprop ro.treble.enabled 返回为 True 则支持，False 则表示不兼容 GSI"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://tva4.sinaimg.cn/large/0072Vf1pgy1foxkjjz8vbj31hc0u0k80.jpg' />
     <link rel="shortcut icon" href="/img/favicon.ico" />
 
@@ -288,14 +246,14 @@ GSI选择 若您的设备支持A/B,或A-only但支持system-as-root,请选择文
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#什么是gsi">什么是GSI</a></li>
-    <li><a href="#gsi要求">GSI要求</a>
+    <li><a href="#什么是-gsi">什么是 GSI</a></li>
+    <li><a href="#gsi-要求">GSI 要求</a>
       <ol>
-        <li><a href="#检查gsi要求">检查GSI要求</a></li>
+        <li><a href="#检查-gsi-要求">检查 GSI 要求</a></li>
       </ol>
     </li>
-    <li><a href="#gsi选择">GSI选择</a></li>
-    <li><a href="#刷写gsi">刷写GSI</a></li>
+    <li><a href="#gsi-选择">GSI 选择</a></li>
+    <li><a href="#刷写-gsi">刷写 GSI</a></li>
   </ol>
 </nav>
         </div>
@@ -370,62 +328,63 @@ GSI选择 若您的设备支持A/B,或A-only但支持system-as-root,请选择文
     
     
     <h1 id="gsi">GSI</h1>
-<h2 id="什么是gsi">什么是GSI</h2>
-<p>GSI,中文名&quot;通用系统镜像&quot;,可以在支持Treble的设备上刷入GSI以便体验最新的Android操作系统<br>
-Google的GSI是AOSP未经修改的,可在各种Android设备上运行</p>
-<h2 id="gsi要求">GSI要求</h2>
-<p>刷入GSI的设备需符合以下要求:</p>
+<h2 id="什么是-gsi">什么是 GSI</h2>
+<p>GSI，中文名&quot;通用系统镜像&quot;,可以在支持 Treble 的设备上刷入 GSI 以便体验最新的 Android 操作系统<br>
+Google 的 GSI 是 AOSP 未经修改的，可在各种 Android 设备上运行</p>
+<h2 id="gsi-要求">GSI 要求</h2>
+<p>刷入 GSI 的设备需符合以下要求：</p>
 <ul>
-<li>Bootloader已解锁</li>
-<li>完全符合Treble要求</li>
-<li>出场时搭载Android9或更高版本</li>
+<li>Bootloader 已解锁</li>
+<li>完全符合 Treble 要求</li>
+<li>出场时搭载 Android9 或更高版本</li>
 </ul>
-<p>搭载Android8或Android8.1的设备可能支持Treble,但在Android12及更高版本的GSI中,移除了对Android8或8.1的不完全Treble的兼容性<br>
-设备需支持VNDK才能跨版本刷入Android版本的GSI</p>
-<h3 id="检查gsi要求">检查GSI要求</h3>
-<p>运行以下命令以检查设备是否支持Treble</p>
+<p>搭载 Android8 或 Android8.1 的设备可能支持 Treble，但在 Android12 及更高版本的 GSI 中，移除了对 Android8 或 8.1 的不完全 Treble 的兼容性<br>
+设备需支持 VNDK 才能跨版本刷入 Android 版本的 GSI</p>
+<h3 id="检查-gsi-要求">检查 GSI 要求</h3>
+<p>运行以下命令以检查设备是否支持 Treble</p>
+<p><del>TMD Chroma 不支持 Shell 高亮</del></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">adb</span> <span class="nx">shell</span> <span class="nx">getprop</span> <span class="nx">ro</span><span class="p">.</span><span class="nx">treble</span><span class="p">.</span><span class="nx">enabled</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">adb shell getprop ro.treble.enabled
+</span></span></code></pre></td></tr></table>
 </div>
-</div>
-<p>返回为True则支持,False则表示不兼容GSI</p>
-<p>运行以下命令检查设备是否支持VNDK</p>
+</div><p>返回为 True 则支持，False 则表示不兼容 GSI</p>
+<p>运行以下命令检查设备是否支持 VNDK</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">adb</span> <span class="nx">shell</span> <span class="nx">cat</span> <span class="o">/</span><span class="nx">system</span><span class="o">/</span><span class="nx">etc</span><span class="o">/</span><span class="nx">ld</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">version_identifier</span><span class="p">.</span><span class="nx">txt</span> \
-</span></span><span class="line"><span class="cl"><span class="p">|</span> <span class="nx">grep</span> <span class="o">-</span><span class="nx">A</span> <span class="mi">20</span> <span class="s">&#34;\[vendor\]&#34;</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">adb shell cat /system/etc/ld.config.version_identifier.txt \
+</span></span><span class="line"><span class="cl">| grep -A 20 &#34;\[vendor\]&#34;
+</span></span></code></pre></td></tr></table>
 </div>
-</div>
-<p>在输出的vendor部分中查找namespace.default.isolated<br>
-若返回True,则代表设备可以安装跨版本的GSI,若返回false则不可</p>
-<p>GSI的架构类型必须与设备一致,运行此命令检查架构类型</p>
+</div><p>在输出的 vendor 部分中查找 namespace.default.isolated<br>
+若返回 True，则代表设备可以安装跨版本的 GSI，若返回 false 则不可</p>
+<p>GSI 的架构类型必须与设备一致，运行此命令检查架构类型</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">adb shell getprop ro.product.cpu.abi</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">adb shell getprop ro.product.cpu.abi
+</span></span></code></pre></td></tr></table>
 </div>
-</div>
-<p>也可使用 <a class="link" href="https://play.google.com/store/apps/details?id=com.blackcurrantstudioz.TrebleCheck"  target="_blank" rel="noopener"
+</div><p>也可使用 <a class="link" href="https://play.google.com/store/apps/details?id=com.blackcurrantstudioz.TrebleCheck"  target="_blank" rel="noopener"
     >Treble Checker</a>或<a class="link" href="https://play.google.com/store/apps/details?id=tk.hack5.treblecheck"  target="_blank" rel="noopener"
     >Treble 信息</a> 查看上述信息</p>
-<h2 id="gsi选择">GSI选择</h2>
+<h2 id="gsi-选择">GSI 选择</h2>
 <p>若您的设备支持A/B,或A-only但支持system-as-root,请选择文件名中带有&quot;ab&quot;字样的镜像<br>
-若您的设备支持动态分区,则可以使用DSU<br>
-若您的设备不支持system-as-root,也非A/B设备,请选择文件名中带有A-only字样的镜像</p>
-<h2 id="刷写gsi">刷写GSI</h2>
-<p>将GSI刷入至符合要求的任何Android设备<br>
-重启到Fastboot,动态分区设备重启到Fastbootd</p>
-<p>擦除System</p>
+若您的设备支持动态分区，则可以使用 DSU<br>
+若您的设备不支持 system-as-root，也非 A/B 设备，请选择文件名中带有 A-only 字样的镜像</p>
+<h2 id="刷写-gsi">刷写 GSI</h2>
+<p>将 GSI 刷入至符合要求的任何 Android 设备<br>
+重启到 Fastboot，动态分区设备重启到 Fastbootd</p>
+<p>擦除 System</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -434,7 +393,7 @@ Google的GSI是AOSP未经修改的,可在各种Android设备上运行</p>
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">fastboot erase system
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>刷入GSI</p>
+</div><p>刷入 GSI</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -463,7 +422,7 @@ Google的GSI是AOSP未经修改的,可在各种Android设备上运行</p>
 </span></span><span class="line"><span class="cl">fastboot: error: Command failed
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>则说明系统分区空间不足,可能需要删除产品分区或扩容system</p>
+</div><p>则说明系统分区空间不足，可能需要删除产品分区或扩容 system</p>
 <p>更改导航栏模式输入</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -535,6 +494,25 @@ Google的GSI是AOSP未经修改的,可在各种Android设备上运行</p>
             
                 
 <article class="has-image">
+    <a href="/p/alist_render/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://tva3.sinaimg.cn/large/0072Vf1pgy1foxkd6lx6jj31kw0w0wyb.jpg" loading="lazy" data-key="Alist_render" data-hash="https://tva3.sinaimg.cn/large/0072Vf1pgy1foxkd6lx6jj31kw0w0wyb.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">在 Render 上部署 Alist V3</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
     <a href="/p/d_c/">
         
         
@@ -584,26 +562,7 @@ Google的GSI是AOSP未经修改的,可在各种Android设备上运行</p>
         
 
         <div class="article-details">
-            <h2 class="article-title">在Hugo中添加Meting-JS和Aplayer</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/bdst/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="https://tva3.sinaimg.cn/large/0076Ry2fly1fqld5uji19j31hc0u0e81.jpg" loading="lazy" data-key="bdst" data-hash="https://tva3.sinaimg.cn/large/0076Ry2fly1fqld5uji19j31hc0u0e81.jpg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">使用Hugo&#43;Github Action&#43;Cloudflare Pages搭建博客</h2>
+            <h2 class="article-title">在 Hugo 中添加 Meting-JS 和 Aplayer</h2>
         </div>
     </a>
 </article>

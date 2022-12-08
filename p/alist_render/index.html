@@ -1,55 +1,37 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='快速禁用Magisk模块 Magisk模块标识 Magisk模块位于/data/adb/modules
-在此目录下的所有文件夹均对应模块
-模块目录中共有三种标识,均为文件,我们也从这下手
-标识:
-skip_mount(若存在,Magisk不会挂载system) disable(若存在,模块在下次启动时会被禁用) remove(若存在,模块在下次启动时会被禁用) 在第三方Recovey中管理模块 在/data/adb/modules中的模块文件夹打开终端,当然,也可以使用Adb shell
-输入
-1 touch disable 即可禁用此模块(使用touch创建disable)
-同理,输入
-1 touch remove 即可移除模块
-不要直接删除模块文件夹,可能会导致无法修复的问题
-通过ADB移除所有模块 启动ADB工具,并输入
-1 adb wait-for-device shell magisk --remove-modules 再连接设备,并开机(System)
-若还是无法启动,强制重启一次即可'>
-<title>如何使用第三方Recovery禁用Magisk模块</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Deploy Alist on Render Alist 在 GitHub 上 fork Alist 的仓库
+最好在 fork 的时候改一下仓库名
+Database (Postgres) 在 Render 上部署 Alist 需要一个远程数据库,这里我用的是ElephantSQL 不得不说,这网站插图风格十分诡异
+在 ElephantSQL 上注册一个数据库，在 Detail 界面会得到一堆信息，这些一会儿要用
+Render 注册一个 Render 账号，进入 Dashboard 之后：
+点击 New&#43; 选择 Web Service 连接到你的 Github 账户 选择刚才 fork 的 Github 仓库 (Branch 选择 v3) 填写 Name，选择 Region 等基础信息 剩下的都别碰，划到最底下，点击 Advanced
+点击 Add Environment Variable 你需要将以下表格中的环境变量依次填入： Key Value DB_HOST 填入 ElephantSQL 中的 Server 后的内容 DB_NAME 填入 User &amp;amp; Default database 后的内容 DB_PASS 填入 Password 后的内容 DB_PORT 5234 DB_SSL_MODE verify-full 或 disable DB_TYPE postgres DB_USER 与 DB_NAME 一致 PORT 8080 或 443 CDN https://unpkg.'>
+<title>在 Render 上部署 Alist V3</title>
 
-<link rel='canonical' href='https://blog.nalanyinyun.ml/p/magisk/'>
+<link rel='canonical' href='https://blog.nalanyinyun.ml/p/alist_render/'>
 
-<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='如何使用第三方Recovery禁用Magisk模块'>
-<meta property='og:description' content='快速禁用Magisk模块 Magisk模块标识 Magisk模块位于/data/adb/modules
-在此目录下的所有文件夹均对应模块
-模块目录中共有三种标识,均为文件,我们也从这下手
-标识:
-skip_mount(若存在,Magisk不会挂载system) disable(若存在,模块在下次启动时会被禁用) remove(若存在,模块在下次启动时会被禁用) 在第三方Recovey中管理模块 在/data/adb/modules中的模块文件夹打开终端,当然,也可以使用Adb shell
-输入
-1 touch disable 即可禁用此模块(使用touch创建disable)
-同理,输入
-1 touch remove 即可移除模块
-不要直接删除模块文件夹,可能会导致无法修复的问题
-通过ADB移除所有模块 启动ADB工具,并输入
-1 adb wait-for-device shell magisk --remove-modules 再连接设备,并开机(System)
-若还是无法启动,强制重启一次即可'>
-<meta property='og:url' content='https://blog.nalanyinyun.ml/p/magisk/'>
+<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='在 Render 上部署 Alist V3'>
+<meta property='og:description' content='Deploy Alist on Render Alist 在 GitHub 上 fork Alist 的仓库
+最好在 fork 的时候改一下仓库名
+Database (Postgres) 在 Render 上部署 Alist 需要一个远程数据库,这里我用的是ElephantSQL 不得不说,这网站插图风格十分诡异
+在 ElephantSQL 上注册一个数据库，在 Detail 界面会得到一堆信息，这些一会儿要用
+Render 注册一个 Render 账号，进入 Dashboard 之后：
+点击 New&#43; 选择 Web Service 连接到你的 Github 账户 选择刚才 fork 的 Github 仓库 (Branch 选择 v3) 填写 Name，选择 Region 等基础信息 剩下的都别碰，划到最底下，点击 Advanced
+点击 Add Environment Variable 你需要将以下表格中的环境变量依次填入： Key Value DB_HOST 填入 ElephantSQL 中的 Server 后的内容 DB_NAME 填入 User &amp;amp; Default database 后的内容 DB_PASS 填入 Password 后的内容 DB_PORT 5234 DB_SSL_MODE verify-full 或 disable DB_TYPE postgres DB_USER 与 DB_NAME 一致 PORT 8080 或 443 CDN https://unpkg.'>
+<meta property='og:url' content='https://blog.nalanyinyun.ml/p/alist_render/'>
 <meta property='og:site_name' content='Blog-Nalanyinyun'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Android' /><meta property='article:tag' content='Magisk' /><meta property='article:tag' content='short' /><meta property='article:published_time' content='2022-11-15T20:55:56&#43;08:00'/><meta property='article:modified_time' content='2022-11-15T20:55:56&#43;08:00'/><meta property='og:image' content='https://tva2.sinaimg.cn/large/0072Vf1pgy1foxk76lzl8j31hc0u0dxk.jpg' />
-<meta name="twitter:title" content="如何使用第三方Recovery禁用Magisk模块">
-<meta name="twitter:description" content="快速禁用Magisk模块 Magisk模块标识 Magisk模块位于/data/adb/modules
-在此目录下的所有文件夹均对应模块
-模块目录中共有三种标识,均为文件,我们也从这下手
-标识:
-skip_mount(若存在,Magisk不会挂载system) disable(若存在,模块在下次启动时会被禁用) remove(若存在,模块在下次启动时会被禁用) 在第三方Recovey中管理模块 在/data/adb/modules中的模块文件夹打开终端,当然,也可以使用Adb shell
-输入
-1 touch disable 即可禁用此模块(使用touch创建disable)
-同理,输入
-1 touch remove 即可移除模块
-不要直接删除模块文件夹,可能会导致无法修复的问题
-通过ADB移除所有模块 启动ADB工具,并输入
-1 adb wait-for-device shell magisk --remove-modules 再连接设备,并开机(System)
-若还是无法启动,强制重启一次即可"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://tva2.sinaimg.cn/large/0072Vf1pgy1foxk76lzl8j31hc0u0dxk.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Web' /><meta property='article:published_time' content='2022-12-08T21:06:19&#43;08:00'/><meta property='article:modified_time' content='2022-12-08T21:06:19&#43;08:00'/><meta property='og:image' content='https://tva3.sinaimg.cn/large/0072Vf1pgy1foxkd6lx6jj31kw0w0wyb.jpg' />
+<meta name="twitter:title" content="在 Render 上部署 Alist V3">
+<meta name="twitter:description" content="Deploy Alist on Render Alist 在 GitHub 上 fork Alist 的仓库
+最好在 fork 的时候改一下仓库名
+Database (Postgres) 在 Render 上部署 Alist 需要一个远程数据库,这里我用的是ElephantSQL 不得不说,这网站插图风格十分诡异
+在 ElephantSQL 上注册一个数据库，在 Detail 界面会得到一堆信息，这些一会儿要用
+Render 注册一个 Render 账号，进入 Dashboard 之后：
+点击 New&#43; 选择 Web Service 连接到你的 Github 账户 选择刚才 fork 的 Github 仓库 (Branch 选择 v3) 填写 Name，选择 Region 等基础信息 剩下的都别碰，划到最底下，点击 Advanced
+点击 Add Environment Variable 你需要将以下表格中的环境变量依次填入： Key Value DB_HOST 填入 ElephantSQL 中的 Server 后的内容 DB_NAME 填入 User &amp;amp; Default database 后的内容 DB_PASS 填入 Password 后的内容 DB_PORT 5234 DB_SSL_MODE verify-full 或 disable DB_TYPE postgres DB_USER 与 DB_NAME 一致 PORT 8080 或 443 CDN https://unpkg."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://tva3.sinaimg.cn/large/0072Vf1pgy1foxkd6lx6jj31kw0w0wyb.jpg' />
     <link rel="shortcut icon" href="/img/favicon.ico" />
 
 <link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
@@ -261,9 +243,14 @@ skip_mount(若存在,Magisk不会挂载system) disable(若存在,模块在下次
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#magisk模块标识">Magisk模块标识</a></li>
-    <li><a href="#在第三方recovey中管理模块">在第三方Recovey中管理模块</a></li>
-    <li><a href="#通过adb移除所有模块">通过ADB移除所有模块</a></li>
+    <li><a href="#alist">Alist</a></li>
+    <li><a href="#database-postgres">Database (Postgres)</a></li>
+    <li><a href="#render">Render</a>
+      <ol>
+        <li><a href="#一些提示">一些提示</a></li>
+      </ol>
+    </li>
+    <li><a href="#完成">完成</a></li>
   </ol>
 </nav>
         </div>
@@ -278,9 +265,9 @@ skip_mount(若存在,Magisk不会挂载system) disable(若存在,模块在下次
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/magisk/">
+            <a href="/p/alist_render/">
                 
-                    <img src="https://tva2.sinaimg.cn/large/0072Vf1pgy1foxk76lzl8j31hc0u0dxk.jpg" loading="lazy" alt="Featured image of post 如何使用第三方Recovery禁用Magisk模块" />
+                    <img src="https://tva3.sinaimg.cn/large/0072Vf1pgy1foxkd6lx6jj31kw0w0wyb.jpg" loading="lazy" alt="Featured image of post 在 Render 上部署 Alist V3" />
                 
             </a>
         </div>
@@ -299,7 +286,7 @@ skip_mount(若存在,Magisk不会挂载system) disable(若存在,模块在下次
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/magisk/">如何使用第三方Recovery禁用Magisk模块</a>
+            <a href="/p/alist_render/">在 Render 上部署 Alist V3</a>
         </h2>
     
         
@@ -321,7 +308,7 @@ skip_mount(若存在,Magisk不会挂载system) disable(若存在,模块在下次
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Nov 15, 2022</time>
+                <time class="article-time--published">Dec 08, 2022</time>
             </div>
         
 
@@ -337,53 +324,85 @@ skip_mount(若存在,Magisk不会挂载system) disable(若存在,模块在下次
     <section class="article-content">
     
     
-    <h1 id="快速禁用magisk模块">快速禁用Magisk模块</h1>
-<h2 id="magisk模块标识">Magisk模块标识</h2>
-<p>Magisk模块位于<code>/data/adb/modules</code><br>
-在此目录下的所有文件夹均对应模块<br>
-模块目录中共有三种标识,均为文件,我们也从这下手<br>
-标识:</p>
-<ul>
-<li>skip_mount(若存在,Magisk不会挂载system)</li>
-<li>disable(若存在,模块在下次启动时会被禁用)</li>
-<li>remove(若存在,模块在下次启动时会被禁用)</li>
-</ul>
-<h2 id="在第三方recovey中管理模块">在第三方Recovey中管理模块</h2>
-<p>在<code>/data/adb/modules</code>中的模块文件夹打开终端,当然,也可以使用<code>Adb shell</code><br>
-输入</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">touch disable
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>即可禁用此模块(使用<code>touch</code>创建<code>disable</code>)<br>
-同理,输入</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">touch remove
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>即可移除模块</p>
-<p><font color="red">不要直接删除模块文件夹,可能会导致无法修复的问题</font></p>
-<h2 id="通过adb移除所有模块">通过ADB移除所有模块</h2>
-<p>启动ADB工具,并输入</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">adb wait-for-device shell magisk --remove-modules
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>再连接设备,并开机(System)<br>
-若还是无法启动,强制重启一次即可</p>
-<meting-js server="netease" type="song" id="1992552055">
+    <h1 id="deploy-alist-on-render">Deploy Alist on Render</h1>
+<h2 id="alist">Alist</h2>
+<p>在 GitHub 上 fork <a class="link" href="https://github.com/alist-org/alist-render"  target="_blank" rel="noopener"
+    >Alist 的仓库</a><br>
+最好在 fork 的时候改一下仓库名</p>
+<h2 id="database-postgres">Database (Postgres)</h2>
+<p>在 Render 上部署 Alist 需要一个远程数据库,这里我用的是<a class="link" href="https://www.elephantsql.com/"  target="_blank" rel="noopener"
+    >ElephantSQL</a>  <del>不得不说,这网站插图风格十分诡异</del><br>
+在 ElephantSQL 上注册一个数据库，在 Detail 界面会得到一堆信息，这些一会儿要用</p>
+<h2 id="render">Render</h2>
+<p>注册一个 Render 账号，进入 Dashboard 之后：</p>
+<ol>
+<li>点击 New+</li>
+<li>选择 Web Service</li>
+<li>连接到你的 Github 账户</li>
+<li>选择刚才 fork 的 Github 仓库 (Branch 选择 v3)</li>
+<li>填写 Name，选择 Region 等基础信息
+剩下的都别碰，划到最底下，点击 Advanced<br>
+点击 Add Environment Variable
+你需要将以下表格中的环境变量依次填入：
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DB_HOST</td>
+<td>填入 ElephantSQL 中的 Server 后的内容</td>
+</tr>
+<tr>
+<td>DB_NAME</td>
+<td>填入 User &amp; Default database 后的内容</td>
+</tr>
+<tr>
+<td>DB_PASS</td>
+<td>填入 Password 后的内容</td>
+</tr>
+<tr>
+<td>DB_PORT</td>
+<td>5234</td>
+</tr>
+<tr>
+<td>DB_SSL_MODE</td>
+<td>verify-full 或 disable</td>
+</tr>
+<tr>
+<td>DB_TYPE</td>
+<td>postgres</td>
+</tr>
+<tr>
+<td>DB_USER</td>
+<td>与 DB_NAME 一致</td>
+</tr>
+<tr>
+<td>PORT</td>
+<td>8080 或 443</td>
+</tr>
+<tr>
+<td>CDN</td>
+<td><a class="link" href="https://unpkg.com/alist-web@$version/dist/"  target="_blank" rel="noopener"
+    >https://unpkg.com/alist-web@$version/dist/</a> (可不填 Jsdelivr已被污染,不再考虑)</td>
+</tr>
+</tbody>
+</table></div>
+</li>
+</ol>
+<p>点击最下方 Create Web Server<br>
+完成，可选进行进一步配置，如配置自定义域名，在 Settings 中</p>
+<h3 id="一些提示">一些提示</h3>
+<p>IANA 把 5432 端口唯一分配给了 PostgresSQL<br>
+若环境变量中无 CDN，默认使用本地 dist，速度较慢，推荐使用 Unpkg<br>
+Render 每月有 750 小时的在线时间，<strong>不要使用 UptimeBot 等阻止 Render 休眠</strong><br>
+Render 前 500GB 流量免费，尽量不要开启下载代理</p>
+<h2 id="完成">完成</h2>
+<p>享受 Alist 的强大功能，如果需要配置自定义域，推荐使用 Cloudflare 以便使用 CDN 和 WAF</p>
+<meting-js server="netease" type="song" id="1857521048">
 
 </section>
 
@@ -392,11 +411,7 @@ skip_mount(若存在,Magisk不会挂载system) disable(若存在,模块在下次
     
     <section class="article-tags">
         
-            <a href="/tags/android/">Android</a>
-        
-            <a href="/tags/magisk/">Magisk</a>
-        
-            <a href="/tags/short/">short</a>
+            <a href="/tags/web/">Web</a>
         
     </section>
 
@@ -427,44 +442,6 @@ skip_mount(若存在,Magisk不会挂载system) disable(若存在,模块在下次
     <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
-            
-                
-<article class="has-image">
-    <a href="/p/gsi/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxkjjz8vbj31hc0u0k80.jpg" loading="lazy" data-key="GSI" data-hash="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxkjjz8vbj31hc0u0k80.jpg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Android GSI 介绍</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/alist_render/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="https://tva3.sinaimg.cn/large/0072Vf1pgy1foxkd6lx6jj31kw0w0wyb.jpg" loading="lazy" data-key="Alist_render" data-hash="https://tva3.sinaimg.cn/large/0072Vf1pgy1foxkd6lx6jj31kw0w0wyb.jpg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">在 Render 上部署 Alist V3</h2>
-        </div>
-    </a>
-</article>
-
             
                 
 <article class="has-image">
@@ -518,6 +495,44 @@ skip_mount(若存在,Magisk不会挂载system) disable(若存在,模块在下次
 
         <div class="article-details">
             <h2 class="article-title">在 Hugo 中添加 Meting-JS 和 Aplayer</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/magisk/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://tva2.sinaimg.cn/large/0072Vf1pgy1foxk76lzl8j31hc0u0dxk.jpg" loading="lazy" data-key="Magisk" data-hash="https://tva2.sinaimg.cn/large/0072Vf1pgy1foxk76lzl8j31hc0u0dxk.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">如何使用第三方Recovery禁用Magisk模块</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/gsi/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxkjjz8vbj31hc0u0k80.jpg" loading="lazy" data-key="GSI" data-hash="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxkjjz8vbj31hc0u0k80.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Android GSI 介绍</h2>
         </div>
     </a>
 </article>
