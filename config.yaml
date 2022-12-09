@@ -110,7 +110,7 @@ params:
                 placeholder:
 
         twikoo:
-            envId: https://twikoo-one-phi.vercel.app/
+            envId: https://comment.nalanyinyun.ml/
             region: 
             path:
             lang: zh-CN
