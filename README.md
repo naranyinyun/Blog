@@ -1,4 +1,4 @@
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/naranyinyun/Blog/Hugo%20Build) ![GitHub top language](https://img.shields.io/github/languages/top/naranyinyun/Blog) ![GitHub](https://img.shields.io/github/license/naranyinyun/Blog) ![Website](https://img.shields.io/website?url=https%3A%2F%2Fblog.nalanyinyun.ml%2F) ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/naranyinyun/Blog) 
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/naranyinyun/Blog/hugo-GitHub_Action.yml?branch=main) ![GitHub top language](https://img.shields.io/github/languages/top/naranyinyun/Blog) ![GitHub](https://img.shields.io/github/license/naranyinyun/Blog) ![Website](https://img.shields.io/website?url=https%3A%2F%2Fblog.nalanyinyun.ml%2F) ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/naranyinyun/Blog) 
 # 这是什么
 这是一个基于Hugo的博客，她使用的主题是Stack，部署在Cloudflare Pages上
 # 为什么仓库是公开的
