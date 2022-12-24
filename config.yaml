@@ -43,7 +43,7 @@ params:
 
     footer:
         since: 2022
-        customText: Opensource Under GPL 3.0.
+        customText: Opensource Under AGPL 3.0.
 
     dateFormat:
         published: Jan 02, 2006
