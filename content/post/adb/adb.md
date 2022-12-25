@@ -1,5 +1,5 @@
 ---
-title: "配置 ADB 环境和基础用法"
+title: "配置 ADB 环境"
 date: 2022-12-25T19:37:38+08:00
 draft: false
 slug: "Adb"
