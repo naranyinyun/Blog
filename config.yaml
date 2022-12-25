@@ -51,7 +51,7 @@ params:
 
     sidebar:
         emoji: 
-        subtitle: Record ErveryThing I Know
+        subtitle: 告诉你一个小秘密,向下滑能看到第二页! q(≧▽≦q)
         avatar:
             enabled: true
             local: false
