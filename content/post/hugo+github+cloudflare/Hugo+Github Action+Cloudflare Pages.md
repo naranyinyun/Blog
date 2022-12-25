@@ -67,7 +67,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
+          hugo-version: '0.108.0' #0.109.0 会出构建问题，我也不知道为啥
           # extended: true
 
       - name: Build
