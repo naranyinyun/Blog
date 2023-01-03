@@ -3,7 +3,7 @@ title: "如何使用第三方 Recovery 禁用 Magisk 模块"
 date: 2022-11-15T20:55:56+08:00
 draft: false
 slug: "Magisk"
-image: "https://tva2.sinaimg.cn/large/0072Vf1pgy1foxk76lzl8j31hc0u0dxk.jpg"
+image: "https://tvax3.sinaimg.cn/large/0072Vf1pgy1foxk76lzl8j31hc0u0dxk.jpg"
 tags: ["Android","Magisk","short"]
 categories: ["Technology"]
 ---

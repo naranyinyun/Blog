@@ -3,7 +3,7 @@ title: "配置 ADB 环境"
 date: 2022-12-25T19:37:38+08:00
 draft: false
 slug: "Adb"
-image: "https://tva4.sinaimg.cn/large/0072Vf1pgy1foxkf6k4jrj31hc0u0k6b.jpg"
+image: "https://tvax3.sinaimg.cn/large/0072Vf1pgy1foxkf6k4jrj31hc0u0k6b.jpg"
 tags: ["Android","Developer"]
 categories: ["Technology"]
 ---

@@ -1,26 +1,26 @@
 ---
-title: "如何在Windows环境下使用BBdown"
+title: "如何在 Windows 环境下使用 BBdown"
 slug: "bbdown"
 date: 2022-11-10T21:06:57+08:00
 draft: false
-image: "https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkfg4cj2j31hc0u01a9.jpg"
+image: "https://tvax3.sinaimg.cn/large/0072Vf1pgy1foxkfg4cj2j31hc0u01a9.jpg"
 tags: ["BiliBili","CLI","Windows"]
 categories: ["Technology"]
 ---
-# 配置BBdown
+# 配置 BBdown
 ## 本体
-从[BBdown](https://github.com/nilaoda/BBDown)的Github下载BBdown程序并添加环境变量(不加也行)
+从[BBdown](https://github.com/nilaoda/BBDown)的 Github 下载 BBdown 程序并添加环境变量 (不加也行)
 ## 依赖
-使用BBdown需要FFmpeg或mp4box  
-从[FFmpeg](https://ffmpeg.org/)下载FFmpeg并配置环境变量(必须配置)
-# 使用BBdown
+使用 BBdown 需要 FFmpeg 或 mp4box  
+从[FFmpeg](https://ffmpeg.org/)下载 FFmpeg 并配置环境变量 (必须配置)
+# 使用 BBdown
 打开Powershell/CMD  
-我这里没有添加环境变量,所以在BBdown所在目录打开Powershell/CMD  
-运行BBdown  
+我这里没有添加环境变量，所以在 BBdown 所在目录打开 Powershell/CMD  
+运行 BBdown  
 ```
 ./bbdown
 ```
-登录BiliBili  
+登录 BiliBili  
 ```
 ./bbdown login
 ```

@@ -3,7 +3,7 @@ title: "在 Render 上部署 Alist V3"
 date: 2022-12-08T21:06:19+08:00
 draft: false
 slug: "Alist_render"
-image: "https://tva3.sinaimg.cn/large/0072Vf1pgy1foxkd6lx6jj31kw0w0wyb.jpg"
+image: "https://tvax3.sinaimg.cn/large/0072Vf1pgy1foxkd6lx6jj31kw0w0wyb.jpg"
 tags: ["Web"]
 categories: ["Technology"]
 ---

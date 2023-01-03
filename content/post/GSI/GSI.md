@@ -3,7 +3,7 @@ title: "Android GSI 介绍"
 date: 2022-11-14T20:41:03+08:00
 draft: false
 slug: "GSI"
-image: "https://tva4.sinaimg.cn/large/0072Vf1pgy1foxkjjz8vbj31hc0u0k80.jpg"
+image: "https://tvax3.sinaimg.cn/large/0072Vf1pgy1foxkjjz8vbj31hc0u0k80.jpg"
 tags: ["Android"]
 categories: ["Technology"]
 ---
