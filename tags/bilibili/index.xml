@@ -7,23 +7,23 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Thu, 10 Nov 2022 21:06:57 +0800</lastBuildDate><atom:link href="https://blog.nalanyinyun.ml/tags/bilibili/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>如何在Windows环境下使用BBdown</title>
+        <title>如何在 Windows 环境下使用 BBdown</title>
         <link>https://blog.nalanyinyun.ml/p/bbdown/</link>
         <pubDate>Thu, 10 Nov 2022 21:06:57 +0800</pubDate>
         
         <guid>https://blog.nalanyinyun.ml/p/bbdown/</guid>
-        <description>&lt;img src="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkfg4cj2j31hc0u01a9.jpg" alt="Featured image of post 如何在Windows环境下使用BBdown" /&gt;&lt;h1 id=&#34;配置bbdown&#34;&gt;配置BBdown&lt;/h1&gt;
+        <description>&lt;img src="https://tvax3.sinaimg.cn/large/0072Vf1pgy1foxkfg4cj2j31hc0u01a9.jpg" alt="Featured image of post 如何在 Windows 环境下使用 BBdown" /&gt;&lt;h1 id=&#34;配置-bbdown&#34;&gt;配置 BBdown&lt;/h1&gt;
 &lt;h2 id=&#34;本体&#34;&gt;本体&lt;/h2&gt;
 &lt;p&gt;从&lt;a class=&#34;link&#34; href=&#34;https://github.com/nilaoda/BBDown&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;BBdown&lt;/a&gt;的Github下载BBdown程序并添加环境变量(不加也行)&lt;/p&gt;
+    &gt;BBdown&lt;/a&gt;的 Github 下载 BBdown 程序并添加环境变量 (不加也行)&lt;/p&gt;
 &lt;h2 id=&#34;依赖&#34;&gt;依赖&lt;/h2&gt;
-&lt;p&gt;使用BBdown需要FFmpeg或mp4box&lt;br&gt;
+&lt;p&gt;使用 BBdown 需要 FFmpeg 或 mp4box&lt;br&gt;
 从&lt;a class=&#34;link&#34; href=&#34;https://ffmpeg.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;FFmpeg&lt;/a&gt;下载FFmpeg并配置环境变量(必须配置)&lt;/p&gt;
-&lt;h1 id=&#34;使用bbdown&#34;&gt;使用BBdown&lt;/h1&gt;
+    &gt;FFmpeg&lt;/a&gt;下载 FFmpeg 并配置环境变量 (必须配置)&lt;/p&gt;
+&lt;h1 id=&#34;使用-bbdown&#34;&gt;使用 BBdown&lt;/h1&gt;
 &lt;p&gt;打开Powershell/CMD&lt;br&gt;
-我这里没有添加环境变量,所以在BBdown所在目录打开Powershell/CMD&lt;br&gt;
-运行BBdown&lt;/p&gt;
+我这里没有添加环境变量，所以在 BBdown 所在目录打开 Powershell/CMD&lt;br&gt;
+运行 BBdown&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -32,7 +32,7 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./bbdown
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;登录BiliBili&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;登录 BiliBili&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1

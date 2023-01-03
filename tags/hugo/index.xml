@@ -12,57 +12,57 @@
         <pubDate>Fri, 02 Dec 2022 12:54:25 +0800</pubDate>
         
         <guid>https://blog.nalanyinyun.ml/p/why-hugo/</guid>
-        <description>&lt;img src="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxli0u4b3j31hc0u0qoj.jpg" alt="Featured image of post 我和 Hugo 的爱恨情仇" /&gt;&lt;h1 id=&#34;hugo&#34;&gt;Hugo&lt;/h1&gt;
+        <description>&lt;img src="https://tvax3.sinaimg.cn/large/0072Vf1pgy1foxli0u4b3j31hc0u0qoj.jpg" alt="Featured image of post 我和 Hugo 的爱恨情仇" /&gt;&lt;h1 id=&#34;hugo&#34;&gt;Hugo&lt;/h1&gt;
 &lt;h2 id=&#34;为什么选择-hugo&#34;&gt;为什么选择 Hugo?&lt;/h2&gt;
-&lt;p&gt;关于此问题的答案, 你可以在网上找到太多太多&lt;br&gt;
+&lt;p&gt;关于此问题的答案，你可以在网上找到太多太多&lt;br&gt;
 比如 Hugo 是使用 Go 语言编写的，相较于使用 Javascript 的 Hexo 和使用 Ruby 的 Jekyll,Hugo 的速度可以说吊打，无论是创建，构建&lt;br&gt;
 但对于我来说，Hugo 的绝大多数优点都抵不过这一个&lt;br&gt;
 &lt;code&gt;简单&lt;/code&gt;&lt;br&gt;
-没错, Hugo 的配置, 使用, 乃至他的文件结构都易于理解且方便使用&lt;br&gt;
-配置主题没有那么多繁琐的步骤, 自行修改也极其方便&lt;br&gt;
-Hugo 自带的 Web 服务器也易于调试, 几乎可以实时的显示你的更改&lt;br&gt;
-Hugo 的文档也十分干净, 不像 Jekyll, 他们的文档写的好像歧视 Windows 用户&lt;/p&gt;
+没错，Hugo 的配置，使用，乃至他的文件结构都易于理解且方便使用&lt;br&gt;
+配置主题没有那么多繁琐的步骤，自行修改也极其方便&lt;br&gt;
+Hugo 自带的 Web 服务器也易于调试，几乎可以实时的显示你的更改&lt;br&gt;
+Hugo 的文档也十分干净，不像 Jekyll, 他们的文档写的好像歧视 Windows 用户&lt;/p&gt;
 &lt;h2 id=&#34;为什么不是-hugo&#34;&gt;为什么不是 Hugo&lt;/h2&gt;
-&lt;p&gt;Hugo 在部署博客方面无疑是极强的, 但部分人觉得他的一大问题就是社区太小, 或者说中文社区太小&lt;br&gt;
-这就要求你在使用 Hugo 的时候必须有基础的英文能力, 一些调试经验和智慧的大脑&lt;br&gt;
-他的主题不能说少, 但和 Hexo 相比就相形见绌了, Hexo 在中文社区的火爆程度可以用烂大街形容&lt;br&gt;
+&lt;p&gt;Hugo 在部署博客方面无疑是极强的，但部分人觉得他的一大问题就是社区太小，或者说中文社区太小&lt;br&gt;
+这就要求你在使用 Hugo 的时候必须有基础的英文能力，一些调试经验和智慧的大脑&lt;br&gt;
+他的主题不能说少，但和 Hexo 相比就相形见绌了，Hexo 在中文社区的火爆程度可以用烂大街形容&lt;br&gt;
 大部分的独立博客都是基于 Hexo 的&lt;br&gt;
-但这都是和其他框架比, 该说说我遇见的糟心事了&lt;br&gt;
+但这都是和其他框架比，该说说我遇见的糟心事了&lt;br&gt;
 另外, Hugo 能够对上眼的主题太少了, 我能对上眼的就三个,&lt;a class=&#34;link&#34; href=&#34;https://getdoks.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Doks&lt;/a&gt;,&lt;a class=&#34;link&#34; href=&#34;https://github.com/miiiku/hugo-theme-kagome&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;kagome&lt;/a&gt; 和 &lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Stack&lt;/a&gt;&lt;br&gt;
-最近, 我想找一个个人主页主题来彻底替代 Jekyll, 没什么, 我就是单纯的不喜欢这个框架&lt;br&gt;
-但是我找来找去, 发现一件事:&lt;br&gt;
+最近，我想找一个个人主页主题来彻底替代 Jekyll, 没什么，我就是单纯的不喜欢这个框架&lt;br&gt;
+但是我找来找去，发现一件事：
 &lt;strong&gt;这咋都是博客主题&lt;/strong&gt;&lt;br&gt;
 到现在也没有换掉 Jekyll&amp;hellip;&lt;/p&gt;
 &lt;h2 id=&#34;hugonodejs-和-doks&#34;&gt;Hugo,NodeJS 和 Doks&lt;/h2&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://getdoks.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Doks&lt;/a&gt; 是一个现代化的文档主题, 基于 Hugo&lt;br&gt;
-但是在部署他的过程中, 要使用 NodeJS, 或者说 NPM&lt;br&gt;
-现在的 NPM 性能问题没那么严重了, 但我还是不愿意使用&lt;br&gt;
+但是在部署他的过程中，要使用 NodeJS, 或者说 NPM&lt;br&gt;
+现在的 NPM 性能问题没那么严重了，但我还是不愿意使用&lt;br&gt;
 &lt;code&gt;Clone&lt;/code&gt;,&lt;code&gt;npm install&lt;/code&gt;&lt;br&gt;
-然后问题就来了,&lt;code&gt;NPM&lt;/code&gt; 卡住了&amp;hellip;, 卡住了&amp;hellip;&lt;br&gt;
-Highlight-JS 这个玩意根本就不在 NPM 的服务器上, 我看他卡了 5 分钟才去访问链接看一下&lt;br&gt;
-OK 完全没问题, 这都可以我自行解决, 更糟心的还在后面&lt;br&gt;
+然后问题就来了，&lt;code&gt;NPM&lt;/code&gt; 卡住了&amp;hellip;, 卡住了&amp;hellip;&lt;br&gt;
+Highlight-JS 这个玩意根本就不在 NPM 的服务器上，我看他卡了 5 分钟才去访问链接看一下&lt;br&gt;
+OK 完全没问题，这都可以我自行解决，更糟心的还在后面&lt;br&gt;
 &lt;code&gt;npm run start&lt;/code&gt;&lt;br&gt;
-他启动了 Hugo 的预览服务器, 和我自己 &lt;code&gt;hugo server&lt;/code&gt; 的效果一样&lt;br&gt;
-但是我在改文件的过程中发现了一件事:&lt;br&gt;
-我在改文件, Hugo 也检测到文件更改重新生成站点&lt;br&gt;
+他启动了 Hugo 的预览服务器，和我自己 &lt;code&gt;hugo server&lt;/code&gt; 的效果一样&lt;br&gt;
+但是我在改文件的过程中发现了一件事：
+我在改文件，Hugo 也检测到文件更改重新生成站点&lt;br&gt;
 但是浏览器上的内容纹丝不动&lt;br&gt;
-我甚至直接把文件删了, 他还是没反应&lt;br&gt;
-我重新启动了一下 Hugo 服务器, 好了&lt;br&gt;
-然后我继续改文件, 改到路径的时候 - 意外发生了&lt;br&gt;
-404, 没错, 404, 我试着用 URL 直接访问根目录里的文件, 还是 404&lt;br&gt;
-显然, 这玩意根本就没同步我的更改&lt;br&gt;
+我甚至直接把文件删了，他还是没反应&lt;br&gt;
+我重新启动了一下 Hugo 服务器，好了&lt;br&gt;
+然后我继续改文件，改到路径的时候 - 意外发生了&lt;br&gt;
+404, 没错，404, 我试着用 URL 直接访问根目录里的文件，还是 404&lt;br&gt;
+显然，这玩意根本就没同步我的更改&lt;br&gt;
 那我改了半天改个寂寞呢&lt;br&gt;
-后来又是一样的毛病, 一直持续到我受不了了&lt;br&gt;
+后来又是一样的毛病，一直持续到我受不了了&lt;br&gt;
 我自己在根目录运行了 &lt;code&gt;hugo server&lt;/code&gt;&lt;br&gt;
-他居然好使了, 我也不知是谁的毛病, 但是我觉得嫌疑最大的是 NodeJS, 我用 &lt;code&gt;yarn run start&lt;/code&gt; 他还是一样不同步更改&lt;br&gt;
-我实在是被折腾烦了, 就直接 &lt;code&gt;npm run build&lt;/code&gt;, 部署到 Cloudflare Pages, 一看正常了&lt;br&gt;
+他居然好使了，我也不知是谁的毛病，但是我觉得嫌疑最大的是 NodeJS, 我用 &lt;code&gt;yarn run start&lt;/code&gt; 他还是一样不同步更改&lt;br&gt;
+我实在是被折腾烦了，就直接 &lt;code&gt;npm run build&lt;/code&gt;, 部署到 Cloudflare Pages, 一看正常了&lt;br&gt;
 就挺无语的&lt;/p&gt;
 &lt;h2 id=&#34;我为什么还用-hugo&#34;&gt;我为什么还用 Hugo&lt;/h2&gt;
-&lt;p&gt;因为 Hugo 的设计, 操作都十分契合我 ~~ 懒得学~~&lt;br&gt;
+&lt;p&gt;因为 Hugo 的设计，操作都十分契合我 ~~ 懒得学~~&lt;br&gt;
 即使他和 NodeJS 一起用的时候很糟心&lt;br&gt;
 但我依旧不会忘记&lt;br&gt;
 &lt;del&gt;淫诗一首&lt;/del&gt;&lt;/p&gt;
@@ -84,7 +84,7 @@ OK 完全没问题, 这都可以我自行解决, 更糟心的还在后面&lt;br&
         <pubDate>Wed, 16 Nov 2022 20:52:36 +0800</pubDate>
         
         <guid>https://blog.nalanyinyun.ml/p/aplayer/</guid>
-        <description>&lt;img src="https://tva2.sinaimg.cn/large/0072Vf1pgy1foxkbxnphoj31hc0u0tpt.jpg" alt="Featured image of post 在 Hugo 中添加 Meting-JS 和 Aplayer" /&gt;&lt;h1 id=&#34;meting-js-and-aplayer&#34;&gt;Meting-Js And Aplayer&lt;/h1&gt;
+        <description>&lt;img src="https://tvax3.sinaimg.cn/large/0072Vf1pgy1foxkbxnphoj31hc0u0tpt.jpg" alt="Featured image of post 在 Hugo 中添加 Meting-JS 和 Aplayer" /&gt;&lt;h1 id=&#34;meting-js-and-aplayer&#34;&gt;Meting-Js And Aplayer&lt;/h1&gt;
 &lt;h2 id=&#34;添加-meting-js&#34;&gt;添加 Meting-Js&lt;/h2&gt;
 &lt;p&gt;在当前主题的&lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;部分填入以下内容&lt;br&gt;
 通过 CDN 引入 (Jsdelivr 已被污染，推荐使用 Unpkg):&lt;/p&gt;
@@ -200,28 +200,28 @@ OK 完全没问题, 这都可以我自行解决, 更糟心的还在后面&lt;br&
 </description>
         </item>
         <item>
-        <title>使用Hugo&#43;Github Action&#43;Cloudflare Pages搭建博客</title>
+        <title>使用 Hugo&#43;Github Action&#43;Cloudflare Pages 搭建博客</title>
         <link>https://blog.nalanyinyun.ml/p/bdst/</link>
         <pubDate>Fri, 11 Nov 2022 20:32:27 +0800</pubDate>
         
         <guid>https://blog.nalanyinyun.ml/p/bdst/</guid>
-        <description>&lt;img src="https://tva3.sinaimg.cn/large/0076Ry2fly1fqld5uji19j31hc0u0e81.jpg" alt="Featured image of post 使用Hugo&#43;Github Action&#43;Cloudflare Pages搭建博客" /&gt;&lt;h1 id=&#34;我为什么把在本地构建的hugo搬到github上&#34;&gt;我为什么把在本地构建的Hugo搬到GitHub上?&lt;/h1&gt;
-&lt;p&gt;本来都在本地没什么,有时我也有多端编辑的需要&lt;br&gt;
-但大多是先写Markdown再传到电脑上&lt;br&gt;
-就这样,我的博客快乐的运行了半年&lt;br&gt;
-直到今年九月,我用来存站点文件的硬盘坏了&lt;br&gt;
-这一坏,啥都没了,我的站点没有备份&lt;br&gt;
+        <description>&lt;img src="https://tvax3.sinaimg.cn/large/0076Ry2fly1fqld5uji19j31hc0u0e81.jpg" alt="Featured image of post 使用 Hugo&#43;Github Action&#43;Cloudflare Pages 搭建博客" /&gt;&lt;h1 id=&#34;我为什么把在本地构建的-hugo-搬到-github-上&#34;&gt;我为什么把在本地构建的 Hugo 搬到 GitHub 上？&lt;/h1&gt;
+&lt;p&gt;本来都在本地没什么，有时我也有多端编辑的需要&lt;br&gt;
+但大多是先写 Markdown 再传到电脑上&lt;br&gt;
+就这样，我的博客快乐的运行了半年&lt;br&gt;
+直到今年九月，我用来存站点文件的硬盘坏了&lt;br&gt;
+这一坏，啥都没了，我的站点没有备份&lt;br&gt;
 这才下定决心把东西都搬到云端&lt;/p&gt;
 &lt;h1 id=&#34;hugogithubcloudflare&#34;&gt;Hugo+GitHub+Cloudflare&lt;/h1&gt;
 &lt;h2 id=&#34;hugo&#34;&gt;Hugo&lt;/h2&gt;
-&lt;p&gt;只需如往常一样使用Hugo&lt;br&gt;
-如果你的主题是通过&lt;code&gt;git clone&lt;/code&gt;安装的,请进入主题目录删除&lt;code&gt;.Git&lt;/code&gt;文件夹&lt;/p&gt;
+&lt;p&gt;只需如往常一样使用 Hugo&lt;br&gt;
+如果你的主题是通过&lt;code&gt;git clone&lt;/code&gt;安装的，请进入主题目录删除&lt;code&gt;.Git&lt;/code&gt;文件夹&lt;/p&gt;
 &lt;h2 id=&#34;github&#34;&gt;Github&lt;/h2&gt;
-&lt;p&gt;把你的站点文件全部上传到GitHub,无需使用&lt;code&gt;hugo&lt;/code&gt;来&lt;code&gt;Build&lt;/code&gt;站点&lt;/p&gt;
+&lt;p&gt;把你的站点文件全部上传到 GitHub，无需使用&lt;code&gt;hugo&lt;/code&gt;来&lt;code&gt;Build&lt;/code&gt;站点&lt;/p&gt;
 &lt;h3 id=&#34;github-action&#34;&gt;Github Action&lt;/h3&gt;
-&lt;p&gt;重中之重,如果没有GitHub Action,把站点上传到GitHub将毫无意义
+&lt;p&gt;重中之重，如果没有 GitHub Action，把站点上传到 GitHub 将毫无意义
 新建一个仓库用于存储站点&lt;/p&gt;
-&lt;p&gt;配置Github-Tokens:&lt;/p&gt;
+&lt;p&gt;配置 Github-Tokens:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;打开 Settings&lt;/li&gt;
 &lt;li&gt;打开 Developer settings&lt;/li&gt;
@@ -232,13 +232,13 @@ OK 完全没问题, 这都可以我自行解决, 更糟心的还在后面&lt;br&
 &lt;li&gt;授予 &lt;code&gt;repo&lt;/code&gt; 和 &lt;code&gt;workflow&lt;/code&gt; 许可并调整过期时间&lt;/li&gt;
 &lt;li&gt;保存 Token 一会儿要用&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;配置Secrets:&lt;/p&gt;
+&lt;p&gt;配置 Secrets:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;进入仓库并打开 settings&lt;/li&gt;
 &lt;li&gt;展开 Secrets&lt;/li&gt;
 &lt;li&gt;点击 Actions&lt;/li&gt;
 &lt;li&gt;点击 New repository secret&lt;/li&gt;
-&lt;li&gt;键入 &lt;code&gt;PERSONAL_TOKEN&lt;/code&gt; 至name&lt;/li&gt;
+&lt;li&gt;键入 &lt;code&gt;PERSONAL_TOKEN&lt;/code&gt; 至 name&lt;/li&gt;
 &lt;li&gt;键入 刚才配置的 Token 至 &lt;code&gt;Secrets&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;点击 Add secret&lt;/li&gt;
 &lt;/ol&gt;
@@ -312,27 +312,27 @@ OK 完全没问题, 这都可以我自行解决, 更糟心的还在后面&lt;br&
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;publish_dir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;./public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 构建后存储到的文件夹&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;strong&gt;中文注释,在使用时编码必须为UTF-8,如报错可删去注释&lt;/strong&gt;&lt;br&gt;
-&lt;strong&gt;extended别删,大多数时候都会用到扩展版&lt;/strong&gt;&lt;/p&gt;
+&lt;strong&gt;中文注释，在使用时编码必须为 UTF-8，如报错可删去注释&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;extended 别删，大多数时候都会用到扩展版&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Push&lt;/code&gt;到&lt;code&gt;Main&lt;/code&gt;即可测试是否可用&lt;/p&gt;
 &lt;h2 id=&#34;cloudflare-pages&#34;&gt;Cloudflare Pages&lt;/h2&gt;
-&lt;p&gt;配置Cloudflare Pages:&lt;/p&gt;
+&lt;p&gt;配置 Cloudflare Pages:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;点击 Pages&lt;/li&gt;
 &lt;li&gt;点击 创建项目&lt;/li&gt;
-&lt;li&gt;点击 连接到Git&lt;/li&gt;
+&lt;li&gt;点击 连接到 Git&lt;/li&gt;
 &lt;li&gt;添加 账户并选择仓库&lt;/li&gt;
-&lt;li&gt;选择 生产分支(Action构建后推送的分支)&lt;/li&gt;
-&lt;li&gt;键入 啥也别键入,别碰构建设置&lt;/li&gt;
+&lt;li&gt;选择 生产分支 (Action 构建后推送的分支)&lt;/li&gt;
+&lt;li&gt;键入 啥也别键入，别碰构建设置&lt;/li&gt;
 &lt;li&gt;点击 保存并部署&lt;/li&gt;
 &lt;li&gt;处理 剩余事项&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;all-done&#34;&gt;All Done&lt;/h2&gt;
-&lt;p&gt;大功告成,你的Hugo站点已经部署到Cloudflare服务器,站点在全球均可访问!&lt;/p&gt;
+&lt;p&gt;大功告成，你的 Hugo 站点已经部署到 Cloudflare 服务器，站点在全球均可访问！&lt;/p&gt;
 &lt;h1 id=&#34;tldr&#34;&gt;TL;DR&lt;/h1&gt;
-&lt;p&gt;你可以Fork&lt;a class=&#34;link&#34; href=&#34;https://github.com/naranyinyun/Blog&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;你可以 Fork&lt;a class=&#34;link&#34; href=&#34;https://github.com/naranyinyun/Blog&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;我的仓库&lt;/a&gt;进行爆改&lt;br&gt;
-本仓库使用GPL 3.0协议,请您遵守开源许可&lt;/p&gt;
+本仓库使用 GPL 3.0 协议，请您遵守开源许可&lt;/p&gt;
 &lt;p&gt;&lt;meting-js server=&#34;netease&#34; type=&#34;song&#34; id=&#34;1356059919&#34;&gt;&lt;/meting-js&gt;&lt;/p&gt;
 </description>
         </item>

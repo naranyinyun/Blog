@@ -12,7 +12,7 @@
         <pubDate>Sun, 25 Dec 2022 19:37:38 +0800</pubDate>
         
         <guid>https://blog.nalanyinyun.ml/p/adb/</guid>
-        <description>&lt;img src="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxkf6k4jrj31hc0u0k6b.jpg" alt="Featured image of post 配置 ADB 环境" /&gt;&lt;h1 id=&#34;配置-adb-环境以及基础用法&#34;&gt;配置 ADB 环境以及基础用法&lt;/h1&gt;
+        <description>&lt;img src="https://tvax3.sinaimg.cn/large/0072Vf1pgy1foxkf6k4jrj31hc0u0k6b.jpg" alt="Featured image of post 配置 ADB 环境" /&gt;&lt;h1 id=&#34;配置-adb-环境以及基础用法&#34;&gt;配置 ADB 环境以及基础用法&lt;/h1&gt;
 &lt;h2 id=&#34;配置-adb-环境&#34;&gt;配置 ADB 环境&lt;/h2&gt;
 &lt;h3 id=&#34;方案一&#34;&gt;方案一&lt;/h3&gt;
 &lt;p&gt;在&lt;a class=&#34;link&#34; href=&#34;https://developer.android.google.cn/studio/releases/platform-tools?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -55,7 +55,7 @@
         <pubDate>Tue, 15 Nov 2022 20:55:56 +0800</pubDate>
         
         <guid>https://blog.nalanyinyun.ml/p/magisk/</guid>
-        <description>&lt;img src="https://tva2.sinaimg.cn/large/0072Vf1pgy1foxk76lzl8j31hc0u0dxk.jpg" alt="Featured image of post 如何使用第三方 Recovery 禁用 Magisk 模块" /&gt;&lt;h1 id=&#34;快速禁用-magisk-模块&#34;&gt;快速禁用 Magisk 模块&lt;/h1&gt;
+        <description>&lt;img src="https://tvax3.sinaimg.cn/large/0072Vf1pgy1foxk76lzl8j31hc0u0dxk.jpg" alt="Featured image of post 如何使用第三方 Recovery 禁用 Magisk 模块" /&gt;&lt;h1 id=&#34;快速禁用-magisk-模块&#34;&gt;快速禁用 Magisk 模块&lt;/h1&gt;
 &lt;h2 id=&#34;magisk-模块标识&#34;&gt;Magisk 模块标识&lt;/h2&gt;
 &lt;p&gt;Magisk 模块位于&lt;code&gt;/data/adb/modules&lt;/code&gt;&lt;br&gt;
 在此目录下的所有文件夹均对应模块&lt;br&gt;
@@ -110,7 +110,7 @@
         <pubDate>Mon, 14 Nov 2022 20:41:03 +0800</pubDate>
         
         <guid>https://blog.nalanyinyun.ml/p/gsi/</guid>
-        <description>&lt;img src="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxkjjz8vbj31hc0u0k80.jpg" alt="Featured image of post Android GSI 介绍" /&gt;&lt;h1 id=&#34;gsi&#34;&gt;GSI&lt;/h1&gt;
+        <description>&lt;img src="https://tvax3.sinaimg.cn/large/0072Vf1pgy1foxkjjz8vbj31hc0u0k80.jpg" alt="Featured image of post Android GSI 介绍" /&gt;&lt;h1 id=&#34;gsi&#34;&gt;GSI&lt;/h1&gt;
 &lt;h2 id=&#34;什么是-gsi&#34;&gt;什么是 GSI&lt;/h2&gt;
 &lt;p&gt;GSI，中文名&amp;quot;通用系统镜像&amp;quot;,可以在支持 Treble 的设备上刷入 GSI 以便体验最新的 Android 操作系统&lt;br&gt;
 Google 的 GSI 是 AOSP 未经修改的，可在各种 Android 设备上运行&lt;/p&gt;
