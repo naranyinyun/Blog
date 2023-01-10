@@ -12,7 +12,7 @@
         <pubDate>Sun, 25 Dec 2022 19:37:38 +0800</pubDate>
         
         <guid>https://blog.nalanyinyun.ml/p/adb/</guid>
-        <description>&lt;img src="https://tvax3.sinaimg.cn/large/0072Vf1pgy1foxkf6k4jrj31hc0u0k6b.jpg" alt="Featured image of post 配置 ADB 环境" /&gt;&lt;h1 id=&#34;配置-adb-环境以及基础用法&#34;&gt;配置 ADB 环境以及基础用法&lt;/h1&gt;
+        <description>&lt;h1 id=&#34;配置-adb-环境以及基础用法&#34;&gt;配置 ADB 环境以及基础用法&lt;/h1&gt;
 &lt;h2 id=&#34;配置-adb-环境&#34;&gt;配置 ADB 环境&lt;/h2&gt;
 &lt;h3 id=&#34;方案一&#34;&gt;方案一&lt;/h3&gt;
 &lt;p&gt;在&lt;a class=&#34;link&#34; href=&#34;https://developer.android.google.cn/studio/releases/platform-tools?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

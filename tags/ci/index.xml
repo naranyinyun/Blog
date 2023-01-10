@@ -12,7 +12,7 @@
         <pubDate>Fri, 11 Nov 2022 20:32:27 +0800</pubDate>
         
         <guid>https://blog.nalanyinyun.ml/p/bdst/</guid>
-        <description>&lt;img src="https://tvax3.sinaimg.cn/large/0076Ry2fly1fqld5uji19j31hc0u0e81.jpg" alt="Featured image of post 使用 Hugo&#43;Github Action&#43;Cloudflare Pages 搭建博客" /&gt;&lt;h1 id=&#34;我为什么把在本地构建的-hugo-搬到-github-上&#34;&gt;我为什么把在本地构建的 Hugo 搬到 GitHub 上？&lt;/h1&gt;
+        <description>&lt;h1 id=&#34;我为什么把在本地构建的-hugo-搬到-github-上&#34;&gt;我为什么把在本地构建的 Hugo 搬到 GitHub 上？&lt;/h1&gt;
 &lt;p&gt;本来都在本地没什么，有时我也有多端编辑的需要&lt;br&gt;
 但大多是先写 Markdown 再传到电脑上&lt;br&gt;
 就这样，我的博客快乐的运行了半年&lt;br&gt;

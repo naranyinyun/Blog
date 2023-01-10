@@ -12,7 +12,7 @@
         <pubDate>Tue, 15 Nov 2022 20:55:56 +0800</pubDate>
         
         <guid>https://blog.nalanyinyun.ml/p/magisk/</guid>
-        <description>&lt;img src="https://tvax3.sinaimg.cn/large/0072Vf1pgy1foxk76lzl8j31hc0u0dxk.jpg" alt="Featured image of post 如何使用第三方 Recovery 禁用 Magisk 模块" /&gt;&lt;h1 id=&#34;快速禁用-magisk-模块&#34;&gt;快速禁用 Magisk 模块&lt;/h1&gt;
+        <description>&lt;h1 id=&#34;快速禁用-magisk-模块&#34;&gt;快速禁用 Magisk 模块&lt;/h1&gt;
 &lt;h2 id=&#34;magisk-模块标识&#34;&gt;Magisk 模块标识&lt;/h2&gt;
 &lt;p&gt;Magisk 模块位于&lt;code&gt;/data/adb/modules&lt;/code&gt;&lt;br&gt;
 在此目录下的所有文件夹均对应模块&lt;br&gt;
