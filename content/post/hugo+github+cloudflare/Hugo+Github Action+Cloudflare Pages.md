@@ -3,7 +3,6 @@ title: "使用 Hugo+Github Action+Cloudflare Pages 搭建博客"
 date: 2022-11-11T20:32:27+08:00
 draft: false
 slug: "bdst"
-image: "https://tvax3.sinaimg.cn/large/0076Ry2fly1fqld5uji19j31hc0u0e81.jpg"
 tags: ["Hugo","CI","Cloudflare"]
 categories: ["Web","Technology"]
 ---

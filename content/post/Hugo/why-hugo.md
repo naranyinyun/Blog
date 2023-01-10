@@ -3,7 +3,6 @@ title: "我和 Hugo 的爱恨情仇"
 date: 2022-12-02T12:54:25+08:00
 draft: false
 slug: "Why Hugo"
-image: "https://tvax3.sinaimg.cn/large/0072Vf1pgy1foxli0u4b3j31hc0u0qoj.jpg"
 tags: ["Hugo"]
 categories: ["Technology"]
 ---

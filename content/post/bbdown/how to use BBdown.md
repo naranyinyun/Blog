@@ -3,7 +3,6 @@ title: "如何在 Windows 环境下使用 BBdown"
 slug: "bbdown"
 date: 2022-11-10T21:06:57+08:00
 draft: false
-image: "https://tvax3.sinaimg.cn/large/0072Vf1pgy1foxkfg4cj2j31hc0u01a9.jpg"
 tags: ["BiliBili","CLI","Windows"]
 categories: ["Technology"]
 ---

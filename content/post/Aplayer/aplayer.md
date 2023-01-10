@@ -3,7 +3,6 @@ title: "在 Hugo 中添加 Meting-JS 和 Aplayer"
 date: 2022-11-16T20:52:36+08:00
 draft: false
 slug: "Aplayer"
-image: "https://tvax3.sinaimg.cn/large/0072Vf1pgy1foxkbxnphoj31hc0u0tpt.jpg"
 tags: ["Hugo"]
 categories: ["Technology","Web"]
 ---
