@@ -1,226 +1,135 @@
-baseurl: https://blog.nalanyinyun.ml/
-languageCode: zh-cn
-theme: hugo-theme-stack
+baseURL: "https://examplesite.com/"
+title: The Nalanyinyun Views
 paginate: 5
-title: Blog-Nalanyinyun
+theme: PaperMod
 
-languages:
-    en:
-        languageName: English
-        title: Nalan-Blog
-        description: 
-        weight: 1
-    zh-cn:
-        languageName: 中文
-        title: Blog-Nalanyinyun
-        description: Record everything i know
-        weight: 2
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
 
-# Change it to your Disqus shortname before using
-disqusShortname: hugo-theme-stack
+googleAnalytics: 
 
-# GA Tracking ID
-googleAnalytics:
-
-# Theme i18n support
-# Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
-DefaultContentLanguage: zh-cn
-
-# Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
-# This will make .Summary and .WordCount behave correctly for CJK languages.
-hasCJKLanguage: false
-
-permalinks:
-    post: /p/:slug/
-    page: /:slug/
+minify:
+  disableXML: true
+  minifyOutput: true
 
 params:
-    mainSections:
-        - post
-    featuredImageField: image
-    rssFullContent: true
-    favicon: /img/favicon.ico # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: The Nalanyinyun's Views
+  description: "The Nalanyinyun's Views"
+  keywords: [Blog]
+  author: Nalanyinyun
+  # author: ["Me", "You"] # multiple authors
+  images: ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
 
-    footer:
-        since: 2022
-        customText: Opensource Under AGPL-3.0.
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: false
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
 
-    dateFormat:
-        published: Jan 02, 2006
-        lastUpdated: Jan 02, 2006 15:04 MST
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "/logo.svg"
+    favicon16x16: "<link / abs url>"
+    favicon32x32: "<link / abs url>"
+    apple_touch_icon: "/logo.svg"
+    safari_pinned_tab: "<link / abs url>"
+    disableHLJS: true
 
-    sidebar:
-        emoji: 
-        subtitle: 告诉你一个小秘密，向下滑能看到第二页！q(≧▽≦q)
-        avatar:
-            enabled: true
-            local: false
-            src: /img/favicon.ico
+  label:
+    text: "MainPage"
+    icon: /apple-touch-icon.png
+    iconHeight: 35
 
-    article:
-        math: false
-        toc: true
-        readingTime: false
-        license:
-            enabled: true
-            default: Licensed under CC BY-NC-SA 4.0
+  # profile-mode
+  profileMode:
+    enabled: false # needs to be explicitly set
+    title: ExampleSite
+    subtitle: "This is subtitle"
+    imageUrl: "<img location>"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
 
-    comments:
-        enabled: false
-        provider: twikoo
+  # home-info mode
+  homeInfoParams:
+    Title: "The Nalanyinyun Views"
+    Content: Welcome to The Nalanyinyun Views
 
-        disqusjs:
-            shortname:
-            apiUrl:
-            apiKey:
-            admin:
-            adminLabel:
+  socialIcons:
+    - name: bilibili
+      url: "https://space.bilibili.com/384920476"
+    - name: email
+      url: "nalanyinyun@nalanyinyun.top"
+    - name: github
+      url: "https://github.com/Naranyinyun"
 
-        utterances:
-            repo: naranyinyun/Comments
-            issueTerm: pathname
-            label:
+  analytics:
+    google:
+      SiteVerificationTag: ""
+    bing:
+      SiteVerificationTag: ""
+    yandex:
+      SiteVerificationTag: ""
 
-        remark42:
-            host:
-            site:
-            locale:
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
 
-        vssue:
-            platform: 
-            owner:
-            repo:
-            clientId:
-            clientSecret:
-            autoCreateIssue: false
+  editPost:
+    URL: "https://github.com/<path_to_repo>/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
 
-        # Waline client configuration see: https://waline.js.org/en/reference/component.html
-        waline:
-            serverURL:
-            lang:
-            pageview:
-            emoji:
-                - https://unpkg.com/@waline/emojis@1.0.1/weibo
-            requiredMeta:
-                - name
-                - email
-                - url
-            locale:
-                admin: Admin
-                placeholder:
-
-        twikoo:
-            envId: 
-            region: 
-            path:
-            lang: zh-CN
-
-        # See https://cactus.chat/docs/reference/web-client/#configuration for description of the various options
-        cactus:
-            defaultHomeserverUrl: "https://matrix.cactus.chat:8448"
-            serverName: "cactus.chat"
-            siteName: "" # You must insert a unique identifier here matching the one you registered (See https://cactus.chat/docs/getting-started/quick-start/#register-your-site)
-
-        giscus:
-            repo:
-            repoID:
-            category:
-            categoryID:
-            mapping:
-            lightTheme:
-            darkTheme:
-            reactionsEnabled: 1
-            emitMetadata: 0
-
-        gitalk:
-            owner:
-            admin:
-            repo:
-            clientID:
-            clientSecret:
-
-        cusdis:
-            host:
-            id:
-    widgets:
-        homepage:
-            - type: search
-            - type: categories
-              params:
-                  limit: 10
-              params:
-                  limit: 5
-            - type: tag-cloud
-              params:
-                  limit: 10
-        page:
-            - type: toc
-
-    opengraph:
-        twitter:
-            # Your Twitter username
-            site:
-
-            # Available values: summary, summary_large_image
-            card: summary_large_image
-
-    defaultImage:
-        opengraph:
-            enabled: false
-            local: false
-            src:
-
-    colorScheme:
-        # Display toggle
-        toggle: true
-
-        # Available values: auto, light, dark
-        default: auto
-
-    imageProcessing:
-        cover:
-            enabled: true
-        content:
-            enabled: true
-
-### Custom menu
-### See https://docs.stack.jimmycai.com/configuration/custom-menu.html
-### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
 menu:
-    main: []
-
-    social:
-        - identifier: github
-          name: GitHub
-          url: https://github.com/naranyinyun/
-          params:
-              icon: brand-github
-
-related:
-    includeNewer: true
-    threshold: 60
-    toLower: false
-    indices:
-        - name: tags
-          weight: 100
-
-        - name: categories
-          weight: 200
-
+  main:
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
 markup:
-    goldmark:
-        renderer:
-            ## Set to true if you have HTML content inside Markdown
-            unsafe: true
-    tableOfContents:
-        endLevel: 4
-        ordered: true
-        startLevel: 2
-    highlight:
-        noClasses: false
-        codeFences: true
-        guessSyntax: true
-        lineNoStart: 1
-        lineNos: true
-        lineNumbersInTable: true
-        tabWidth: 4
+  highlight:
+    # noClasses: false
+    # anchorLineNos: true
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    style: monokai
