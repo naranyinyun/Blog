@@ -50,7 +50,6 @@ params:
     favicon32x32: "<link / abs url>"
     apple_touch_icon: "/logo.svg"
     safari_pinned_tab: "<link / abs url>"
-    disableHLJS: true
 
   label:
     text: "MainPage"
@@ -99,7 +98,7 @@ params:
     hiddenInSingle: true # hide on single page
 
   editPost:
-    URL: "https://github.com/<path_to_repo>/content"
+    URL: "https://github.com/naranyinyun/Blog/tree/main/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
@@ -129,7 +128,7 @@ markup:
   highlight:
     # noClasses: false
     # anchorLineNos: true
-    codeFences: true
-    guessSyntax: true
-    lineNos: true
-    style: monokai
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    # style: monokai
