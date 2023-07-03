@@ -16,6 +16,8 @@ LilyWorks 不会就此解散, 我们准备继续找点别的玩, 也可能暂时
 1. 关闭 Apodidae DevBlog, 后续公告由本博客提供
 2. 同步本公告至 GitHub Discussions
 3. 停止接受任何渠道的任何反馈
+
+
 计划中的措施如下:
 1. 在虾滑提供 MTD9000 支持后, 归档 Apodidae 仓库
 2. 更新官网信息, Apodidae 官网不会被关闭
