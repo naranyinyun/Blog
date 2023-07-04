@@ -1,0 +1,14 @@
+{
+  "name": "The Nalanyinyun View",
+  "short_name": "Nalan's View",
+  "theme_color": "#1d1e20",
+  "background_color": "#1d1e20",
+  "display": "minimal-ui",
+  "scope": "/",
+  "start_url": "https://blog.nalanyinyun.top/",
+  "icons": [{
+    "src": "/logo_pwa.svg",
+    "sizes": "512x512",
+    "type": "image/svg+xml"
+  }]
+}
