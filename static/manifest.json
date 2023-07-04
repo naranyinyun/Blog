@@ -3,9 +3,9 @@
   "short_name": "Nalan's View",
   "theme_color": "#1d1e20",
   "background_color": "#1d1e20",
-  "display": "minimal-ui",
+  "display": "fullscreen",
   "scope": "/",
-  "start_url": "https://blog.nalanyinyun.top/",
+  "start_url": "../",
   "icons": [{
     "src": "/logo_pwa.svg",
     "sizes": "512x512",
