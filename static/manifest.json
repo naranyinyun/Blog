@@ -3,7 +3,7 @@
   "short_name": "Nalan's View",
   "theme_color": "#1d1e20",
   "background_color": "#1d1e20",
-  "display": "fullscreen",
+  "display": "standalone",
   "scope": "/",
   "start_url": "../",
   "icons": [{
