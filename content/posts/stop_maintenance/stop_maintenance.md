@@ -12,22 +12,20 @@ author: ["Nalanyinyun","XiaHuaBeiChiDiaoLe","LilyWorks"]
 - 主流的 MediaTek 设备已经提供稳定适配  
 
 LilyWorks 不会就此解散, 我们准备继续找点别的玩, 也可能暂时先不找, 因为最近要处理的事情实在有点多  
-目前我们准备进行如下措施:
+这是我们已经完成的所有措施:
 1. 关闭 Apodidae DevBlog, 后续公告由本博客提供
 2. 同步本公告至 GitHub Discussions
 3. 停止接受任何渠道的任何反馈
+4. 归档 Apodidae 仓库
+5. 更新官网信息, Apodidae 官网不会被关闭
+6. 关闭 ApodidaeMirror, 不再提供 Release 镜像
 
-
-计划中的措施如下:
-1. 在虾滑提供 MTD9000 支持后, 归档 Apodidae 仓库
-2. 更新官网信息, Apodidae 官网不会被关闭
-3. 可能会注销 Coolapk 账号 `Naranyinyun`
 
 感谢诸位从 2023-02-07 17:21:03 开始至今的一切支持! LilyWorks 不会忘记支持我们近半年的用户们
 
 对了,我最近在学 Python, 那就送大家一段最最简单的 Python 代码吧  
 
 ``` 
-Print("Farewell!")
+print("Farewell!")
 ```
 
