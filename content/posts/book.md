@@ -1,6 +1,6 @@
 ---  
 title: "从零开始制作一本书"  
-date: 2023-11-13T19:54:45+08:00  
+date: 2023-11-11T19:54:45+08:00  
 draft: false  
 slug: "book"  
 tags: ["Technology"]  
