@@ -8,17 +8,20 @@ tags: ["Technology"]
 # Intro  
 本文将介绍如何将 Windows 10 & 11 刷入 Xiaomi Pad 2  
 此外 [Nalanyinyun's OneDrive](https://mirror.nalanyinyun.top/) 将提供本文所需所有文件的镜像  
-> The Nalanyinyun's OneDrive is a mirror for lots of sources, it's free, fast, no trick.  
-> Nalanyinyun's OneDrive 是为源提供的镜像，免费，高速而毫无套路  
-> 我们不需要你关注任何公众号，也无需付费或感受糟糕的下载体验。  
+{{< notice tip >}}
+The Nalanyinyun's OneDrive is a mirror for lots of sources, it's free, fast, no trick.   
+Nalanyinyun's OneDrive 是专为源提供的镜像，免费，高速    
+我们不需要你关注任何公众号，也无需付费或感受糟糕的下载体验
+{{< /notice >}}
 
 # 准备工作  
 所需物品  
 - 一个不小于 8GB 的 **FAT32** 格式的外置存储设备  
 - 键盘和鼠标，必须可以通过 USB 方式连接到电脑  
 - 一个 OTG 转接器或 USB 集线器，推荐至少有两个接口并可外置供电  
-- 将你的平板充满电，因为接下来的操作过程可能会非常长，低电量水平会导致失败
 - 你要安装的系统镜像，提前存至存储设备中 *我非常推荐你使用 Windows LTSC 2021 或 2019 你可以在 MSDN 上找到它们
+
+{{< notice warning >}} 请确保设备电池的有效电量足够，低电量水平会导致失败，你很可能要再等近一个小时才能重新开始 {{< /notice >}}
 
 # 前置步骤  
 ## 1.0 在外置存储设备上安装 PE  
@@ -34,7 +37,7 @@ tags: ["Technology"]
 将压缩包内所有文件解压至存储设备**根目录**  
 ### 1.0.3 准备驱动  
 下载 [Xiaomi Pad 2 Drives](https://mirror.nalanyinyun.top/zh-CN/The%20Mirror%20of%20Source/Xiaomi%20Pad%20Source/Xiaomi%20Pad%202%20Drivers.7z)  
-建议将驱动提前解压至你熟悉的目录，否则你可能会花费超过 4 分钟的时间解压此文件  
+{{< notice warning >}} 最好在电脑上提前解压驱动，否则的你将花费超过 5 分钟在平板上解压 {{< /notice >}} 
 ### 1.0.4 确认  
 确认你的文件结构正常，如果你没有把驱动解压至根目录，他的结构看起来应该是这样  
 ``` Markdown  

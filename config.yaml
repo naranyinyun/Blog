@@ -17,7 +17,7 @@ minify:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: The Nalanyinyun's Views
-  description: "The Nalanyinyun's Views"
+  description: "The Nalanyinyun's Views\nPredirect, humanity, technology, literature\nEverything will be found here "
   keywords: [Blog]
   author: Nalanyinyun
   # author: ["Me", "You"] # multiple authors
@@ -39,7 +39,7 @@ params:
   comments: false
   hidemeta: false
   hideSummary: false
-  showtoc: false
+  showtoc: true
   tocopen: false
 
   assets:
@@ -61,7 +61,7 @@ params:
     enabled: false # needs to be explicitly set
     title: ExampleSite
     subtitle: "This is subtitle"
-    imageUrl: "<img location>"
+    imageUrl: ""
     imageWidth: 120
     imageHeight: 120
     imageTitle: my image
@@ -74,7 +74,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "The Nalanyinyun Views"
-    Content: Welcome to The Nalanyinyun Views
+    Content: The Nalanyinyun's Views<br>Predirect, humanity, technology, literature<br>Everything will be found here
 
   socialIcons:
     - name: bilibili
@@ -135,3 +135,7 @@ markup:
     # guessSyntax: true
     # lineNos: true
     # style: monokai
+
+module:
+  imports:
+    - path: github.com/martignoni/hugo-notice
