@@ -1,23 +1,30 @@
 baseurl: https://example.com
-languageCode: zh-cn
+languageCode: en-us
 theme: hugo-theme-stack
 paginate: 5
-title: The Nalanyinyun's View
-copyright: Nalanyinyun
+title: Example Site
+copyright: Example Person
 
 languages:
     en:
         languageName: English
-        title: The Nalanyinyun's View
-        weight: 2
+        title: Example Site
+        weight: 1
         params:
             description: Example description
     zh-cn:
-        languageName: 简体中文
-        title: The Nalanyinyun's View
-        weight: 1
+        languageName: 中文
+        title: 演示站点
+        weight: 2
         params:
             description: 演示说明
+    ar:
+        languageName: عربي
+        languagedirection: rtl
+        title: موقع تجريبي
+        weight: 3
+        params:
+            description: وصف تجريبي
 
 # Change it to your Disqus shortname before using
 disqusShortname: hugo-theme-stack
@@ -27,7 +34,7 @@ googleAnalytics:
 
 # Theme i18n support
 # Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
-DefaultContentLanguage: zh-cn
+DefaultContentLanguage: en
 
 # Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
 # This will make .Summary and .WordCount behave correctly for CJK languages.
@@ -53,15 +60,15 @@ params:
         lastUpdated: Jan 02, 2006 15:04 MST
 
     sidebar:
-        emoji: 🌷
-        subtitle: Nalanyinyun, just as your has known.
+        emoji: 🍥
+        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         avatar:
             enabled: true
-            local: false
-            src: /nalanyinyun.png
+            local: true
+            src: img/avatar.png
 
     article:
-        math: true
+        math: false
         toc: true
         readingTime: true
         license:
@@ -69,7 +76,7 @@ params:
             default: Licensed under CC BY-NC-SA 4.0
 
     comments:
-        enabled: false
+        enabled: true
         provider: disqus
 
         disqusjs:
@@ -196,9 +203,16 @@ menu:
     social:
         - identifier: github
           name: GitHub
-          url: https://github.com/Naranyinyun
+          url: https://github.com/CaiJimmy/hugo-theme-stack
           params:
               icon: brand-github
+
+        - identifier: twitter
+          name: Twitter
+          url: https://twitter.com
+          params:
+              icon: brand-twitter
+
 related:
     includeNewer: true
     threshold: 60
@@ -227,7 +241,3 @@ markup:
         lineNos: true
         lineNumbersInTable: true
         tabWidth: 4
-
-module:
-  imports:
-    - path: github.com/martignoni/hugo-notice
