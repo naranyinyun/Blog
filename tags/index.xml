@@ -1,34 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Tags on The Nalanyinyun Views</title>
-    <link>https://blog.nalanyinyun.top/tags/</link>
-    <description>Recent content in Tags on The Nalanyinyun Views</description>
-    <image>
-      <title>The Nalanyinyun Views</title>
-      <url>https://blog.nalanyinyun.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://blog.nalanyinyun.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
-    </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sat, 11 Nov 2023 19:54:45 +0800</lastBuildDate><atom:link href="https://blog.nalanyinyun.top/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Technology</title>
-      <link>https://blog.nalanyinyun.top/tags/technology/</link>
-      <pubDate>Sat, 11 Nov 2023 19:54:45 +0800</pubDate>
-      
-      <guid>https://blog.nalanyinyun.top/tags/technology/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Apodidae</title>
-      <link>https://blog.nalanyinyun.top/tags/apodidae/</link>
-      <pubDate>Mon, 03 Jul 2023 15:32:26 +0800</pubDate>
-      
-      <guid>https://blog.nalanyinyun.top/tags/apodidae/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tags on The Nalanyinyun&#39;s View</title>
+        <link>https://example.com/tags/</link>
+        <description>Recent content in Tags on The Nalanyinyun&#39;s View</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Nalanyinyun</copyright>
+        <lastBuildDate>Sat, 11 Nov 2023 19:54:45 +0800</lastBuildDate><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Technology</title>
+        <link>https://example.com/tags/technology/</link>
+        <pubDate>Sat, 11 Nov 2023 19:54:45 +0800</pubDate>
+        
+        <guid>https://example.com/tags/technology/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Apodidae</title>
+        <link>https://example.com/tags/apodidae/</link>
+        <pubDate>Mon, 03 Jul 2023 15:32:26 +0800</pubDate>
+        
+        <guid>https://example.com/tags/apodidae/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
 </rss>
