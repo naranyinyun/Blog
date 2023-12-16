@@ -227,7 +227,3 @@ markup:
         lineNos: true
         lineNumbersInTable: true
         tabWidth: 4
-
-module:
-  imports:
-    - path: github.com/martignoni/hugo-notice
