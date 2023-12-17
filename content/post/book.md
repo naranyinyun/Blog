@@ -5,6 +5,7 @@ draft: false
 slug: "book"  
 tags: ["Technology"]  
 categories: ["Technology"]
+description: "没错，我们即将拥有一本自己的书"
 ---  
 # 从零开始制作一本书
 ## Intro

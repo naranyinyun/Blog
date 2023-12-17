@@ -3,6 +3,8 @@ title: '在 Windows 上安装 Chocoatey'
 date: 2023-12-17T19:17:17+08:00
 draft: false
 slug: "choco"
+tags: ["Technology"]
+categories: ["Technology", "Guide"]
 description: "Chocolatey 是一个 Windows 下的包管理器，就像 APT, 它允许你只用终端就能管理电脑上的软件"
 ---
 # 安装

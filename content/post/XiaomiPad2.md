@@ -5,6 +5,7 @@ draft: false
 slug: "XiaomiPad2"  
 tags: ["Technology"]  
 categories: ["Technology", "Guide"]
+description: "小米平板 2 在 Windows 上也许会更加实用"
 ---  
 # Intro  
 本文将介绍如何将 Windows 10 & 11 刷入 Xiaomi Pad 2  

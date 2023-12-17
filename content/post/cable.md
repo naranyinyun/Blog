@@ -4,6 +4,7 @@ date: 2023-10-21T23:54:56+08:00
 draft: false
 tags: ["Technology"]
 categories: ["Technology"]
+description: "自己动手，丰衣足食"
 ---
 ## Intro
 本文将介绍 标准 CAT6E 网线 水晶头接法，包括 TIA/EIA 568A 和 TIA/EIA 568B.
