@@ -1,36 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Intro 本文将介绍如何将 Windows 10 &amp;amp; 11 刷入 Xiaomi Pad 2
-此外 Nalanyinyun&amp;rsquo;s OneDrive 将提供本文所需所有文件的镜像
-The Nalanyinyun&amp;rsquo;s OneDrive is a mirror for lots of sources, it&amp;rsquo;s free, fast, no trick.
-Nalanyinyun&amp;rsquo;s OneDrive 是专为源提供的镜像，免费，高速 我们不需要你关注任何公众号，也无需付费或感受糟糕的下载体验
-准备工作 所需物品
-一个不小于 8GB 的 FAT32 格式的外置存储设备 键盘和鼠标，必须可以通过 USB 方式连接到电脑 一个 OTG 转接器或 USB 集线器，推荐至少有两个接口并可外置供电 你要安装的系统镜像，提前存至存储设备中 *我非常推荐你使用 Windows LTSC 2021 或 2019 你可以在 MSDN 上找到它们 请确保设备电池的有效电量足够，低电量水平会导致失败，你很可能要再等近一个小时才能重新开始
-前置步骤 1.0 在外置存储设备上安装 PE 1.0.1 格式化存储设备 首先，确认你的存储设备可以通过 USB 连接到电脑，并且格式为 FAT32 , 且只有一个分区 (推荐) 如果已经确认，请转至 1.'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='小米平板 2 在 Windows 上也许会更加实用'>
 <title>为小米平板 2 刷入 Windows 11 或 10</title>
 
 <link rel='canonical' href='https://blog.nalanyinyun.top/p/xiaomipad2/'>
 
 <link rel="stylesheet" href="/scss/style.min.f1b38d4b91e6298fd57c34286bb9b8707a26860103d98da1b0922d5e4eb479ca.css"><meta property='og:title' content='为小米平板 2 刷入 Windows 11 或 10'>
-<meta property='og:description' content='Intro 本文将介绍如何将 Windows 10 &amp;amp; 11 刷入 Xiaomi Pad 2
-此外 Nalanyinyun&amp;rsquo;s OneDrive 将提供本文所需所有文件的镜像
-The Nalanyinyun&amp;rsquo;s OneDrive is a mirror for lots of sources, it&amp;rsquo;s free, fast, no trick.
-Nalanyinyun&amp;rsquo;s OneDrive 是专为源提供的镜像，免费，高速 我们不需要你关注任何公众号，也无需付费或感受糟糕的下载体验
-准备工作 所需物品
-一个不小于 8GB 的 FAT32 格式的外置存储设备 键盘和鼠标，必须可以通过 USB 方式连接到电脑 一个 OTG 转接器或 USB 集线器，推荐至少有两个接口并可外置供电 你要安装的系统镜像，提前存至存储设备中 *我非常推荐你使用 Windows LTSC 2021 或 2019 你可以在 MSDN 上找到它们 请确保设备电池的有效电量足够，低电量水平会导致失败，你很可能要再等近一个小时才能重新开始
-前置步骤 1.0 在外置存储设备上安装 PE 1.0.1 格式化存储设备 首先，确认你的存储设备可以通过 USB 连接到电脑，并且格式为 FAT32 , 且只有一个分区 (推荐) 如果已经确认，请转至 1.'>
+<meta property='og:description' content='小米平板 2 在 Windows 上也许会更加实用'>
 <meta property='og:url' content='https://blog.nalanyinyun.top/p/xiaomipad2/'>
 <meta property='og:site_name' content='The Nalanyinyun&#39;s View'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Technology' /><meta property='article:published_time' content='2023-10-28T19:54:45&#43;08:00'/><meta property='article:modified_time' content='2023-10-28T19:54:45&#43;08:00'/>
 <meta name="twitter:title" content="为小米平板 2 刷入 Windows 11 或 10">
-<meta name="twitter:description" content="Intro 本文将介绍如何将 Windows 10 &amp;amp; 11 刷入 Xiaomi Pad 2
-此外 Nalanyinyun&amp;rsquo;s OneDrive 将提供本文所需所有文件的镜像
-The Nalanyinyun&amp;rsquo;s OneDrive is a mirror for lots of sources, it&amp;rsquo;s free, fast, no trick.
-Nalanyinyun&amp;rsquo;s OneDrive 是专为源提供的镜像，免费，高速 我们不需要你关注任何公众号，也无需付费或感受糟糕的下载体验
-准备工作 所需物品
-一个不小于 8GB 的 FAT32 格式的外置存储设备 键盘和鼠标，必须可以通过 USB 方式连接到电脑 一个 OTG 转接器或 USB 集线器，推荐至少有两个接口并可外置供电 你要安装的系统镜像，提前存至存储设备中 *我非常推荐你使用 Windows LTSC 2021 或 2019 你可以在 MSDN 上找到它们 请确保设备电池的有效电量足够，低电量水平会导致失败，你很可能要再等近一个小时才能重新开始
-前置步骤 1.0 在外置存储设备上安装 PE 1.0.1 格式化存储设备 首先，确认你的存储设备可以通过 USB 连接到电脑，并且格式为 FAT32 , 且只有一个分区 (推荐) 如果已经确认，请转至 1.">
+<meta name="twitter:description" content="小米平板 2 在 Windows 上也许会更加实用">
     </head>
     <body class="
     article-page
@@ -268,6 +250,10 @@ Nalanyinyun&amp;rsquo;s OneDrive 是专为源提供的镜像，免费，高速 �
         </h2>
     
         
+        <h3 class="article-subtitle">
+            小米平板 2 在 Windows 上也许会更加实用
+        </h3>
+        
     </div>
 
     
@@ -475,6 +461,19 @@ Nalanyinyun&rsquo;s OneDrive 是专为源提供的镜像，免费，高速 <br>
     <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/choco/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">在 Windows 上安装 Chocoatey</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="">
