@@ -2,6 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.nalanyinyun.top/post/</loc>
+    <lastmod>2023-12-17T19:17:17+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.nalanyinyun.top/</loc>
+    <lastmod>2023-12-17T19:17:17+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.nalanyinyun.top/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://blog.nalanyinyun.top/"
+                />
+  </url><url>
+    <loc>https://blog.nalanyinyun.top/p/choco/</loc>
+    <lastmod>2023-12-17T19:17:17+08:00</lastmod>
+  </url><url>
     <loc>https://blog.nalanyinyun.top/categories/</loc>
     <lastmod>2023-11-11T19:54:45+08:00</lastmod>
     <xhtml:link
@@ -14,9 +33,6 @@
                 hreflang="zh-cn"
                 href="https://blog.nalanyinyun.top/categories/"
                 />
-  </url><url>
-    <loc>https://blog.nalanyinyun.top/post/</loc>
-    <lastmod>2023-11-11T19:54:45+08:00</lastmod>
   </url><url>
     <loc>https://blog.nalanyinyun.top/tags/</loc>
     <lastmod>2023-11-11T19:54:45+08:00</lastmod>
@@ -36,19 +52,6 @@
   </url><url>
     <loc>https://blog.nalanyinyun.top/categories/technology/</loc>
     <lastmod>2023-11-11T19:54:45+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.nalanyinyun.top/</loc>
-    <lastmod>2023-11-11T19:54:45+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.nalanyinyun.top/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://blog.nalanyinyun.top/"
-                />
   </url><url>
     <loc>https://blog.nalanyinyun.top/p/book/</loc>
     <lastmod>2023-11-11T19:54:45+08:00</lastmod>
