@@ -43,7 +43,7 @@
 
 &lt;h2 id=&#34;使用&#34;&gt;使用&lt;/h2&gt;
 &lt;h3 id=&#34;修改默认安装路径&#34;&gt;修改默认安装路径&lt;/h3&gt;
-&lt;p&gt;在高级系统设置中点击编辑系统环境变量，点击 Path , 将 &lt;code&gt;C:\ProgramData\chocolatey\bin&lt;/code&gt; 改为你希望安装的路径，我选择的是 &lt;code&gt;D:\ChocolateySoftware&lt;/code&gt;
+&lt;p&gt;在高级系统设置中点击编辑系统环境变量，点击 Chocolateyinstall , 将 &lt;code&gt;C:\ProgramData\chocolatey\bin&lt;/code&gt; 改为你希望安装的路径，我选择的是 &lt;code&gt;D:\ChocolateySoftware&lt;/code&gt;
 
 
 
