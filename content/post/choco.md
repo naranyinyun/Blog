@@ -25,7 +25,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 {{< /notice >}}
 ## 使用
 ### 修改默认安装路径
-在高级系统设置中点击编辑系统环境变量，点击 Path , 将 `C:\ProgramData\chocolatey\bin` 改为你希望安装的路径，我选择的是 `D:\ChocolateySoftware`
+在高级系统设置中点击编辑系统环境变量，点击 Chocolateyinstall , 将 `C:\ProgramData\chocolatey\bin` 改为你希望安装的路径，我选择的是 `D:\ChocolateySoftware`
 {{< notice notice-note >}}
 如果不更改安装路径，你的每一次操作都需要在管理员 PowerShell 中运行
 {{< /notice >}}
