@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Guide on The Nalanyinyun&#39;s View</title>
-        <link>https://example.com/categories/guide/</link>
+        <link>https://blog.nalanyinyun.top/categories/guide/</link>
         <description>Recent content in Guide on The Nalanyinyun&#39;s View</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Nalanyinyun</copyright>
-        <lastBuildDate>Sat, 28 Oct 2023 19:54:45 +0800</lastBuildDate><atom:link href="https://example.com/categories/guide/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 28 Oct 2023 19:54:45 +0800</lastBuildDate><atom:link href="https://blog.nalanyinyun.top/categories/guide/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>为小米平板 2 刷入 Windows 11 或 10</title>
-        <link>https://example.com/p/xiaomipad2/</link>
+        <link>https://blog.nalanyinyun.top/p/xiaomipad2/</link>
         <pubDate>Sat, 28 Oct 2023 19:54:45 +0800</pubDate>
         
-        <guid>https://example.com/p/xiaomipad2/</guid>
+        <guid>https://blog.nalanyinyun.top/p/xiaomipad2/</guid>
         <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;
 &lt;p&gt;本文将介绍如何将 Windows 10 &amp;amp; 11 刷入 Xiaomi Pad 2&lt;br&gt;
 此外 &lt;a class=&#34;link&#34; href=&#34;https://mirror.nalanyinyun.top/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -44,7 +44,7 @@ Nalanyinyun&amp;rsquo;s OneDrive 是专为源提供的镜像，免费，高速 &
 &lt;h3 id=&#34;101-格式化存储设备&#34;&gt;1.0.1 格式化存储设备&lt;/h3&gt;
 &lt;p&gt;首先，确认你的存储设备可以通过 USB 连接到电脑，并且格式为 FAT32 , 且只有一个分区 (推荐) 如果已经确认，请转至 1.0.2&lt;br&gt;
 打开 DiskGenius&lt;br&gt;
-&lt;img src=&#34;https://example.com/DiskGenius.png&#34;
+&lt;img src=&#34;https://blog.nalanyinyun.top/DiskGenius.png&#34;
 	
 	
 	

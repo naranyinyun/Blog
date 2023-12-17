@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tags on The Nalanyinyun&#39;s View</title>
-        <link>https://example.com/tags/</link>
+        <link>https://blog.nalanyinyun.top/tags/</link>
         <description>Recent content in Tags on The Nalanyinyun&#39;s View</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Nalanyinyun</copyright>
-        <lastBuildDate>Sat, 11 Nov 2023 19:54:45 +0800</lastBuildDate><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 11 Nov 2023 19:54:45 +0800</lastBuildDate><atom:link href="https://blog.nalanyinyun.top/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Technology</title>
-        <link>https://example.com/tags/technology/</link>
+        <link>https://blog.nalanyinyun.top/tags/technology/</link>
         <pubDate>Sat, 11 Nov 2023 19:54:45 +0800</pubDate>
         
-        <guid>https://example.com/tags/technology/</guid>
+        <guid>https://blog.nalanyinyun.top/tags/technology/</guid>
         <description></description>
         </item>
         <item>
         <title>Apodidae</title>
-        <link>https://example.com/tags/apodidae/</link>
+        <link>https://blog.nalanyinyun.top/tags/apodidae/</link>
         <pubDate>Mon, 03 Jul 2023 15:32:26 +0800</pubDate>
         
-        <guid>https://example.com/tags/apodidae/</guid>
+        <guid>https://blog.nalanyinyun.top/tags/apodidae/</guid>
         <description></description>
         </item>
         

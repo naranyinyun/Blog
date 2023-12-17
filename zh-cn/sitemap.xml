@@ -2,80 +2,80 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com/categories/</loc>
+    <loc>https://blog.nalanyinyun.top/categories/</loc>
     <lastmod>2023-11-11T19:54:45+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/en/categories/"
+                href="https://blog.nalanyinyun.top/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://example.com/categories/"
+                href="https://blog.nalanyinyun.top/categories/"
                 />
   </url><url>
-    <loc>https://example.com/post/</loc>
+    <loc>https://blog.nalanyinyun.top/post/</loc>
     <lastmod>2023-11-11T19:54:45+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/</loc>
+    <loc>https://blog.nalanyinyun.top/tags/</loc>
     <lastmod>2023-11-11T19:54:45+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/en/tags/"
+                href="https://blog.nalanyinyun.top/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://example.com/tags/"
+                href="https://blog.nalanyinyun.top/tags/"
                 />
   </url><url>
-    <loc>https://example.com/tags/technology/</loc>
+    <loc>https://blog.nalanyinyun.top/tags/technology/</loc>
     <lastmod>2023-11-11T19:54:45+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/categories/technology/</loc>
+    <loc>https://blog.nalanyinyun.top/categories/technology/</loc>
     <lastmod>2023-11-11T19:54:45+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/</loc>
+    <loc>https://blog.nalanyinyun.top/</loc>
     <lastmod>2023-11-11T19:54:45+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/en/"
+                href="https://blog.nalanyinyun.top/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://example.com/"
+                href="https://blog.nalanyinyun.top/"
                 />
   </url><url>
-    <loc>https://example.com/p/book/</loc>
+    <loc>https://blog.nalanyinyun.top/p/book/</loc>
     <lastmod>2023-11-11T19:54:45+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/categories/guide/</loc>
+    <loc>https://blog.nalanyinyun.top/categories/guide/</loc>
     <lastmod>2023-10-28T19:54:45+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/p/xiaomipad2/</loc>
+    <loc>https://blog.nalanyinyun.top/p/xiaomipad2/</loc>
     <lastmod>2023-10-28T19:54:45+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/p/%E6%A0%87%E5%87%86-cat6e-%E7%BD%91%E7%BA%BF%E6%B0%B4%E6%99%B6%E5%A4%B4%E6%8E%A5%E6%B3%95/</loc>
+    <loc>https://blog.nalanyinyun.top/p/%E6%A0%87%E5%87%86-cat6e-%E7%BD%91%E7%BA%BF%E6%B0%B4%E6%99%B6%E5%A4%B4%E6%8E%A5%E6%B3%95/</loc>
     <lastmod>2023-10-21T23:54:56+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/apodidae/</loc>
+    <loc>https://blog.nalanyinyun.top/tags/apodidae/</loc>
     <lastmod>2023-07-03T15:32:26+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/p/stop_maintenance/</loc>
+    <loc>https://blog.nalanyinyun.top/p/stop_maintenance/</loc>
     <lastmod>2023-07-03T15:32:26+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/about/</loc>
+    <loc>https://blog.nalanyinyun.top/about/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/page/</loc>
+    <loc>https://blog.nalanyinyun.top/page/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/search/</loc>
+    <loc>https://blog.nalanyinyun.top/search/</loc>
   </url><url>
-    <loc>https://example.com/categories/test/</loc>
+    <loc>https://blog.nalanyinyun.top/categories/test/</loc>
   </url>
 </urlset>

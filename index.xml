@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>The Nalanyinyun&#39;s View</title>
-        <link>https://example.com/</link>
+        <link>https://blog.nalanyinyun.top/</link>
         <description>Recent content on The Nalanyinyun&#39;s View</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Nalanyinyun</copyright>
-        <lastBuildDate>Sat, 11 Nov 2023 19:54:45 +0800</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 11 Nov 2023 19:54:45 +0800</lastBuildDate><atom:link href="https://blog.nalanyinyun.top/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>从零开始制作一本书</title>
-        <link>https://example.com/p/book/</link>
+        <link>https://blog.nalanyinyun.top/p/book/</link>
         <pubDate>Sat, 11 Nov 2023 19:54:45 +0800</pubDate>
         
-        <guid>https://example.com/p/book/</guid>
+        <guid>https://blog.nalanyinyun.top/p/book/</guid>
         <description>&lt;h1 id=&#34;从零开始制作一本书&#34;&gt;从零开始制作一本书&lt;/h1&gt;
 &lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;p&gt;在本文中，你将了解如何从无到有获取自己的第一本书，当然，是你自己的&lt;br&gt;
@@ -93,10 +93,10 @@
         </item>
         <item>
         <title>为小米平板 2 刷入 Windows 11 或 10</title>
-        <link>https://example.com/p/xiaomipad2/</link>
+        <link>https://blog.nalanyinyun.top/p/xiaomipad2/</link>
         <pubDate>Sat, 28 Oct 2023 19:54:45 +0800</pubDate>
         
-        <guid>https://example.com/p/xiaomipad2/</guid>
+        <guid>https://blog.nalanyinyun.top/p/xiaomipad2/</guid>
         <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;
 &lt;p&gt;本文将介绍如何将 Windows 10 &amp;amp; 11 刷入 Xiaomi Pad 2&lt;br&gt;
 此外 &lt;a class=&#34;link&#34; href=&#34;https://mirror.nalanyinyun.top/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -128,7 +128,7 @@ Nalanyinyun&amp;rsquo;s OneDrive 是专为源提供的镜像，免费，高速 &
 &lt;h3 id=&#34;101-格式化存储设备&#34;&gt;1.0.1 格式化存储设备&lt;/h3&gt;
 &lt;p&gt;首先，确认你的存储设备可以通过 USB 连接到电脑，并且格式为 FAT32 , 且只有一个分区 (推荐) 如果已经确认，请转至 1.0.2&lt;br&gt;
 打开 DiskGenius&lt;br&gt;
-&lt;img src=&#34;https://example.com/DiskGenius.png&#34;
+&lt;img src=&#34;https://blog.nalanyinyun.top/DiskGenius.png&#34;
 	
 	
 	
@@ -197,10 +197,10 @@ Nalanyinyun&amp;rsquo;s OneDrive 是专为源提供的镜像，免费，高速 &
         </item>
         <item>
         <title>标准 CAT6E 网线水晶头接法</title>
-        <link>https://example.com/p/%E6%A0%87%E5%87%86-cat6e-%E7%BD%91%E7%BA%BF%E6%B0%B4%E6%99%B6%E5%A4%B4%E6%8E%A5%E6%B3%95/</link>
+        <link>https://blog.nalanyinyun.top/p/%E6%A0%87%E5%87%86-cat6e-%E7%BD%91%E7%BA%BF%E6%B0%B4%E6%99%B6%E5%A4%B4%E6%8E%A5%E6%B3%95/</link>
         <pubDate>Sat, 21 Oct 2023 23:54:56 +0800</pubDate>
         
-        <guid>https://example.com/p/%E6%A0%87%E5%87%86-cat6e-%E7%BD%91%E7%BA%BF%E6%B0%B4%E6%99%B6%E5%A4%B4%E6%8E%A5%E6%B3%95/</guid>
+        <guid>https://blog.nalanyinyun.top/p/%E6%A0%87%E5%87%86-cat6e-%E7%BD%91%E7%BA%BF%E6%B0%B4%E6%99%B6%E5%A4%B4%E6%8E%A5%E6%B3%95/</guid>
         <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;p&gt;本文将介绍 标准 CAT6E 网线 水晶头接法，包括 TIA/EIA 568A 和 TIA/EIA 568B.&lt;/p&gt;
 &lt;h2 id=&#34;准备工具&#34;&gt;准备工具&lt;/h2&gt;
@@ -213,7 +213,7 @@ Nalanyinyun&amp;rsquo;s OneDrive 是专为源提供的镜像，免费，高速 &
 &lt;h3 id=&#34;10-准备工作&#34;&gt;1.0 准备工作&lt;/h3&gt;
 &lt;p&gt;用网线钳或剥线器剥去适当长度的网线外皮&lt;br&gt;
 解开所有缠绕的线缆，用剪刀剪去中间的塑料骨架，按照 TIA/EIA-568B(推荐) 或 TIA/EIA-568A 标准整理线缆，线序如图所示&lt;br&gt;
-&lt;img src=&#34;https://example.com/images.png&#34;
+&lt;img src=&#34;https://blog.nalanyinyun.top/images.png&#34;
 	
 	
 	
@@ -236,10 +236,10 @@ Nalanyinyun&amp;rsquo;s OneDrive 是专为源提供的镜像，免费，高速 &
         </item>
         <item>
         <title>Apodidae 停止维护公告</title>
-        <link>https://example.com/p/stop_maintenance/</link>
+        <link>https://blog.nalanyinyun.top/p/stop_maintenance/</link>
         <pubDate>Mon, 03 Jul 2023 15:32:26 +0800</pubDate>
         
-        <guid>https://example.com/p/stop_maintenance/</guid>
+        <guid>https://blog.nalanyinyun.top/p/stop_maintenance/</guid>
         <description>&lt;p&gt;经过考虑 (也没什么可考虑的), 我们 (LilyWorks) 准备停止 Apodidae 的一切维护工作，包括 开发博客 官方网站 以及 Apodidae 本体&lt;br&gt;
 其实停止维护的理由很简单，一共就这两点：&lt;/p&gt;
 &lt;ul&gt;
@@ -270,14 +270,14 @@ Nalanyinyun&amp;rsquo;s OneDrive 是专为源提供的镜像，免费，高速 &
         </item>
         <item>
         <title>About</title>
-        <link>https://example.com/about/</link>
+        <link>https://blog.nalanyinyun.top/about/</link>
         <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/about/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;https://example.com/about/20231009_232759_0000.png&#34;
+        <guid>https://blog.nalanyinyun.top/about/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;https://blog.nalanyinyun.top/about/20231009_232759_0000.png&#34;
 	width=&#34;1584&#34;
 	height=&#34;396&#34;
-	srcset=&#34;https://example.com/about/20231009_232759_0000_hu8aa64946ffb52b9ab74c03462fde02c2_48935_480x0_resize_box_3.png 480w, https://example.com/about/20231009_232759_0000_hu8aa64946ffb52b9ab74c03462fde02c2_48935_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.nalanyinyun.top/about/20231009_232759_0000_hu8aa64946ffb52b9ab74c03462fde02c2_48935_480x0_resize_box_3.png 480w, https://blog.nalanyinyun.top/about/20231009_232759_0000_hu8aa64946ffb52b9ab74c03462fde02c2_48935_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Banner&#34;
@@ -290,10 +290,10 @@ Nalanyinyun&amp;rsquo;s OneDrive 是专为源提供的镜像，免费，高速 &
 &gt;&lt;br&gt;
 I&amp;rsquo;m a translator. If you require Chinese or English translation for your project, feel free to mention me. It would be my pleasure to help others.&lt;/p&gt;
 &lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/about/20230909_235016_0001.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.nalanyinyun.top/about/20230909_235016_0001.png&#34;
 	width=&#34;1050&#34;
 	height=&#34;600&#34;
-	srcset=&#34;https://example.com/about/20230909_235016_0001_hub13dc27ac897bce885714585c52ba0ba_29551_480x0_resize_box_3.png 480w, https://example.com/about/20230909_235016_0001_hub13dc27ac897bce885714585c52ba0ba_29551_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.nalanyinyun.top/about/20230909_235016_0001_hub13dc27ac897bce885714585c52ba0ba_29551_480x0_resize_box_3.png 480w, https://blog.nalanyinyun.top/about/20230909_235016_0001_hub13dc27ac897bce885714585c52ba0ba_29551_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;intro&#34;
@@ -304,10 +304,10 @@ I&amp;rsquo;m a translator. If you require Chinese or English translation for yo
 		data-flex-basis=&#34;420px&#34;
 	
 &gt;&lt;br&gt;
-&lt;img src=&#34;https://example.com/about/20230909_235016_0000.png&#34;
+&lt;img src=&#34;https://blog.nalanyinyun.top/about/20230909_235016_0000.png&#34;
 	width=&#34;1050&#34;
 	height=&#34;600&#34;
-	srcset=&#34;https://example.com/about/20230909_235016_0000_hu4be4c38f3240917c48406c40963c8f19_52669_480x0_resize_box_3.png 480w, https://example.com/about/20230909_235016_0000_hu4be4c38f3240917c48406c40963c8f19_52669_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.nalanyinyun.top/about/20230909_235016_0000_hu4be4c38f3240917c48406c40963c8f19_52669_480x0_resize_box_3.png 480w, https://blog.nalanyinyun.top/about/20230909_235016_0000_hu4be4c38f3240917c48406c40963c8f19_52669_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;intro&#34;
@@ -360,10 +360,10 @@ I&amp;rsquo;m a translator. If you require Chinese or English translation for yo
         </item>
         <item>
         <title>Search</title>
-        <link>https://example.com/search/</link>
+        <link>https://blog.nalanyinyun.top/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/search/</guid>
+        <guid>https://blog.nalanyinyun.top/search/</guid>
         <description></description>
         </item>
         

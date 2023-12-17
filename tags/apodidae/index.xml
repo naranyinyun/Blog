@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Apodidae on The Nalanyinyun&#39;s View</title>
-        <link>https://example.com/tags/apodidae/</link>
+        <link>https://blog.nalanyinyun.top/tags/apodidae/</link>
         <description>Recent content in Apodidae on The Nalanyinyun&#39;s View</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Nalanyinyun</copyright>
-        <lastBuildDate>Mon, 03 Jul 2023 15:32:26 +0800</lastBuildDate><atom:link href="https://example.com/tags/apodidae/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 03 Jul 2023 15:32:26 +0800</lastBuildDate><atom:link href="https://blog.nalanyinyun.top/tags/apodidae/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Apodidae 停止维护公告</title>
-        <link>https://example.com/p/stop_maintenance/</link>
+        <link>https://blog.nalanyinyun.top/p/stop_maintenance/</link>
         <pubDate>Mon, 03 Jul 2023 15:32:26 +0800</pubDate>
         
-        <guid>https://example.com/p/stop_maintenance/</guid>
+        <guid>https://blog.nalanyinyun.top/p/stop_maintenance/</guid>
         <description>&lt;p&gt;经过考虑 (也没什么可考虑的), 我们 (LilyWorks) 准备停止 Apodidae 的一切维护工作，包括 开发博客 官方网站 以及 Apodidae 本体&lt;br&gt;
 其实停止维护的理由很简单，一共就这两点：&lt;/p&gt;
 &lt;ul&gt;
