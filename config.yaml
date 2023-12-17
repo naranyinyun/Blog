@@ -54,7 +54,7 @@ params:
 
     sidebar:
         emoji: 🌷
-        subtitle: Nalanyinyun, just as your has known.
+        subtitle: Nalanyinyun, Just as you knew.
         avatar:
             enabled: true
             local: false
