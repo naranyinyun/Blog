@@ -26,4 +26,7 @@ menu:
         params:
             icon: link
 ---
-这里是一些我的其他网站
+这里是一些我的其他网站：  
+这里是一些生成的 Badge ，很漂亮，也很有意思  
+
+{{< badge text="Wilderness Artworks" herf="https://artworks.nalanyinyun.top" >}}
