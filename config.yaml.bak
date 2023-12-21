@@ -1,8 +1,6 @@
 baseurl: https://blog.nalanyinyun.top
 languageCode: zh-cn
-theme: 
-    - hugo-shortcode-roneo-button-icon-badge
-    - hugo-theme-stack
+theme: hugo-theme-stack
 paginate: 5
 title: The Nalanyinyun's View
 copyright: Nalanyinyun
@@ -60,7 +58,7 @@ params:
         avatar:
             enabled: true
             local: false
-            src: /nalanyinyun.webp
+            src: /nalanyinyun.png
 
     article:
         math: true
@@ -229,4 +227,3 @@ markup:
         lineNos: true
         lineNumbersInTable: true
         tabWidth: 4
-        
