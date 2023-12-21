@@ -58,7 +58,7 @@ params:
         avatar:
             enabled: true
             local: false
-            src: /nalanyinyun.png
+            src: /nalanyinyun.webp
 
     article:
         math: true
