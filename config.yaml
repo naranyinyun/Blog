@@ -8,18 +8,12 @@ title: The Nalanyinyun's View
 copyright: Nalanyinyun
 
 languages:
-    en:
-        languageName: English
-        title: The Nalanyinyun's View
-        weight: 2
-        params:
-            description: Example description
     zh-cn:
         languageName: 简体中文
         title: The Nalanyinyun's View
         weight: 1
         params:
-            description: 演示说明
+            description: 记录一些技术文档，教程，和某些奇奇怪怪的东西
 
 # Change it to your Disqus shortname before using
 disqusShortname: hugo-theme-stack
