@@ -50,7 +50,7 @@ params:
 
     sidebar:
         emoji: ❄
-        subtitle: 涉江采芙蓉，兰泽多芳草. | Merry Christmas!
+        subtitle: 涉江采芙蓉，兰泽多芳草. | 千门万户曈曈日，总把新桃换旧符.
         avatar:
             enabled: true
             local: false
