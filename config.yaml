@@ -195,6 +195,16 @@ menu:
           url: https://github.com/Naranyinyun
           params:
               icon: brand-github
+        - indentifier: bgm.tv
+          name: Bangumi.tv
+          url: https://bgm.tv/user/wilderness_nala
+          params:
+              icon: bgm
+        - indentifier: bilibili
+          name: BiliBili
+          url: https://space.bilibili.com/384920476
+          params:
+              icon: bilibili
 related:
     includeNewer: true
     threshold: 60
