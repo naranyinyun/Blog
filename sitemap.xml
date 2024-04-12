@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.nalanyinyun.top/post/</loc>
+    <lastmod>2024-04-12T16:21:52+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.nalanyinyun.top/</loc>
+    <lastmod>2024-04-12T16:21:52+00:00</lastmod>
+  </url><url>
     <loc>https://blog.nalanyinyun.top/categories/</loc>
     <lastmod>2024-01-17T13:36:13+00:00</lastmod>
   </url><url>
@@ -11,13 +17,7 @@
     <loc>https://blog.nalanyinyun.top/categories/poetry/</loc>
     <lastmod>2024-01-17T13:36:13+00:00</lastmod>
   </url><url>
-    <loc>https://blog.nalanyinyun.top/post/</loc>
-    <lastmod>2024-01-17T13:36:13+00:00</lastmod>
-  </url><url>
     <loc>https://blog.nalanyinyun.top/tags/</loc>
-    <lastmod>2024-01-17T13:36:13+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.nalanyinyun.top/</loc>
     <lastmod>2024-01-17T13:36:13+00:00</lastmod>
   </url><url>
     <loc>https://blog.nalanyinyun.top/tags/wilderness/</loc>
