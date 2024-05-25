@@ -50,7 +50,7 @@ params:
 
     sidebar:
         emoji: 
-        subtitle: 柳色千家与万家，轻风细雨落残花 | Ending of Spring
+        subtitle: 
         avatar:
             enabled: true
             local: false
