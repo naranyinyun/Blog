@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Technology on The Nalanyinyun&#39;s View</title>
+        <link>http://localhost:1313/categories/technology/</link>
+        <description>Recent content in Technology on The Nalanyinyun&#39;s View</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Nalanyinyun</copyright>
+        <lastBuildDate>Wed, 31 Jul 2024 19:31:14 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/technology/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>为 CR6608 安装 Openwrt</title>
+        <link>http://localhost:1313/p/openwrt-for-cr6608/</link>
+        <pubDate>Wed, 31 Jul 2024 19:31:14 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/openwrt-for-cr6608/</guid>
+        <description>&lt;h2 id=&#34;准备&#34;&gt;准备&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Openwrt 固件&lt;/li&gt;
+&lt;li&gt;一台&lt;strong&gt;运行 Openwrt&lt;/strong&gt;的设备（辅助设备）&lt;/li&gt;
+&lt;li&gt;一台 CR6608&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;获取-ssh-权限并刷入-pb-boot&#34;&gt;获取 SSH 权限并刷入 pb-boot&lt;/h2&gt;
+&lt;h2 id=&#34;辅助设备准备&#34;&gt;辅助设备准备&lt;/h2&gt;
+&lt;p&gt;将 &lt;a class=&#34;link&#34; href=&#34;https://mirror.nalanyinyun.top/zh-CN/The%20Mirror%20of%20Source/CR660X%20Source/xqsystem.lua&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;xqsystem.lua&lt;/a&gt; 上传至辅助路由器的&lt;code&gt;/usr/lib/lua/luci/controller/admin/&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scp -O [path xqsystem.lua] [username]@[router ip]:/usr/lib/lua/luci/controller/admin/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;降级&#34;&gt;降级&lt;/h3&gt;
+</description>
+        </item>
+        <item>
+        <title>在 Windows 上安装 Chocoatey</title>
+        <link>http://localhost:1313/p/choco/</link>
+        <pubDate>Sun, 17 Dec 2023 19:17:17 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/choco/</guid>
+        <description>&lt;h1 id=&#34;安装&#34;&gt;安装&lt;/h1&gt;
+&lt;h2 id=&#34;通过-nupkg-离线安装&#34;&gt;通过 .nupkg 离线安装&lt;/h2&gt;
+&lt;p&gt;访问 &lt;a class=&#34;link&#34; href=&#34;https://chocolatey.org/install&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Chocolatey Installation&lt;/a&gt; , 转至 &lt;code&gt;Step 2&lt;/code&gt;, 选择 &lt;code&gt;PS DSC&lt;/code&gt;, 下滑，选择 &lt;code&gt;Download&lt;/code&gt; , 关于 PowerShell 上的离线安装，这里不做过多介绍，如需参考，转至 &lt;a class=&#34;link&#34; href=&#34;https://learn.microsoft.com/en-us/powershell/gallery/how-to/working-with-packages/manual-download?view=powershellget-3.x&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Microsoft Learn | Manual Package Download&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;通过在线脚本安装&#34;&gt;通过在线脚本安装&lt;/h2&gt;
+&lt;p&gt;以管理员权限打开 &lt;code&gt;PowerShell&lt;/code&gt;, 输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Powershell&#34; data-lang=&#34;Powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Set-ExecutionPolicy&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Bypass&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-Scope&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;Process&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-Force&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;System.Net.ServicePointManager&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SecurityProtocol&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;System.Net.ServicePointManager&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SecurityProtocol&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-bor&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;3072&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;iex &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;New-Object&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Net&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;WebClient&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;DownloadString&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;https://community.chocolatey.org/install.ps1&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;等待脚本运行完成
+
+
+
+&lt;div class=&#34;notice notice-info&#34; &gt;
+    &lt;div class=&#34;notice-title&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; height=&#34;24&#34; viewBox=&#34;0 -960 960 960&#34; width=&#34;24&#34;&gt;&lt;path d=&#34;M480-280q17 0 28.5-11.5T520-320v-160q0-17-11.5-28.5T480-520q-17 0-28.5 11.5T440-480v160q0 17 11.5 28.5T480-280Zm0-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;&lt;p&gt;如果 PowerShell 提示 &lt;code&gt; 无法加载文件 &amp;lt;any file&amp;gt; ，因为在此系统上禁止运行脚本&lt;/code&gt;, 在管理员 PowerShell 中输入 &lt;code&gt;Set-ExecutionPolicy -ExecutionPolicy RemoteSigned&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+
+
+&lt;div class=&#34;notice notice-warning&#34; &gt;
+    &lt;div class=&#34;notice-title&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; height=&#34;24&#34; viewBox=&#34;0 -960 960 960&#34; width=&#34;24&#34;&gt;&lt;path d=&#34;m326-90-58-98-110-24q-15-3-24-15.5t-7-27.5l11-113-75-86q-10-11-10-26t10-26l75-86-11-113q-2-15 7-27.5t24-15.5l110-24 58-98q8-13 22-17.5t28 1.5l104 44 104-44q14-6 28-1.5t22 17.5l58 98 110 24q15 3 24 15.5t7 27.5l-11 113 75 86q10 11 10 26t-10 26l-75 86 11 113q2 15-7 27.5T802-212l-110 24-58 98q-8 13-22 17.5T584-74l-104-44-104 44q-14 6-28 1.5T326-90Zm52-72 102-44 104 44 56-96 110-26-10-112 74-84-74-86 10-112-110-24-58-96-102 44-104-44-56 96-110 24 10 112-74 86 74 84-10 114 110 24 58 96Zm102-318Zm0 200q17 0 28.5-11.5T520-320q0-17-11.5-28.5T480-360q-17 0-28.5 11.5T440-320q0 17 11.5 28.5T480-280Zm0-160q17 0 28.5-11.5T520-480v-160q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640v160q0 17 11.5 28.5T480-440Z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;&lt;p&gt;如果你不知道你在做什么，请在安装之后切换回 &lt;code&gt;Restricted&lt;/code&gt;, &lt;code&gt;RemoteSinged&lt;/code&gt; 和更宽松的执行策略可能会导致严重的安全性问题&lt;/p&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;使用&#34;&gt;使用&lt;/h2&gt;
+&lt;h3 id=&#34;修改默认安装路径&#34;&gt;修改默认安装路径&lt;/h3&gt;
+&lt;p&gt;在高级系统设置中点击编辑系统环境变量，点击 Chocolateyinstall , 将 &lt;code&gt;C:\ProgramData\chocolatey\bin&lt;/code&gt; 改为你希望安装的路径，我选择的是 &lt;code&gt;D:\ChocolateySoftware&lt;/code&gt;
+
+
+
+&lt;div class=&#34;notice notice-note&#34; &gt;
+    &lt;div class=&#34;notice-title&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; height=&#34;24&#34; viewBox=&#34;0 -960 960 960&#34; width=&#34;24&#34;&gt;&lt;path d=&#34;M360-200q-20 0-37.5-9T294-234L153-434q-15-21-15-46t15-46l141-200q11-16 28.5-25t37.5-9h400q33 0 56.5 23.5T840-680v400q0 33-23.5 56.5T760-200H360Zm400-80v-400 400Zm-400 0h400v-400H360L218-480l142 200Zm20-160q17 0 28.5-11.5T420-480q0-17-11.5-28.5T380-520q-17 0-28.5 11.5T340-480q0 17 11.5 28.5T380-440Zm140 0q17 0 28.5-11.5T560-480q0-17-11.5-28.5T520-520q-17 0-28.5 11.5T480-480q0 17 11.5 28.5T520-440Zm140 0q17 0 28.5-11.5T700-480q0-17-11.5-28.5T660-520q-17 0-28.5 11.5T620-480q0 17 11.5 28.5T660-440Z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;&lt;p&gt;如果不更改安装路径，你的每一次操作都需要在管理员 PowerShell 中运行&lt;/p&gt;&lt;/div&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;cli-用法&#34;&gt;CLI 用法&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Shell&#34; data-lang=&#34;Shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 安装软件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;choco install adb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 卸载软件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;choco uninstall adb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 搜索软件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;choco search adb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 查看本地已经安装的软件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;choco list -lo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 更新&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;choco upgrade adb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 查看版本&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;choco version adb
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>从零开始制作一本书</title>
+        <link>http://localhost:1313/p/book/</link>
+        <pubDate>Sat, 11 Nov 2023 19:54:45 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/book/</guid>
+        <description>&lt;h1 id=&#34;从零开始制作一本书&#34;&gt;从零开始制作一本书&lt;/h1&gt;
+&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;p&gt;在本文中，你将了解如何从无到有获取自己的第一本书，当然，是你自己的&lt;br&gt;
+两周前，我突然萌生出了写一本书这样的想法，当这想法产生的那一刻起，我就知道这是个疯狂的想法，而我会为了实现那疯狂的想法而付出努力
+现在，它已经基本完成了，只需等待印刷，大抵很快就会到我手里了吧&lt;br&gt;
+相信我，当你排完整本书后，为整本书写最后一笔时，你的感觉会是我无法描述，常人也无法想象的舒畅&lt;/p&gt;
+&lt;h2 id=&#34;10-预先准备&#34;&gt;1.0 预先准备&lt;/h2&gt;
+&lt;p&gt;由于制作一本书需要考虑的事情较多，我非常推荐你仔细考量完这些问题后再进行下一步操作&lt;/p&gt;
+&lt;h3 id=&#34;11-选择纸张规格&#34;&gt;1.1 选择纸张规格&lt;/h3&gt;
+&lt;p&gt;常见的纸张规格有这些&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;32 开 (中国) 130mm×185mm&lt;/li&gt;
+&lt;li&gt;32 开 203×140mm&lt;/li&gt;
+&lt;li&gt;A5 210 mm × 148 mm&lt;/li&gt;
+&lt;li&gt;B5 257 mm × 182 mm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我比较推荐你使用 32 开 或 A5，我自己选择的是 A5，拿一张 A4 纸对折的大小就是 A5，我对比了一下，和「挪威的森林」差不多大，而且也较方便印刷&lt;/p&gt;
+&lt;p&gt;当然你可以选择其他尺寸，但是切记，&lt;strong&gt;你选择的尺寸必须被你选择的印刷商支持&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;12-选择排版软件&#34;&gt;1.2 选择排版软件&lt;/h3&gt;
+&lt;p&gt;目前较为流行的软件有这些&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Adobe InDesign&lt;/li&gt;
+&lt;li&gt;CorelDraw&lt;/li&gt;
+&lt;li&gt;Microsoft Publisher&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我非常推荐你使用 Microsoft Publisher，和最专业的 Adobe InDesign 相比，Microsoft Publisher 的操作简单快捷，学习成本也极低，几乎不需要学习便可以上手使用&lt;/p&gt;
+&lt;p&gt;而且我有 Microsoft 365 for Business 授权，何乐而不为呢？&lt;/p&gt;
+&lt;h3 id=&#34;13-选择字体&#34;&gt;1.3 选择字体&lt;/h3&gt;
+&lt;p&gt;字体的种类很多，在此不一一介绍了&lt;/p&gt;
+&lt;p&gt;如果你去查阅，你会发现很多答案都在推荐宋体，但我想说的是，我最讨厌的字体之一就是宋体，不仅是因为衬线字体在显示器上的显示效果极差，更因为宋体表达的情感太弱了&lt;/p&gt;
+&lt;p&gt;宋体也许很适合某些文学作品，但对于诗集而言，更现代化的黑体才是更好的选择
+黑体简洁，干脆，无衬线字体带来的观感要远好于宋体之类的衬线字体&lt;/p&gt;
+&lt;p&gt;总之，我的诗集选用了 Xiaomi 的 MiSans，MiSans 虽然与其他汉仪字体无太大区别，但我很喜欢 MiSans 的标点，无论是逗号，句号 (英文)，都是方形的设计，这会让本就简洁有力的黑体表现力更上一层楼&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;平淡的叙述平淡的事情，平淡的叙述绝望的一切&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这便是黑体的表现力&lt;/p&gt;
+&lt;h3 id=&#34;21-设计&#34;&gt;2.1 设计&lt;/h3&gt;
+&lt;p&gt;根据你使用的软件不同，设计的方式也不同，我不会在这里教你怎么排版，但仍有一些事情值得注意&lt;/p&gt;
+&lt;h4 id=&#34;22-段首缩进缩进和段间距&#34;&gt;2.2 段首缩进，缩进和段间距&lt;/h4&gt;
+&lt;p&gt;我很难为你提供什么指导，但我的选择也许可以供你参考&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(左) 缩进：0.25 厘米&lt;/li&gt;
+&lt;li&gt;段间距：1.19 倍行距&lt;/li&gt;
+&lt;li&gt;行间距：Publisher 默认&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;23-封面底面和页码&#34;&gt;2.3 封面，底面和页码&lt;/h4&gt;
+&lt;p&gt;封面和底面我比较推荐 Canva 进行设计，页码也很简单，设计在每页远离书脊那一侧就可以了&lt;/p&gt;
+&lt;p&gt;注意，一定要区分好左手页和右手页，封面和底面应在单独的一面上，不要混淆&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;底面镜像之后才符合正常阅读顺序&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;24-出血线色彩和格式&#34;&gt;2.4 出血线，色彩和格式&lt;/h4&gt;
+&lt;p&gt;一般 32 开 的纸张需要预留 3 毫米提供机器裁切，这样即便有切割误差也不会出现白边，这就是出血线，如果你选择了软胶封装，每页的书脊侧也会被钉入 3 - 5 毫米&lt;/p&gt;
+&lt;p&gt;关于色彩，尽量在一开始就用 CMYK 进行设计，否则 sRGB 到 CMYK 转换的色差会让你的图片毁容，如果通篇图片和颜色很少则无需担心&lt;/p&gt;
+&lt;p&gt;格式使用 PDF 较多，注意你的 PDF 分辨率应至少为 300，否则会导致印刷不清晰，此外，确保你插入的图片分辨率足够，不然印刷出来的效果差强人意&lt;/p&gt;
+&lt;h3 id=&#34;31-印刷&#34;&gt;3.1 印刷&lt;/h3&gt;
+&lt;p&gt;印刷设计的问题也不少，你可能会面临这些问题&lt;/p&gt;
+&lt;h4 id=&#34;32-印刷用纸&#34;&gt;3.2 印刷用纸&lt;/h4&gt;
+&lt;p&gt;一般 80g 或 70g 的普通纸，哑粉纸 (很厚)，道林纸即可满足需求，铜版纸也可，但质感独特，具体咨询印刷商家&lt;/p&gt;
+&lt;h4 id=&#34;33-装订&#34;&gt;3.3 装订&lt;/h4&gt;
+&lt;p&gt;常见的装订方式&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;骑马钉&lt;/li&gt;
+&lt;li&gt;软胶&lt;/li&gt;
+&lt;li&gt;锁线&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一般软胶即可满足需求，而且软胶比较常见，不能完全展开，而且要考虑被封入的部分
+骑马钉非常不推荐使用，容易坏还丑
+锁线效果更好，能完全展开，不易损，但是较贵，如果需要收藏可以选择锁线&lt;/p&gt;
+&lt;h3 id=&#34;41-尾语&#34;&gt;4.1 尾语&lt;/h3&gt;
+&lt;p&gt;拥有自己的书的感觉十分奇怪，我也在这里描述不出来，但当你拥有自己的书的那刻便会明白此刻我的心情&lt;/p&gt;
+&lt;p&gt;印刷过程你可能会遇到很多问题，但别着急，先印一两张看看效果，排版时一定要&lt;strong&gt;注意校对&lt;/strong&gt;，在书里看到错字实在是令人难以接受&lt;/p&gt;
+&lt;p&gt;这一切需要时间，更需要耐心&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;生命实在是这样奇妙的东西，万千矛盾集于一体&lt;/p&gt;
+&lt;p&gt;摘自 The Wilderness&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
+        <title>为小米平板 2 刷入 Windows 11 或 10</title>
+        <link>http://localhost:1313/p/xiaomipad2/</link>
+        <pubDate>Sat, 28 Oct 2023 19:54:45 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/xiaomipad2/</guid>
+        <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;
+&lt;p&gt;本文将介绍如何将 Windows 10 &amp;amp; 11 刷入 Xiaomi Pad 2&lt;br&gt;
+此外 &lt;a class=&#34;link&#34; href=&#34;https://mirror.nalanyinyun.top/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nalanyinyun&amp;rsquo;s OneDrive&lt;/a&gt; 将提供本文所需所有文件的镜像&lt;br&gt;
+
+
+
+&lt;div class=&#34;notice notice-tip&#34; &gt;
+    &lt;div class=&#34;notice-title&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; height=&#34;24&#34; viewBox=&#34;0 -960 960 960&#34; width=&#34;24&#34;&gt;&lt;path d=&#34;m438-452-58-57q-11-11-27.5-11T324-508q-11 11-11 28t11 28l86 86q12 12 28 12t28-12l170-170q12-12 11.5-28T636-592q-12-12-28.5-12.5T579-593L438-452ZM326-90l-58-98-110-24q-15-3-24-15.5t-7-27.5l11-113-75-86q-10-11-10-26t10-26l75-86-11-113q-2-15 7-27.5t24-15.5l110-24 58-98q8-13 22-17.5t28 1.5l104 44 104-44q14-6 28-1.5t22 17.5l58 98 110 24q15 3 24 15.5t7 27.5l-11 113 75 86q10 11 10 26t-10 26l-75 86 11 113q2 15-7 27.5T802-212l-110 24-58 98q-8 13-22 17.5T584-74l-104-44-104 44q-14 6-28 1.5T326-90Zm52-72 102-44 104 44 56-96 110-26-10-112 74-84-74-86 10-112-110-24-58-96-102 44-104-44-56 96-110 24 10 112-74 86 74 84-10 114 110 24 58 96Zm102-318Z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;&lt;p&gt;The Nalanyinyun&amp;rsquo;s OneDrive is a mirror for lots of sources, it&amp;rsquo;s free, fast, no trick.&lt;br&gt;
+Nalanyinyun&amp;rsquo;s OneDrive 是专为源提供的镜像，免费，高速 &lt;br&gt;
+我们不需要你关注任何公众号，也无需付费或感受糟糕的下载体验&lt;/p&gt;&lt;/div&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;准备工作&#34;&gt;准备工作&lt;/h1&gt;
+&lt;p&gt;所需物品&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个不小于 8GB 的 &lt;strong&gt;FAT32&lt;/strong&gt; 格式的外置存储设备&lt;/li&gt;
+&lt;li&gt;键盘和鼠标，必须可以通过 USB 方式连接到电脑&lt;/li&gt;
+&lt;li&gt;一个 OTG 转接器或 USB 集线器，推荐至少有两个接口并可外置供电&lt;/li&gt;
+&lt;li&gt;你要安装的系统镜像，提前存至存储设备中 *我非常推荐你使用 Windows LTSC 2021 或 2019 你可以在 MSDN 上找到它们&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;div class=&#34;notice notice-warning&#34; &gt;
+    &lt;div class=&#34;notice-title&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; height=&#34;24&#34; viewBox=&#34;0 -960 960 960&#34; width=&#34;24&#34;&gt;&lt;path d=&#34;m326-90-58-98-110-24q-15-3-24-15.5t-7-27.5l11-113-75-86q-10-11-10-26t10-26l75-86-11-113q-2-15 7-27.5t24-15.5l110-24 58-98q8-13 22-17.5t28 1.5l104 44 104-44q14-6 28-1.5t22 17.5l58 98 110 24q15 3 24 15.5t7 27.5l-11 113 75 86q10 11 10 26t-10 26l-75 86 11 113q2 15-7 27.5T802-212l-110 24-58 98q-8 13-22 17.5T584-74l-104-44-104 44q-14 6-28 1.5T326-90Zm52-72 102-44 104 44 56-96 110-26-10-112 74-84-74-86 10-112-110-24-58-96-102 44-104-44-56 96-110 24 10 112-74 86 74 84-10 114 110 24 58 96Zm102-318Zm0 200q17 0 28.5-11.5T520-320q0-17-11.5-28.5T480-360q-17 0-28.5 11.5T440-320q0 17 11.5 28.5T480-280Zm0-160q17 0 28.5-11.5T520-480v-160q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640v160q0 17 11.5 28.5T480-440Z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;&lt;p&gt;请确保设备电池的有效电量足够，低电量水平会导致失败，你很可能要再等近一个小时才能重新开始&lt;/p&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;前置步骤&#34;&gt;前置步骤&lt;/h1&gt;
+&lt;h2 id=&#34;10-在外置存储设备上安装-pe&#34;&gt;1.0 在外置存储设备上安装 PE&lt;/h2&gt;
+&lt;h3 id=&#34;101-格式化存储设备&#34;&gt;1.0.1 格式化存储设备&lt;/h3&gt;
+&lt;p&gt;首先，确认你的存储设备可以通过 USB 连接到电脑，并且格式为 FAT32 , 且只有一个分区 (推荐) 如果已经确认，请转至 1.0.2&lt;br&gt;
+打开 DiskGenius&lt;br&gt;
+&lt;img src=&#34;http://localhost:1313/DiskGenius.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;br&gt;
+选中你的移动存储设备，依次点击右上方 &lt;code&gt;磁盘&lt;/code&gt; - &lt;code&gt;删除所有分区&lt;/code&gt;&lt;br&gt;
+保存更改&lt;br&gt;
+点击 &lt;code&gt;新建分区&lt;/code&gt; , 然后在 &lt;code&gt;请选择文件系统类型:&lt;/code&gt; 中选择 &lt;code&gt;FAT32&lt;/code&gt; 并确认&lt;/p&gt;
+&lt;h3 id=&#34;102-安装-pe&#34;&gt;1.0.2 安装 PE&lt;/h3&gt;
+&lt;p&gt;下载 &lt;a class=&#34;link&#34; href=&#34;https://mirror.nalanyinyun.top/zh-CN/The%20Mirror%20of%20Source/Xiaomi%20Pad%20Source/Xiaomi%20Pad%202%20Touchable%20PE.7z&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Xiaomi Pad 2 Touchable PE&lt;/a&gt;&lt;br&gt;
+将压缩包内所有文件解压至存储设备&lt;strong&gt;根目录&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;103-准备驱动&#34;&gt;1.0.3 准备驱动&lt;/h3&gt;
+&lt;p&gt;下载 &lt;a class=&#34;link&#34; href=&#34;https://mirror.nalanyinyun.top/zh-CN/The%20Mirror%20of%20Source/Xiaomi%20Pad%20Source/Xiaomi%20Pad%202%20Drivers.7z&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Xiaomi Pad 2 Drives&lt;/a&gt;&lt;br&gt;
+
+
+
+&lt;div class=&#34;notice notice-warning&#34; &gt;
+    &lt;div class=&#34;notice-title&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; height=&#34;24&#34; viewBox=&#34;0 -960 960 960&#34; width=&#34;24&#34;&gt;&lt;path d=&#34;m326-90-58-98-110-24q-15-3-24-15.5t-7-27.5l11-113-75-86q-10-11-10-26t10-26l75-86-11-113q-2-15 7-27.5t24-15.5l110-24 58-98q8-13 22-17.5t28 1.5l104 44 104-44q14-6 28-1.5t22 17.5l58 98 110 24q15 3 24 15.5t7 27.5l-11 113 75 86q10 11 10 26t-10 26l-75 86 11 113q2 15-7 27.5T802-212l-110 24-58 98q-8 13-22 17.5T584-74l-104-44-104 44q-14 6-28 1.5T326-90Zm52-72 102-44 104 44 56-96 110-26-10-112 74-84-74-86 10-112-110-24-58-96-102 44-104-44-56 96-110 24 10 112-74 86 74 84-10 114 110 24 58 96Zm102-318Zm0 200q17 0 28.5-11.5T520-320q0-17-11.5-28.5T480-360q-17 0-28.5 11.5T440-320q0 17 11.5 28.5T480-280Zm0-160q17 0 28.5-11.5T520-480v-160q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640v160q0 17 11.5 28.5T480-440Z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;&lt;p&gt;最好在电脑上提前解压驱动，否则的你将花费超过 5 分钟在平板上解压&lt;/p&gt;&lt;/div&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;104-确认&#34;&gt;1.0.4 确认&lt;/h3&gt;
+&lt;p&gt;确认你的文件结构正常，如果你没有把驱动解压至根目录，他的结构看起来应该是这样&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Markdown&#34; data-lang=&#34;Markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Length Name  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;------ ----  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;LOST.DIR  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Boot  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;efi  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sources  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;附件  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bootmgfw.efi  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bootmgr.efi  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h1 id=&#34;在平板上操作&#34;&gt;在平板上操作&lt;/h1&gt;
+&lt;h2 id=&#34;10-进入-pe&#34;&gt;1.0 进入 PE&lt;/h2&gt;
+&lt;p&gt;将存储设备连接至平板并重启，如果提示 &lt;code&gt;Shim UEFI key mangement&lt;/code&gt; 此类提示，按下电源键进入 BIOS&lt;br&gt;
+接入键盘，依次操作 &lt;code&gt;Boot Manager&lt;/code&gt; - &lt;code&gt;System Setup&lt;/code&gt; 关闭 &lt;code&gt;Secure Boot&lt;/code&gt;&lt;br&gt;
+按下 ESC, 拔下键盘插入存储设备，用音量键选择 &lt;code&gt;Commit Change and reboot&lt;/code&gt; 按电源键确认。&lt;br&gt;
+重启后即可进入 PE, 你可能每次进入 PE 都需要执行此操作&lt;/p&gt;
+&lt;h2 id=&#34;11-操作分区&#34;&gt;1.1 操作分区&lt;/h2&gt;
+&lt;p&gt;在 DiskGenius 中按照 1.0.1 的步骤删除 本地硬盘 中的所有分区，注意 新建分区时应选择 NTFS 格式，勾选创建 ESP 分区&lt;/p&gt;
+&lt;h2 id=&#34;12-安装系统&#34;&gt;1.2 安装系统&lt;/h2&gt;
+&lt;p&gt;打开 Dism++ , 依次点击 右上方 &lt;code&gt;文件&lt;/code&gt; - &lt;code&gt;释放镜像&lt;/code&gt; 选择你的镜像和释放目录，勾选&lt;code&gt;格式化&lt;/code&gt;,&lt;code&gt;添加引导&lt;/code&gt;&lt;br&gt;
+点击确认，等待释放完成&lt;br&gt;
+完成后点击 &lt;code&gt;打开会话&lt;/code&gt; - &lt;code&gt;驱动管理&lt;/code&gt; - &lt;code&gt;添加驱动&lt;/code&gt; 选择你在 1.0.3 中解压的文件，注意，是&lt;strong&gt;整个文件夹&lt;/strong&gt;, 即 &lt;code&gt;Xiaomi Pad 2 Drivers&lt;/code&gt; 文件夹&lt;br&gt;
+等待添加完成，点击重启并在屏幕熄灭后迅速拔下存储设备&lt;/p&gt;
+&lt;h2 id=&#34;13-oobe&#34;&gt;1.3 OOBE&lt;/h2&gt;
+&lt;p&gt;完成 Windows 引导即可享受&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>标准 CAT6E 网线水晶头接法</title>
+        <link>http://localhost:1313/p/%E6%A0%87%E5%87%86-cat6e-%E7%BD%91%E7%BA%BF%E6%B0%B4%E6%99%B6%E5%A4%B4%E6%8E%A5%E6%B3%95/</link>
+        <pubDate>Sat, 21 Oct 2023 23:54:56 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/%E6%A0%87%E5%87%86-cat6e-%E7%BD%91%E7%BA%BF%E6%B0%B4%E6%99%B6%E5%A4%B4%E6%8E%A5%E6%B3%95/</guid>
+        <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;p&gt;本文将介绍 标准 CAT6E 网线 水晶头接法，包括 TIA/EIA 568A 和 TIA/EIA 568B.&lt;/p&gt;
+&lt;h2 id=&#34;准备工具&#34;&gt;准备工具&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;一根 CAT6E 网线&lt;/li&gt;
+&lt;li&gt;若干 六类水晶头，五类水晶头对于标准 CAT6E 网线可能会无法插入&lt;/li&gt;
+&lt;li&gt;一把 网线钳&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;步骤&#34;&gt;步骤&lt;/h2&gt;
+&lt;h3 id=&#34;10-准备工作&#34;&gt;1.0 准备工作&lt;/h3&gt;
+&lt;p&gt;用网线钳或剥线器剥去适当长度的网线外皮&lt;br&gt;
+解开所有缠绕的线缆，用剪刀剪去中间的塑料骨架，按照 TIA/EIA-568B(推荐) 或 TIA/EIA-568A 标准整理线缆&lt;br&gt;
+&lt;strong&gt;六类网线线缆非常硬，不要过度用力以免折断线缆&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;11-接入水晶头&#34;&gt;1.1 接入水晶头&lt;/h2&gt;
+&lt;p&gt;核对线序，取出水晶头，并将先前整理的线缆剪去一部分，必须保证剪去后的各条线缆长度相当&lt;/p&gt;
+&lt;p&gt;将各条线缆整理，将其插入水晶头，其有金属片的一面朝向你，最左边的线缆颜色为 白橙，插入水晶头&lt;br&gt;
+从水晶头的侧面和背面观察，再次核对线序，核对无误后检查各条线缆是否已进入到水晶头顶端金属片下，检查无误后将水晶头放入网线钳后按压&lt;br&gt;
+最好保证网线皮在水晶头的卡口下，这样会更加牢固&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;适当即可，不要把网线钳压到底！&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;20-检查线缆&#34;&gt;2.0 检查线缆&lt;/h2&gt;
+&lt;p&gt;将网线接入对线仪，检查线序，用手轻轻拉扯水晶头和网线，检查连接是否牢固，将网线插入测试设备，检查网线可用性，如不可用，检查水晶头内线缆是否有未到头的情况，如有，剪去网线，重新连接水晶头&lt;/p&gt;
+&lt;h2 id=&#34;end&#34;&gt;End&lt;/h2&gt;
+&lt;p&gt;五类水晶头也可以连接 CAT6E 网线，但可能会难以插入线缆，甚至损坏线缆，不推荐使用&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

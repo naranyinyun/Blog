@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='没错，我们即将拥有一本自己的书'>
+<title>从零开始制作一本书</title>
+
+<link rel='canonical' href='http://localhost:1313/p/book/'>
+
+<link rel="stylesheet" href="/scss/style.min.dfb5ae8b39f5fc326146eba7e78fb73fa3201d7ac663b08dffa3536ff7b09265.css"><meta property='og:title' content='从零开始制作一本书'>
+<meta property='og:description' content='没错，我们即将拥有一本自己的书'>
+<meta property='og:url' content='http://localhost:1313/p/book/'>
+<meta property='og:site_name' content='The Nalanyinyun&#39;s View'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Technology' /><meta property='article:published_time' content='2023-11-11T19:54:45&#43;08:00'/><meta property='article:modified_time' content='2023-11-11T19:54:45&#43;08:00'/>
+<meta name="twitter:title" content="从零开始制作一本书">
+<meta name="twitter:description" content="没错，我们即将拥有一本自己的书">
+  
+
+<meta name="theme-color" content="#343A40" />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "dark");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="/nalanyinyun.webp" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">The Nalanyinyun&#39;s View</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://bgm.tv/user/wilderness_nala'
+                        target="_blank"
+                        title="Bangumi.tv"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1703864211378" class="icon" viewBox="0 0 4020 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7089" xmlns:xlink="http://www.w3.org/1999/xlink" width="94.21875" height="24"><path d="M1080.64237 231.860148l6.731852 0.075852h278.053926l7.073185 0.037926c123.960889 1.327407 187.240296 37.69837 189.81926 109.112889l-150.376297 339.892148-51.465481 112.260741-53.43763 115.389629-2.939259 6.144c-35.612444 72.817778-88.746667 109.226667-159.345778 109.226667H590.639407l51.446519-102.912h421.546667l6.030222-0.341333c45.776593-3.318519 80.042667-21.921185 102.798222-55.789037l31.668148-68.589037-299.804444 1.554963-6.769778-0.037926c-102.362074-1.137778-153.543111-28.690963-153.543111-82.602667 0-10.391704 2.313481-22.33837 6.921481-35.858963l158.340741-347.704889 1.744593-4.835555c24.841481-65.327407 83.626667-96.976593 176.355555-94.947556z m1358.127408 405.731556l-74.714074 173.89037h-172.980148l74.714074-173.89037h172.980148zM472.538074 0l-99.062518 224.995556h248.661333l7.092148 0.037925c124.09363 1.327407 187.448889 37.755259 190.046815 109.321482l-150.565926 343.74163-2.029037 4.797629c-31.687111 72.836741-108.619852 109.264593-230.779259 109.264593H160.464593l-6.750815-0.037926C51.237926 790.945185 0 763.373037 0 709.347556c0-10.42963 2.313481-22.395259 6.940444-35.934815l158.492445-348.425482L314.04563 0h158.492444z m1652.811852 231.841185l7.149037 0.037926c125.345185 1.327407 189.326222 37.413926 191.943111 108.316445l-152.082963 340.517925-48.014222 111.445334h-172.088889l190.103704-414.814815-0.474074-3.451259c-3.621926-22.471111-18.147556-33.697185-43.557926-33.697185h-38.020741l-29.999407 65.005037-172.088889 386.958222h-148.081778l178.100148-386.958222 30.01837-65.005037h-92.046222l-18.014815 37.148444L1680.118519 649.746963l-66.048 142.411852H1448.011852l56.035555-116.091259 160.066371-345.163852 46.023111-99.062519h415.213037z m833.327407-173.89037l-94.359703 208.952889h469.921185l-45.283556 101.565629h-466.147555l-20.764445 34.816-120.794074 255.374223 0.246519 3.072c2.351407 22.016 17.92 32.673185 46.705777 31.933629l4.020149-0.189629h158.53037l-64.170667 98.683259H2658.607407l-6.011259-0.056889c-93.297778-1.422222-139.150222-36.181333-137.576296-104.296296l0.170667-4.47526 150.964148-323.565037 141.558518-301.795555h150.964148z m614.968889 212.536889l-42.097778 354.493629 342.20563-354.493629H4020.148148l-486.779259 521.671111h-161.014519l43.918223-521.671111h157.373629zM585.197037 347.780741H379.316148l-5.537185 0.094815c-32.900741 1.175704-58.102519 12.913778-75.605333 35.252148l-126.691556 259.223703 0.265482 2.74963c2.635852 19.77837 20.347259 29.658074 53.172148 29.658074l223.687111 1.460148c21.124741-2.939259 38.267259-14.222222 51.465481-33.867852l128.663704-259.223703-0.455111-3.299556c-3.602963-21.371259-17.957926-32.047407-43.083852-32.047407z m743.063704 0H1122.379852l-5.556148 0.094815c-32.900741 1.175704-58.102519 12.913778-75.605334 35.252148l-126.672592 259.223703 0.246518 2.74963c2.654815 19.77837 20.366222 29.658074 53.191111 29.658074l223.687112 1.460148 49.493333-1.460148 130.654815-291.65037-0.474074-3.280593c-3.602963-21.371259-17.957926-32.047407-43.083852-32.047407z" fill="currentColor" p-id="7090"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/384920476'
+                        target="_blank"
+                        title="BiliBili"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1703863786065" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4241" width="24" height="24" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M777.514667 131.669333a53.333333 53.333333 0 0 1 0 75.434667L728.746667 255.829333h49.92A160 160 0 0 1 938.666667 415.872v320a160 160 0 0 1-160 160H245.333333A160 160 0 0 1 85.333333 735.872v-320a160 160 0 0 1 160-160h49.749334L246.4 207.146667a53.333333 53.333333 0 1 1 75.392-75.434667l113.152 113.152c3.370667 3.370667 6.186667 7.04 8.448 10.965333h137.088c2.261333-3.925333 5.12-7.68 8.490667-11.008l113.109333-113.152a53.333333 53.333333 0 0 1 75.434667 0z m1.152 231.253334H245.333333a53.333333 53.333333 0 0 0-53.205333 49.365333l-0.128 4.010667v320c0 28.117333 21.76 51.157333 49.365333 53.162666l3.968 0.170667h533.333334a53.333333 53.333333 0 0 0 53.205333-49.365333l0.128-3.968v-320c0-29.44-23.893333-53.333333-53.333333-53.333334z m-426.666667 106.666666c29.44 0 53.333333 23.893333 53.333333 53.333334v53.333333a53.333333 53.333333 0 1 1-106.666666 0v-53.333333c0-29.44 23.893333-53.333333 53.333333-53.333334z m320 0c29.44 0 53.333333 23.893333 53.333333 53.333334v53.333333a53.333333 53.333333 0 1 1-106.666666 0v-53.333333c0-29.44 23.893333-53.333333 53.333333-53.333334z" p-id="4242" fill="currentColor"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/Naranyinyun'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg t="1703864543566" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1874" width="24" height="24"><path d="M850.346667 155.008a42.666667 42.666667 0 0 0-22.741334-23.509333c-8.704-3.754667-85.717333-33.322667-200.32 39.168H396.714667c-114.773333-72.618667-191.701333-42.922667-200.32-39.168a42.88 42.88 0 0 0-22.741334 23.466666c-26.197333 66.218667-18.048 136.448-7.850666 176.896C134.272 374.016 128 413.098667 128 469.333333c0 177.877333 127.104 227.882667 226.730667 246.272a189.568 189.568 0 0 0-13.013334 46.549334A44.373333 44.373333 0 0 0 341.333333 768v38.613333c-19.498667-4.138667-41.002667-11.946667-55.168-26.112C238.08 732.416 188.330667 682.666667 128 682.666667v85.333333c25.002667 0 65.365333 40.362667 97.834667 72.832 51.029333 51.029333 129.066667 55.253333 153.386666 55.253333 3.114667 0 5.376-0.085333 6.528-0.128A42.666667 42.666667 0 0 0 426.666667 853.333333v-82.090666c4.266667-24.746667 20.224-49.621333 27.946666-56.362667a42.666667 42.666667 0 0 0-23.125333-74.581333C293.333333 624.554667 213.333333 591.488 213.333333 469.333333c0-53.12 5.632-70.741333 31.573334-99.285333 11.008-12.117333 14.08-29.568 7.978666-44.8-4.821333-11.904-18.773333-65.450667-6.485333-117.546667 20.650667-1.578667 59.904 4.565333 113.706667 40.96C367.104 253.44 375.466667 256 384 256h256a42.666667 42.666667 0 0 0 23.936-7.338667c54.016-36.522667 92.970667-41.770667 113.664-41.130666 12.330667 52.224-1.578667 105.770667-6.4 117.674666a42.666667 42.666667 0 0 0 8.021333 44.928C805.077333 398.464 810.666667 416.085333 810.666667 469.333333c0 122.581333-79.957333 155.52-218.069334 170.922667a42.666667 42.666667 0 0 0-23.125333 74.709333c19.797333 17.066667 27.861333 32.469333 27.861333 53.034667v128h85.333334v-128c0-20.437333-3.925333-38.101333-9.770667-53.12C769.92 695.765333 896 643.712 896 469.333333c0-56.362667-6.272-95.530667-37.76-137.514666 10.197333-40.405333 18.261333-110.506667-7.893333-176.810667z" fill="currentColor" p-id="1875"></path></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="http://localhost:1313/" selected>简体中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#10-预先准备">1.0 预先准备</a>
+      <ol>
+        <li><a href="#11-选择纸张规格">1.1 选择纸张规格</a></li>
+        <li><a href="#12-选择排版软件">1.2 选择排版软件</a></li>
+        <li><a href="#13-选择字体">1.3 选择字体</a></li>
+        <li><a href="#21-设计">2.1 设计</a>
+          <ol>
+            <li><a href="#22-段首缩进缩进和段间距">2.2 段首缩进，缩进和段间距</a></li>
+            <li><a href="#23-封面底面和页码">2.3 封面，底面和页码</a></li>
+            <li><a href="#24-出血线色彩和格式">2.4 出血线，色彩和格式</a></li>
+          </ol>
+        </li>
+        <li><a href="#31-印刷">3.1 印刷</a>
+          <ol>
+            <li><a href="#32-印刷用纸">3.2 印刷用纸</a></li>
+            <li><a href="#33-装订">3.3 装订</a></li>
+          </ol>
+        </li>
+        <li><a href="#41-尾语">4.1 尾语</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/technology/" >
+                Technology
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/book/">从零开始制作一本书</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            没错，我们即将拥有一本自己的书
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 11, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 1 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="从零开始制作一本书">从零开始制作一本书</h1>
+<h2 id="intro">Intro</h2>
+<p>在本文中，你将了解如何从无到有获取自己的第一本书，当然，是你自己的<br>
+两周前，我突然萌生出了写一本书这样的想法，当这想法产生的那一刻起，我就知道这是个疯狂的想法，而我会为了实现那疯狂的想法而付出努力
+现在，它已经基本完成了，只需等待印刷，大抵很快就会到我手里了吧<br>
+相信我，当你排完整本书后，为整本书写最后一笔时，你的感觉会是我无法描述，常人也无法想象的舒畅</p>
+<h2 id="10-预先准备">1.0 预先准备</h2>
+<p>由于制作一本书需要考虑的事情较多，我非常推荐你仔细考量完这些问题后再进行下一步操作</p>
+<h3 id="11-选择纸张规格">1.1 选择纸张规格</h3>
+<p>常见的纸张规格有这些</p>
+<ul>
+<li>32 开 (中国) 130mm×185mm</li>
+<li>32 开 203×140mm</li>
+<li>A5 210 mm × 148 mm</li>
+<li>B5 257 mm × 182 mm</li>
+</ul>
+<p>我比较推荐你使用 32 开 或 A5，我自己选择的是 A5，拿一张 A4 纸对折的大小就是 A5，我对比了一下，和「挪威的森林」差不多大，而且也较方便印刷</p>
+<p>当然你可以选择其他尺寸，但是切记，<strong>你选择的尺寸必须被你选择的印刷商支持</strong></p>
+<h3 id="12-选择排版软件">1.2 选择排版软件</h3>
+<p>目前较为流行的软件有这些</p>
+<ul>
+<li>Adobe InDesign</li>
+<li>CorelDraw</li>
+<li>Microsoft Publisher</li>
+</ul>
+<p>我非常推荐你使用 Microsoft Publisher，和最专业的 Adobe InDesign 相比，Microsoft Publisher 的操作简单快捷，学习成本也极低，几乎不需要学习便可以上手使用</p>
+<p>而且我有 Microsoft 365 for Business 授权，何乐而不为呢？</p>
+<h3 id="13-选择字体">1.3 选择字体</h3>
+<p>字体的种类很多，在此不一一介绍了</p>
+<p>如果你去查阅，你会发现很多答案都在推荐宋体，但我想说的是，我最讨厌的字体之一就是宋体，不仅是因为衬线字体在显示器上的显示效果极差，更因为宋体表达的情感太弱了</p>
+<p>宋体也许很适合某些文学作品，但对于诗集而言，更现代化的黑体才是更好的选择
+黑体简洁，干脆，无衬线字体带来的观感要远好于宋体之类的衬线字体</p>
+<p>总之，我的诗集选用了 Xiaomi 的 MiSans，MiSans 虽然与其他汉仪字体无太大区别，但我很喜欢 MiSans 的标点，无论是逗号，句号 (英文)，都是方形的设计，这会让本就简洁有力的黑体表现力更上一层楼</p>
+<blockquote>
+<p>平淡的叙述平淡的事情，平淡的叙述绝望的一切</p>
+</blockquote>
+<p>这便是黑体的表现力</p>
+<h3 id="21-设计">2.1 设计</h3>
+<p>根据你使用的软件不同，设计的方式也不同，我不会在这里教你怎么排版，但仍有一些事情值得注意</p>
+<h4 id="22-段首缩进缩进和段间距">2.2 段首缩进，缩进和段间距</h4>
+<p>我很难为你提供什么指导，但我的选择也许可以供你参考</p>
+<ul>
+<li>(左) 缩进：0.25 厘米</li>
+<li>段间距：1.19 倍行距</li>
+<li>行间距：Publisher 默认</li>
+</ul>
+<h4 id="23-封面底面和页码">2.3 封面，底面和页码</h4>
+<p>封面和底面我比较推荐 Canva 进行设计，页码也很简单，设计在每页远离书脊那一侧就可以了</p>
+<p>注意，一定要区分好左手页和右手页，封面和底面应在单独的一面上，不要混淆</p>
+<p><strong>底面镜像之后才符合正常阅读顺序</strong></p>
+<h4 id="24-出血线色彩和格式">2.4 出血线，色彩和格式</h4>
+<p>一般 32 开 的纸张需要预留 3 毫米提供机器裁切，这样即便有切割误差也不会出现白边，这就是出血线，如果你选择了软胶封装，每页的书脊侧也会被钉入 3 - 5 毫米</p>
+<p>关于色彩，尽量在一开始就用 CMYK 进行设计，否则 sRGB 到 CMYK 转换的色差会让你的图片毁容，如果通篇图片和颜色很少则无需担心</p>
+<p>格式使用 PDF 较多，注意你的 PDF 分辨率应至少为 300，否则会导致印刷不清晰，此外，确保你插入的图片分辨率足够，不然印刷出来的效果差强人意</p>
+<h3 id="31-印刷">3.1 印刷</h3>
+<p>印刷设计的问题也不少，你可能会面临这些问题</p>
+<h4 id="32-印刷用纸">3.2 印刷用纸</h4>
+<p>一般 80g 或 70g 的普通纸，哑粉纸 (很厚)，道林纸即可满足需求，铜版纸也可，但质感独特，具体咨询印刷商家</p>
+<h4 id="33-装订">3.3 装订</h4>
+<p>常见的装订方式</p>
+<ul>
+<li>骑马钉</li>
+<li>软胶</li>
+<li>锁线</li>
+</ul>
+<p>一般软胶即可满足需求，而且软胶比较常见，不能完全展开，而且要考虑被封入的部分
+骑马钉非常不推荐使用，容易坏还丑
+锁线效果更好，能完全展开，不易损，但是较贵，如果需要收藏可以选择锁线</p>
+<h3 id="41-尾语">4.1 尾语</h3>
+<p>拥有自己的书的感觉十分奇怪，我也在这里描述不出来，但当你拥有自己的书的那刻便会明白此刻我的心情</p>
+<p>印刷过程你可能会遇到很多问题，但别着急，先印一两张看看效果，排版时一定要<strong>注意校对</strong>，在书里看到错字实在是令人难以接受</p>
+<p>这一切需要时间，更需要耐心</p>
+<blockquote>
+<p>生命实在是这样奇妙的东西，万千矛盾集于一体</p>
+<p>摘自 The Wilderness</p>
+</blockquote>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/technology/">Technology</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/openwrt-for-cr6608/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">为 CR6608 安装 Openwrt</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/choco/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">在 Windows 上安装 Chocoatey</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/xiaomipad2/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">为小米平板 2 刷入 Windows 11 或 10</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E6%A0%87%E5%87%86-cat6e-%E7%BD%91%E7%BA%BF%E6%B0%B4%E6%99%B6%E5%A4%B4%E6%8E%A5%E6%B3%95/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">标准 CAT6E 网线水晶头接法</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2024 Nalanyinyun
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<link href="https://mirror.nalanyinyun.top/api/raw/?path=/Tulip%20CDN/APlayer.min.css" rel="stylesheet">
+<script defer src="
+https://mirror.nalanyinyun.top/api/raw/?path=/Tulip%20CDN/APlayer.min.js
+"></script>
+
+<script defer src="https://mirror.nalanyinyun.top/api/raw/?path=/Tulip%20CDN/Meting.min.js"></script>
+
+<meting-js
+	server="netease"
+	type="playlist"
+	order="random"
+	mutex="true"
+	perload="auto"
+	loop="all"
+	id="9105233373"
+	fixed="true">
+</meting-js>
+    </body>
+</html>

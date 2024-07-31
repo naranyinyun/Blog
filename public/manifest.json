@@ -1,0 +1,15 @@
+{
+  "name": "The Nalanyinyun View",
+  "short_name": "Nalan's View",
+  "theme_color": "#343a40",
+  "background_color": "#343a40",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "../",
+  "icons": [{
+    "src": "/maskable_icon_x512.png",
+    "sizes": "512x512",
+    "type": "image/png",
+    "purpose": "any maskable"
+  }]
+}

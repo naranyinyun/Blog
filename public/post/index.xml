@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on The Nalanyinyun&#39;s View</title>
+        <link>http://localhost:1313/post/</link>
+        <description>Recent content in Posts on The Nalanyinyun&#39;s View</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Nalanyinyun</copyright>
+        <lastBuildDate>Wed, 31 Jul 2024 19:31:14 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>为 CR6608 安装 Openwrt</title>
+        <link>http://localhost:1313/p/openwrt-for-cr6608/</link>
+        <pubDate>Wed, 31 Jul 2024 19:31:14 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/openwrt-for-cr6608/</guid>
+        <description>&lt;h2 id=&#34;准备&#34;&gt;准备&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Openwrt 固件&lt;/li&gt;
+&lt;li&gt;一台&lt;strong&gt;运行 Openwrt&lt;/strong&gt;的设备（辅助设备）&lt;/li&gt;
+&lt;li&gt;一台 CR6608&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;获取-ssh-权限并刷入-pb-boot&#34;&gt;获取 SSH 权限并刷入 pb-boot&lt;/h2&gt;
+&lt;h2 id=&#34;辅助设备准备&#34;&gt;辅助设备准备&lt;/h2&gt;
+&lt;p&gt;将 &lt;a class=&#34;link&#34; href=&#34;https://mirror.nalanyinyun.top/zh-CN/The%20Mirror%20of%20Source/CR660X%20Source/xqsystem.lua&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;xqsystem.lua&lt;/a&gt; 上传至辅助路由器的&lt;code&gt;/usr/lib/lua/luci/controller/admin/&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scp -O [path xqsystem.lua] [username]@[router ip]:/usr/lib/lua/luci/controller/admin/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;降级&#34;&gt;降级&lt;/h3&gt;
+</description>
+        </item>
+        <item>
+        <title>层云</title>
+        <link>http://localhost:1313/p/%E5%B1%82%E4%BA%91/</link>
+        <pubDate>Sat, 25 May 2024 14:11:33 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/%E5%B1%82%E4%BA%91/</guid>
+        <description>&lt;p&gt;　　百花齐放的暮春中&lt;/p&gt;
+&lt;p&gt;　　细雨绵绵的暮春中&lt;/p&gt;
+&lt;p&gt;　　微风吹拂的地面上&lt;/p&gt;
+&lt;p&gt;　　澄澈的天空被一片层云覆盖&lt;/p&gt;
+&lt;p&gt;　　灰色云母般的质感&lt;/p&gt;
+&lt;p&gt;　　灰黑色在其中激荡 碰撞&lt;/p&gt;
+&lt;p&gt;　　似乎被天空在涂上了浓墨重彩的一笔&lt;/p&gt;
+&lt;p&gt;　　一阵凉风吹过&lt;/p&gt;
+&lt;p&gt;　　雨滴从云上掉落下来&lt;/p&gt;
+&lt;p&gt;　　砸在我的肩头&lt;/p&gt;
+&lt;p&gt;　　砸在石板铺装的地面上&lt;/p&gt;
+&lt;p&gt;　　巨大的水痕清晰可见&lt;/p&gt;
+&lt;p&gt;　　我抬起头 闭上双眼&lt;/p&gt;
+&lt;p&gt;　　等待着暴雨的来临&lt;/p&gt;
+&lt;p&gt;　　但雨云并没有降下她的雨水&lt;/p&gt;
+&lt;p&gt;　　只是随着风继续流动着&lt;/p&gt;
+&lt;p&gt;　　阳光穿过浓厚的层云&lt;/p&gt;
+&lt;p&gt;　　照在城市的楼旁&lt;/p&gt;
+&lt;p&gt;　　不过阳光被云滤去了温暖&lt;/p&gt;
+&lt;p&gt;　　只剩下淡淡的冷色&lt;/p&gt;
+&lt;p&gt;　　让这世界变了色调&lt;/p&gt;
+&lt;p&gt;　　那是一种奇怪的低饱和度&lt;/p&gt;
+&lt;p&gt;　　如同世界末日般的&lt;/p&gt;
+&lt;p&gt;　　人类最后的日出&lt;/p&gt;
+&lt;p&gt;　　又一阵凉风吹过&lt;/p&gt;
+&lt;p&gt;　　雨滴又从层云中降下&lt;/p&gt;
+&lt;p&gt;　　起初是豆大的雨滴&lt;/p&gt;
+&lt;p&gt;　　润湿了风 使其化为寒风&lt;/p&gt;
+&lt;p&gt;　　卷起了树上没有转绿的树叶&lt;/p&gt;
+&lt;p&gt;　　然而&lt;/p&gt;
+&lt;p&gt;　　只是降下了绵绵细雨&lt;/p&gt;
+&lt;p&gt;　　层云裂开了一个口子&lt;/p&gt;
+&lt;p&gt;　　阳光从口子照下来&lt;/p&gt;
+&lt;p&gt;　　让这世界都熠熠生辉&lt;/p&gt;
+&lt;p&gt;　　正当我失望的低着头前行时&lt;/p&gt;
+&lt;p&gt;　　阳光消失了&lt;/p&gt;
+&lt;p&gt;　　暴雨倾盆而下&lt;/p&gt;
+&lt;p&gt;　　寒风将我的头发吹的乱飞&lt;/p&gt;
+&lt;p&gt;　　刚刚盛开的花朵在风雨中摇曳&lt;/p&gt;
+&lt;p&gt;　　似乎下一秒就会被折断&lt;/p&gt;
+&lt;p&gt;　　我张开双臂 在雨中奔跑&lt;/p&gt;
+&lt;p&gt;　　我要跑到一个没有春天的地方&lt;/p&gt;
+&lt;p&gt;　　这忽冷忽热的微风&lt;/p&gt;
+&lt;p&gt;　　这飘忽不定的层云&lt;/p&gt;
+&lt;p&gt;　　晴雨无常的春天&lt;/p&gt;
+&lt;p&gt;　　只是低着头&lt;/p&gt;
+&lt;p&gt;　　遵循着心中的方向&lt;/p&gt;
+&lt;p&gt;　　寻找这无边无际云的尽头&lt;/p&gt;
+&lt;p&gt;　　&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>初春</title>
+        <link>http://localhost:1313/p/spring/</link>
+        <pubDate>Fri, 12 Apr 2024 16:21:52 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/spring/</guid>
+        <description>&lt;p&gt;　　一阵暖风吹过&lt;br&gt;
+　　北方的春天来的很晚&lt;br&gt;
+　　就算是春天的暖风&lt;br&gt;
+　　也夹杂着一丝微寒&lt;br&gt;
+　　阳光将我的脸庞炽热&lt;br&gt;
+　　抬头望去&lt;br&gt;
+　　却只是大片的 灰暗的 浓厚的层云&lt;br&gt;
+　　天空中落下了一丝雨水&lt;br&gt;
+　　它打在我的手上&lt;br&gt;
+　　带下了天空的污浊&lt;br&gt;
+　　粉色的花苞似乎快要裂开&lt;br&gt;
+　　从其中绽放出朵朵桃花&lt;br&gt;
+　　路边被修建整齐的灌木丛上&lt;br&gt;
+　　亮黄色的嫩叶从枯黄的枝干中伸展开来 &lt;br&gt;
+　　突然 又一阵凉风吹过&lt;br&gt;
+　　更多的雨丝从天空中掉落&lt;br&gt;
+　　我想 这大概是谁人的泪水吧&lt;br&gt;
+　　石板铺作的地面被打湿&lt;br&gt;
+　　灰尘在空中弥漫&lt;br&gt;
+　　那是一种难以描述的呛人味道&lt;br&gt;
+　　夹杂着土壤的清香&lt;br&gt;
+　　四处的草坪绿了&lt;br&gt;
+　　但凑近一看 却找不出一颗嫩绿的草&lt;br&gt;
+　　雾霭笼罩着地面&lt;br&gt;
+　　四周没有任何声响&lt;br&gt;
+　　我似乎被关在孤独的笼子里&lt;br&gt;
+　　无论我如何呐喊 都得不来一点回音&lt;br&gt;
+　　于是我放弃了呐喊&lt;br&gt;
+　　因为不会有人理解我&lt;br&gt;
+　　理解我眼中的初春&lt;br&gt;
+　　理解在万物生机勃勃的世界中仅存的一丝颓废&lt;br&gt;
+　　于是我放弃了呐喊&lt;br&gt;
+　　因为我不想再受到任何伤害&lt;br&gt;
+　　只是乘着风&lt;br&gt;
+　　在雨中起舞&lt;br&gt;
+　　这乍暖还寒的初春&lt;br&gt;
+　　我的初春又在哪里呢？&lt;br&gt;
+　　我不知道&lt;br&gt;
+　　只是低下头&lt;br&gt;
+　　漫无目的的向前走罢了&lt;br&gt;
+　　在心中的旷野追寻孤芳自赏的春天&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>落日</title>
+        <link>http://localhost:1313/p/sun/</link>
+        <pubDate>Wed, 17 Jan 2024 13:36:13 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/sun/</guid>
+        <description>&lt;p&gt;　　在落日钢水般的余辉下&lt;br&gt;
+　　在被染作暖橙色的草地上&lt;br&gt;
+　　在落叶纷飞的树下&lt;br&gt;
+　　一只破旧的木桩被藤蔓悬挂在树上&lt;br&gt;
+　　落叶似乎被这落日的余辉的炽热融化&lt;br&gt;
+　　化为一团团橙光闪烁的光斑&lt;br&gt;
+　　在空中飞舞&lt;br&gt;
+　　落在草地上&lt;br&gt;
+　　落在秋千上&lt;br&gt;
+　　一阵暖风吹过&lt;br&gt;
+　　扬起了本落在地上的叶片&lt;br&gt;
+　　那只秋千也随之而摇曳&lt;br&gt;
+　　将藤蔓从树的阴影中带出&lt;br&gt;
+　　枯萎的藤蔓上盘曲着另一株藤蔓&lt;br&gt;
+　　挂着秋千的树干歪曲着&lt;br&gt;
+　　那是一个破败而炽热的秋天&lt;br&gt;
+　　我坐在树下&lt;br&gt;
+　　靠在粗糙的树干上&lt;br&gt;
+　　愈发橘黄而明亮的光照亮着我&lt;br&gt;
+　　照亮着我与心中的荒芜&lt;br&gt;
+　　那是一种浓厚的孤独&lt;br&gt;
+　　就像独自站在午后空无一人的街道上&lt;br&gt;
+　　曾经存在的声音渐渐远去&lt;br&gt;
+　　寂静中显露出日落下无边的旷野&lt;br&gt;
+　　太阳自私的落下&lt;br&gt;
+　　抛弃了我 抛弃了阳光下迷茫的我&lt;br&gt;
+　　抛弃的孤独的我 抛弃了一无所有的我&lt;br&gt;
+　　而我只得坐在树下&lt;br&gt;
+　　遥望着愈发模糊的远方&lt;br&gt;
+　　我伸出双手&lt;br&gt;
+　　却看不见自己的手指&lt;br&gt;
+　　我放下双手&lt;br&gt;
+　　却看见那渐行渐远的，昏黄的地平线&lt;br&gt;
+　　天空中破碎的云愈发灰暗&lt;br&gt;
+　　只有那些浅而薄的积云&lt;br&gt;
+　　被夕阳镀上了一层金边&lt;br&gt;
+　　它们在炽热的钢水下沸腾&lt;br&gt;
+　　在空中翻滚&lt;br&gt;
+　　越来越小，直至消失&lt;br&gt;
+　　我坐在秋千上&lt;br&gt;
+　　任凭其晃荡&lt;br&gt;
+　　干枯的藤蔓划破了我的手&lt;br&gt;
+　　却不觉得有丝毫疼痛&lt;br&gt;
+　　因为时间总会冲淡一切&lt;br&gt;
+　　冲淡的我孤寂和痛苦&lt;br&gt;
+　　我一直坚信时间有这样的力量&lt;br&gt;
+　　但就算不是这样，我也愿意相信&lt;br&gt;
+　　因为我早已同这木桩一样&lt;br&gt;
+　　内心早已被腐蚀殆尽&lt;br&gt;
+　　只留下了一具躯壳&lt;br&gt;
+　　我躺在温暖的草地上&lt;br&gt;
+　　看着太阳融化着一切&lt;br&gt;
+　　不过再炽热的贴水也终究会冷却&lt;br&gt;
+　　就像我面前的天空&lt;br&gt;
+　　刚刚还是炽热的橙色&lt;br&gt;
+　　现在已经冷却为深邃的暗蓝色了&lt;br&gt;
+　　我闭上双眼&lt;br&gt;
+　　任凭落叶继续拍打着我的躯体&lt;br&gt;
+　　多么希望能够就此将我掩埋&lt;br&gt;
+　　释放囚禁在这幅躯体中的灵魂&lt;br&gt;
+　　让我从此脱离尘世&lt;br&gt;
+　　自由的在旷野上游荡&lt;br&gt;
+　　不再为了落日而哀叹&lt;br&gt;
+　　在新生的荒芜中&lt;br&gt;
+　　追寻着遥远的彼方&lt;br&gt;
+　　
+　　
+　　&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>花</title>
+        <link>http://localhost:1313/p/flower/</link>
+        <pubDate>Sun, 14 Jan 2024 14:54:02 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/flower/</guid>
+        <description>&lt;p&gt;　　在层云的笼罩下&lt;br&gt;
+　　在十月的寒风中&lt;br&gt;
+　　在一片死一样的寂静中&lt;br&gt;
+　　我踏入了这花园&lt;br&gt;
+　　灰黄色的花瓣铺满了土地&lt;br&gt;
+　　褐色的树枝在风的吹拂下&lt;br&gt;
+　　互相刮擦，碰撞&lt;br&gt;
+　　又一阵寒风袭来&lt;br&gt;
+　　不禁裹紧了大衣&lt;br&gt;
+　　一旁的栅栏开裂了&lt;br&gt;
+　　我想也是因为这侵入骨髓的寒风吧&lt;br&gt;
+　　踩着满地的树叶与花瓣漫步&lt;br&gt;
+　　在尚未僵硬的土地上&lt;br&gt;
+　　我的脚步没有发出任何声音&lt;br&gt;
+　　只是那细细的花丝在树叶的掩盖下滑动&lt;br&gt;
+　　有一种难以形容的细腻触感&lt;br&gt;
+　　我抬头仰望着天空&lt;br&gt;
+　　高高的层云流过&lt;br&gt;
+　　也许这就是冬季吧&lt;br&gt;
+　　万物凋零，枯萎，静谧的季节&lt;br&gt;
+　　我并不觉得那是凄凉&lt;br&gt;
+　　因为来年的春天&lt;br&gt;
+　　它们还会在这片土地上生长，开放&lt;br&gt;
+　　我蹲下身子&lt;br&gt;
+　　随手折下一只花茎&lt;br&gt;
+　　把它戴在头上&lt;br&gt;
+　　我闭上双眼&lt;br&gt;
+　　双手合十，扣在胸前&lt;br&gt;
+　　默默祈祷着什么&lt;br&gt;
+　　祈祷着这满园的花能为我再盛开一次&lt;br&gt;
+　　睁开双眼&lt;br&gt;
+　　一切都如往常一样&lt;br&gt;
+　　也对，这些花怎么能为我这样自私的人盛开呢？&lt;br&gt;
+　　如果这些花盛开了，我会再次祈祷&lt;br&gt;
+　　祈祷这些花只为我而盛开&lt;br&gt;
+　　我取下戴在头上的那只花茎&lt;br&gt;
+　　却发现枯萎的花茎上出现了一朵白色的花&lt;br&gt;
+　　低下头去俯瞰四周&lt;br&gt;
+　　我身边的花也正在盛开&lt;br&gt;
+　　不知从哪里冒出来的草长满了土地&lt;br&gt;
+　　我便踏着这绿意盎然的土地奔跑起来&lt;br&gt;
+　　我触摸了那褐色的树干&lt;br&gt;
+　　粉色的樱花便开满了枯竭的树枝&lt;br&gt;
+　　我挥动手臂&lt;br&gt;
+　　春风一般温暖的风便吹拂花园&lt;br&gt;
+　　所有的花都在绽放&lt;br&gt;
+　　如此绚丽而多彩&lt;br&gt;
+　　在寒冬的十月&lt;br&gt;
+　　摘下一朵郁金香&lt;br&gt;
+　　躺在盛开的樱花树下&lt;br&gt;
+　　任凭花瓣落满全身&lt;br&gt;
+　　我也和花瓣一起&lt;br&gt;
+　　在大地上&lt;br&gt;
+　　默默的等待消亡&lt;br&gt;
+　　
+　　
+　　&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>倘若世界只剩我一人</title>
+        <link>http://localhost:1313/p/meet/</link>
+        <pubDate>Mon, 08 Jan 2024 16:44:08 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/meet/</guid>
+        <description>&lt;p&gt;　　倘若世界只剩我一人&lt;br&gt;
+　　我可能也不会伤心吧&lt;br&gt;
+　　跑出门外，浸没在雨幕之中&lt;br&gt;
+　　也许会早些忘了你吧&lt;br&gt;
+　　看着西方云渐变橙&lt;br&gt;
+　　看着乌云朵朵飘过&lt;br&gt;
+　　倘若世界只剩我一人&lt;br&gt;
+　　可能我也不会忘记你吧&lt;br&gt;
+　　写在纸上，刻在心里&lt;br&gt;
+　　看着远方渐渐黯淡&lt;br&gt;
+　　看着雨夜中空无一人的世界&lt;br&gt;
+　　也许我早已习惯了吧&lt;br&gt;
+　　看着迷蒙的天空中&lt;br&gt;
+　　紫色的雷电闪烁&lt;br&gt;
+　　也许你也会随这转瞬即逝的光&lt;br&gt;
+　　突然消失了吧&lt;br&gt;
+　　消失在无色的，黑暗的雨夜&lt;br&gt;
+　　倘若世界只剩我一人&lt;br&gt;
+　　也许我会放声大哭吧&lt;br&gt;
+　　已经不用在意别人&lt;br&gt;
+　　也许我已经足够快乐了吧&lt;br&gt;
+　　倘若世界只剩我一人&lt;br&gt;
+　　我也许会静默在死一般的宁静之中&lt;br&gt;
+　　看着天空，沉浸在曾经与你共度的时光吧&lt;br&gt;
+　　浸没在雨幕之中&lt;br&gt;
+　　从此不再忘记你吧&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>火光</title>
+        <link>http://localhost:1313/p/firelight/</link>
+        <pubDate>Mon, 25 Dec 2023 14:45:18 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/firelight/</guid>
+        <description>&lt;p&gt;　　在辽阔的天空下&lt;br&gt;
+　　在碧蓝的海水前&lt;br&gt;
+　　在蔓延向天边的海岸线上&lt;br&gt;
+　　我矗立着&lt;br&gt;
+　　望着远方&lt;br&gt;
+　　望着海中的一座小岛&lt;br&gt;
+　　也许是因为长期的海水侵蚀&lt;br&gt;
+　　稍带黄色的岩柱从地上突起&lt;br&gt;
+　　在天空中弯曲 指向远方&lt;br&gt;
+　　朦胧的积云溶解在深蓝的天空&lt;br&gt;
+　　是那样深邃而均匀的蓝色&lt;br&gt;
+　　海风吹拂 海浪拍岸&lt;br&gt;
+　　偶尔的飞溅水花会打湿我的脸颊&lt;br&gt;
+　　深绿色的树叶悠闲的摇晃着&lt;br&gt;
+　　天空依旧是那样湛蓝&lt;br&gt;
+　　突然&lt;br&gt;
+　　地平线上亮起了红光&lt;br&gt;
+　　巨大的色带从远方升起&lt;br&gt;
+　　在水汽弥漫的海上&lt;br&gt;
+　　那猩红的身影逐渐显露&lt;br&gt;
+　　由红色转为金黄&lt;br&gt;
+　　太阳在我的注视下徐徐升起&lt;br&gt;
+　　那是我为数不多能直视如此巨物的时刻&lt;br&gt;
+　　那溶解在空中的的云也炽热起来&lt;br&gt;
+　　它在一片光的热潮中升温 沸腾 翻滚&lt;br&gt;
+　　几乎要被太阳的热量蒸干&lt;br&gt;
+　　又一束更明亮的光刺痛了我的眼睛&lt;br&gt;
+　　我遮住阳光 再向小岛看去&lt;br&gt;
+　　太阳正经过那弯曲的石柱&lt;br&gt;
+　　太阳不再是那个可被人随意观赏的圆盘了&lt;br&gt;
+　　他开始燃烧自己 变得光芒四射&lt;br&gt;
+　　无数的能量在他周围环绕&lt;br&gt;
+　　深蓝色的天空也变得淡黄&lt;br&gt;
+　　金色的火光照耀 点燃着一切&lt;br&gt;
+　　那是一次壮丽的日出&lt;br&gt;
+　　但我又何曾真正观看过这日出呢&lt;br&gt;
+　　只是用手遮住耀眼的阳光&lt;br&gt;
+　　闭上双眼&lt;br&gt;
+　　任我的灵魂在海上游荡&lt;br&gt;
+　　浸入那炽热的远方&lt;br&gt;
+　　
+　　
+　　
+　　&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>最近的一些设计</title>
+        <link>http://localhost:1313/p/somedesigns/</link>
+        <pubDate>Wed, 20 Dec 2023 16:02:31 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/somedesigns/</guid>
+        <description>&lt;p&gt;最近用 Canva 为 FlowerWorks 及其 Teams 做了一些 LOGO 和海报的设计，都是极简风格的，不过并不是单纯的套模板，说实话我对 Canva 的模板很不满意，尤其是 LOGO 模板&lt;/p&gt;
+&lt;p&gt;这是一些设计样例：&lt;/p&gt;
+&lt;h2 id=&#34;logo-of-flowerworks&#34;&gt;LOGO of FlowerWorks&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/Design/FlowerWorks.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;FlowerWorks LOGO&#34;
+	
+	
+&gt;&lt;br&gt;
+这是 FlowerWorks 的徽标，它的品牌色是 &lt;code&gt;#A21538&lt;/code&gt; ，是我十分中意的配色之选，大气而不失优雅，热情而不轻浮，深邃而不幽暗&lt;br&gt;
+主体是强调色字体和白色对比字，斜向上的视角箭头代表刚正，坚定，因为 FlowerWorks 生来就不走寻常路&lt;/p&gt;
+&lt;h2 id=&#34;poster-of-flowerworks&#34;&gt;Poster of FlowerWorks&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/Design/FlowerWorksPost.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;FlowerWorks Poster&#34;
+	
+	
+&gt;&lt;br&gt;
+不得不承认的是在海报上使用如此鲜明的背景色不太恰当，但这更能突出 FlowerWorks 的鲜明特色&lt;br&gt;
+其上诉说了我们一直相信的一件事，有了开放，团结，创造，没有我们做不到的事&lt;br&gt;
+方圆代表多样，没有什么是我们接纳不了的&lt;/p&gt;
+&lt;h2 id=&#34;logo-of-lavender-publishing&#34;&gt;LOGO of Lavender Publishing&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/Design/LavenderPublish.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Lavender Publish&#34;
+	
+	
+&gt;&lt;br&gt;
+淡紫色如同薰衣草的颜色，Lavender Publish 就是为了传播芳香而生的，我们创作，我们设计，就像薰衣草那样沁人心脾&lt;br&gt;
+Lavender Publish 已经设计了一本书，但那本书还尚未印刷，还不知道要等多久才能彻底完成这书呢？也许永远都不能，这取决去它的作者了&lt;/p&gt;
+&lt;h2 id=&#34;poster-of-lavender-publish&#34;&gt;Poster of Lavender Publish&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/Design/LavenderPublishPost.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Lavender Publish Poster&#34;
+	
+	
+&gt;&lt;br&gt;
+如果你留意过你买到的诗集或者小说，会发现那纸张是如同这海报一般的清新，淡雅，淡淡的黄色象征着一种难以描述的力量，因为藏在书里的是不知谁人思绪与才华的精髓&lt;br&gt;
+设计十分简洁，配色也并不大胆，因为 Lavender 追求的是在平凡中极致的表现力&lt;/p&gt;
+&lt;h2 id=&#34;logo-of-sunflower&#34;&gt;LOGO of Sunflower&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/Design/Sunflower.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Sunflower&#34;
+	
+	
+&gt;&lt;br&gt;
+Sundlower 是 FlowerWorks 的开发团队，目前只有 Apodidae 这一个项目，而且已经停止维护了，不过我们正在寻找其他好玩的&lt;br&gt;
+配色迥异，因为 Sunflower 诞生只是为了好玩，我们随心所欲，没有任何东西能限制我们的想法，你在 Apodidae 中也能看出这一点，我们和 FlowerWorks 一样，本就是不走寻常路的人，为何能被束缚呢？&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>如果我再遇见了你</title>
+        <link>http://localhost:1313/p/ifimeetyouagain/</link>
+        <pubDate>Wed, 20 Dec 2023 23:12:54 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/ifimeetyouagain/</guid>
+        <description>&lt;p&gt;　　如果我再遇见了你&lt;br&gt;
+　　我会假装不认识你&lt;br&gt;
+　　因为我认识过的你的一切&lt;br&gt;
+　　都已化为灰烬&lt;/p&gt;
+&lt;p&gt;　　如果我再遇见了你&lt;br&gt;
+　　我不会装作不认识你&lt;br&gt;
+　　因为与你度过的点点滴滴&lt;br&gt;
+　　真切而无可忘记&lt;/p&gt;
+&lt;p&gt;　　如果我再遇见了你&lt;br&gt;
+　　我不会原谅你&lt;br&gt;
+　　因为你留在我身上的伤痕&lt;br&gt;
+　　自始至终 从未淡去&lt;/p&gt;
+&lt;p&gt;　　如果我再遇见了你&lt;br&gt;
+　　我会原谅你的一切&lt;br&gt;
+　　因为你的所作所为&lt;br&gt;
+　　再无法触动我颤动的灵魂&lt;/p&gt;
+&lt;p&gt;　　如果我再遇见了你&lt;br&gt;
+　　我不会想起与你的一分一毫&lt;br&gt;
+　　因为逝去的都早已逝去&lt;/p&gt;
+&lt;p&gt;　　如果我再遇见了你&lt;br&gt;
+　　我会回忆关于你的一分一毫&lt;br&gt;
+　　因为曾经真实的经历&lt;br&gt;
+　　炽热的回忆&lt;/p&gt;
+&lt;p&gt;　　如果我再遇见了你&lt;br&gt;
+　　我会把这首简短的诗送给你&lt;br&gt;
+　　但那不是因为我放下了曾经&lt;br&gt;
+　　原谅了你或自己&lt;br&gt;
+　　而是这一切都因你而生 由你而起&lt;br&gt;
+　　所以&lt;br&gt;
+　　我要把它送给你&lt;br&gt;
+　　因为&lt;br&gt;
+　　它不再是我的诗&lt;br&gt;
+　　现在不是 过去也不会是&lt;/p&gt;
+&lt;p&gt;　　如果我再遇见了你&lt;br&gt;
+　　我再也不会遇见你&lt;br&gt;
+　　如果我再遇见了你&lt;br&gt;
+　　我会再次遇见你&lt;br&gt;
+　　如果我再遇见了你&lt;br&gt;
+　　如果你能再遇见我&lt;br&gt;
+　　我不会再遇见你&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>在 Windows 上安装 Chocoatey</title>
+        <link>http://localhost:1313/p/choco/</link>
+        <pubDate>Sun, 17 Dec 2023 19:17:17 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/choco/</guid>
+        <description>&lt;h1 id=&#34;安装&#34;&gt;安装&lt;/h1&gt;
+&lt;h2 id=&#34;通过-nupkg-离线安装&#34;&gt;通过 .nupkg 离线安装&lt;/h2&gt;
+&lt;p&gt;访问 &lt;a class=&#34;link&#34; href=&#34;https://chocolatey.org/install&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Chocolatey Installation&lt;/a&gt; , 转至 &lt;code&gt;Step 2&lt;/code&gt;, 选择 &lt;code&gt;PS DSC&lt;/code&gt;, 下滑，选择 &lt;code&gt;Download&lt;/code&gt; , 关于 PowerShell 上的离线安装，这里不做过多介绍，如需参考，转至 &lt;a class=&#34;link&#34; href=&#34;https://learn.microsoft.com/en-us/powershell/gallery/how-to/working-with-packages/manual-download?view=powershellget-3.x&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Microsoft Learn | Manual Package Download&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;通过在线脚本安装&#34;&gt;通过在线脚本安装&lt;/h2&gt;
+&lt;p&gt;以管理员权限打开 &lt;code&gt;PowerShell&lt;/code&gt;, 输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Powershell&#34; data-lang=&#34;Powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Set-ExecutionPolicy&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Bypass&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-Scope&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;Process&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-Force&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;System.Net.ServicePointManager&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SecurityProtocol&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;System.Net.ServicePointManager&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SecurityProtocol&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-bor&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;3072&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;iex &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;New-Object&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Net&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;WebClient&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;DownloadString&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;https://community.chocolatey.org/install.ps1&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;等待脚本运行完成
+
+
+
+&lt;div class=&#34;notice notice-info&#34; &gt;
+    &lt;div class=&#34;notice-title&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; height=&#34;24&#34; viewBox=&#34;0 -960 960 960&#34; width=&#34;24&#34;&gt;&lt;path d=&#34;M480-280q17 0 28.5-11.5T520-320v-160q0-17-11.5-28.5T480-520q-17 0-28.5 11.5T440-480v160q0 17 11.5 28.5T480-280Zm0-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;&lt;p&gt;如果 PowerShell 提示 &lt;code&gt; 无法加载文件 &amp;lt;any file&amp;gt; ，因为在此系统上禁止运行脚本&lt;/code&gt;, 在管理员 PowerShell 中输入 &lt;code&gt;Set-ExecutionPolicy -ExecutionPolicy RemoteSigned&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+
+
+&lt;div class=&#34;notice notice-warning&#34; &gt;
+    &lt;div class=&#34;notice-title&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; height=&#34;24&#34; viewBox=&#34;0 -960 960 960&#34; width=&#34;24&#34;&gt;&lt;path d=&#34;m326-90-58-98-110-24q-15-3-24-15.5t-7-27.5l11-113-75-86q-10-11-10-26t10-26l75-86-11-113q-2-15 7-27.5t24-15.5l110-24 58-98q8-13 22-17.5t28 1.5l104 44 104-44q14-6 28-1.5t22 17.5l58 98 110 24q15 3 24 15.5t7 27.5l-11 113 75 86q10 11 10 26t-10 26l-75 86 11 113q2 15-7 27.5T802-212l-110 24-58 98q-8 13-22 17.5T584-74l-104-44-104 44q-14 6-28 1.5T326-90Zm52-72 102-44 104 44 56-96 110-26-10-112 74-84-74-86 10-112-110-24-58-96-102 44-104-44-56 96-110 24 10 112-74 86 74 84-10 114 110 24 58 96Zm102-318Zm0 200q17 0 28.5-11.5T520-320q0-17-11.5-28.5T480-360q-17 0-28.5 11.5T440-320q0 17 11.5 28.5T480-280Zm0-160q17 0 28.5-11.5T520-480v-160q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640v160q0 17 11.5 28.5T480-440Z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;&lt;p&gt;如果你不知道你在做什么，请在安装之后切换回 &lt;code&gt;Restricted&lt;/code&gt;, &lt;code&gt;RemoteSinged&lt;/code&gt; 和更宽松的执行策略可能会导致严重的安全性问题&lt;/p&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;使用&#34;&gt;使用&lt;/h2&gt;
+&lt;h3 id=&#34;修改默认安装路径&#34;&gt;修改默认安装路径&lt;/h3&gt;
+&lt;p&gt;在高级系统设置中点击编辑系统环境变量，点击 Chocolateyinstall , 将 &lt;code&gt;C:\ProgramData\chocolatey\bin&lt;/code&gt; 改为你希望安装的路径，我选择的是 &lt;code&gt;D:\ChocolateySoftware&lt;/code&gt;
+
+
+
+&lt;div class=&#34;notice notice-note&#34; &gt;
+    &lt;div class=&#34;notice-title&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; height=&#34;24&#34; viewBox=&#34;0 -960 960 960&#34; width=&#34;24&#34;&gt;&lt;path d=&#34;M360-200q-20 0-37.5-9T294-234L153-434q-15-21-15-46t15-46l141-200q11-16 28.5-25t37.5-9h400q33 0 56.5 23.5T840-680v400q0 33-23.5 56.5T760-200H360Zm400-80v-400 400Zm-400 0h400v-400H360L218-480l142 200Zm20-160q17 0 28.5-11.5T420-480q0-17-11.5-28.5T380-520q-17 0-28.5 11.5T340-480q0 17 11.5 28.5T380-440Zm140 0q17 0 28.5-11.5T560-480q0-17-11.5-28.5T520-520q-17 0-28.5 11.5T480-480q0 17 11.5 28.5T520-440Zm140 0q17 0 28.5-11.5T700-480q0-17-11.5-28.5T660-520q-17 0-28.5 11.5T620-480q0 17 11.5 28.5T660-440Z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;&lt;p&gt;如果不更改安装路径，你的每一次操作都需要在管理员 PowerShell 中运行&lt;/p&gt;&lt;/div&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;cli-用法&#34;&gt;CLI 用法&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Shell&#34; data-lang=&#34;Shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 安装软件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;choco install adb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 卸载软件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;choco uninstall adb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 搜索软件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;choco search adb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 查看本地已经安装的软件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;choco list -lo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 更新&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;choco upgrade adb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 查看版本&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;choco version adb
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>从零开始制作一本书</title>
+        <link>http://localhost:1313/p/book/</link>
+        <pubDate>Sat, 11 Nov 2023 19:54:45 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/book/</guid>
+        <description>&lt;h1 id=&#34;从零开始制作一本书&#34;&gt;从零开始制作一本书&lt;/h1&gt;
+&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;p&gt;在本文中，你将了解如何从无到有获取自己的第一本书，当然，是你自己的&lt;br&gt;
+两周前，我突然萌生出了写一本书这样的想法，当这想法产生的那一刻起，我就知道这是个疯狂的想法，而我会为了实现那疯狂的想法而付出努力
+现在，它已经基本完成了，只需等待印刷，大抵很快就会到我手里了吧&lt;br&gt;
+相信我，当你排完整本书后，为整本书写最后一笔时，你的感觉会是我无法描述，常人也无法想象的舒畅&lt;/p&gt;
+&lt;h2 id=&#34;10-预先准备&#34;&gt;1.0 预先准备&lt;/h2&gt;
+&lt;p&gt;由于制作一本书需要考虑的事情较多，我非常推荐你仔细考量完这些问题后再进行下一步操作&lt;/p&gt;
+&lt;h3 id=&#34;11-选择纸张规格&#34;&gt;1.1 选择纸张规格&lt;/h3&gt;
+&lt;p&gt;常见的纸张规格有这些&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;32 开 (中国) 130mm×185mm&lt;/li&gt;
+&lt;li&gt;32 开 203×140mm&lt;/li&gt;
+&lt;li&gt;A5 210 mm × 148 mm&lt;/li&gt;
+&lt;li&gt;B5 257 mm × 182 mm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我比较推荐你使用 32 开 或 A5，我自己选择的是 A5，拿一张 A4 纸对折的大小就是 A5，我对比了一下，和「挪威的森林」差不多大，而且也较方便印刷&lt;/p&gt;
+&lt;p&gt;当然你可以选择其他尺寸，但是切记，&lt;strong&gt;你选择的尺寸必须被你选择的印刷商支持&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;12-选择排版软件&#34;&gt;1.2 选择排版软件&lt;/h3&gt;
+&lt;p&gt;目前较为流行的软件有这些&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Adobe InDesign&lt;/li&gt;
+&lt;li&gt;CorelDraw&lt;/li&gt;
+&lt;li&gt;Microsoft Publisher&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我非常推荐你使用 Microsoft Publisher，和最专业的 Adobe InDesign 相比，Microsoft Publisher 的操作简单快捷，学习成本也极低，几乎不需要学习便可以上手使用&lt;/p&gt;
+&lt;p&gt;而且我有 Microsoft 365 for Business 授权，何乐而不为呢？&lt;/p&gt;
+&lt;h3 id=&#34;13-选择字体&#34;&gt;1.3 选择字体&lt;/h3&gt;
+&lt;p&gt;字体的种类很多，在此不一一介绍了&lt;/p&gt;
+&lt;p&gt;如果你去查阅，你会发现很多答案都在推荐宋体，但我想说的是，我最讨厌的字体之一就是宋体，不仅是因为衬线字体在显示器上的显示效果极差，更因为宋体表达的情感太弱了&lt;/p&gt;
+&lt;p&gt;宋体也许很适合某些文学作品，但对于诗集而言，更现代化的黑体才是更好的选择
+黑体简洁，干脆，无衬线字体带来的观感要远好于宋体之类的衬线字体&lt;/p&gt;
+&lt;p&gt;总之，我的诗集选用了 Xiaomi 的 MiSans，MiSans 虽然与其他汉仪字体无太大区别，但我很喜欢 MiSans 的标点，无论是逗号，句号 (英文)，都是方形的设计，这会让本就简洁有力的黑体表现力更上一层楼&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;平淡的叙述平淡的事情，平淡的叙述绝望的一切&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这便是黑体的表现力&lt;/p&gt;
+&lt;h3 id=&#34;21-设计&#34;&gt;2.1 设计&lt;/h3&gt;
+&lt;p&gt;根据你使用的软件不同，设计的方式也不同，我不会在这里教你怎么排版，但仍有一些事情值得注意&lt;/p&gt;
+&lt;h4 id=&#34;22-段首缩进缩进和段间距&#34;&gt;2.2 段首缩进，缩进和段间距&lt;/h4&gt;
+&lt;p&gt;我很难为你提供什么指导，但我的选择也许可以供你参考&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(左) 缩进：0.25 厘米&lt;/li&gt;
+&lt;li&gt;段间距：1.19 倍行距&lt;/li&gt;
+&lt;li&gt;行间距：Publisher 默认&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;23-封面底面和页码&#34;&gt;2.3 封面，底面和页码&lt;/h4&gt;
+&lt;p&gt;封面和底面我比较推荐 Canva 进行设计，页码也很简单，设计在每页远离书脊那一侧就可以了&lt;/p&gt;
+&lt;p&gt;注意，一定要区分好左手页和右手页，封面和底面应在单独的一面上，不要混淆&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;底面镜像之后才符合正常阅读顺序&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;24-出血线色彩和格式&#34;&gt;2.4 出血线，色彩和格式&lt;/h4&gt;
+&lt;p&gt;一般 32 开 的纸张需要预留 3 毫米提供机器裁切，这样即便有切割误差也不会出现白边，这就是出血线，如果你选择了软胶封装，每页的书脊侧也会被钉入 3 - 5 毫米&lt;/p&gt;
+&lt;p&gt;关于色彩，尽量在一开始就用 CMYK 进行设计，否则 sRGB 到 CMYK 转换的色差会让你的图片毁容，如果通篇图片和颜色很少则无需担心&lt;/p&gt;
+&lt;p&gt;格式使用 PDF 较多，注意你的 PDF 分辨率应至少为 300，否则会导致印刷不清晰，此外，确保你插入的图片分辨率足够，不然印刷出来的效果差强人意&lt;/p&gt;
+&lt;h3 id=&#34;31-印刷&#34;&gt;3.1 印刷&lt;/h3&gt;
+&lt;p&gt;印刷设计的问题也不少，你可能会面临这些问题&lt;/p&gt;
+&lt;h4 id=&#34;32-印刷用纸&#34;&gt;3.2 印刷用纸&lt;/h4&gt;
+&lt;p&gt;一般 80g 或 70g 的普通纸，哑粉纸 (很厚)，道林纸即可满足需求，铜版纸也可，但质感独特，具体咨询印刷商家&lt;/p&gt;
+&lt;h4 id=&#34;33-装订&#34;&gt;3.3 装订&lt;/h4&gt;
+&lt;p&gt;常见的装订方式&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;骑马钉&lt;/li&gt;
+&lt;li&gt;软胶&lt;/li&gt;
+&lt;li&gt;锁线&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一般软胶即可满足需求，而且软胶比较常见，不能完全展开，而且要考虑被封入的部分
+骑马钉非常不推荐使用，容易坏还丑
+锁线效果更好，能完全展开，不易损，但是较贵，如果需要收藏可以选择锁线&lt;/p&gt;
+&lt;h3 id=&#34;41-尾语&#34;&gt;4.1 尾语&lt;/h3&gt;
+&lt;p&gt;拥有自己的书的感觉十分奇怪，我也在这里描述不出来，但当你拥有自己的书的那刻便会明白此刻我的心情&lt;/p&gt;
+&lt;p&gt;印刷过程你可能会遇到很多问题，但别着急，先印一两张看看效果，排版时一定要&lt;strong&gt;注意校对&lt;/strong&gt;，在书里看到错字实在是令人难以接受&lt;/p&gt;
+&lt;p&gt;这一切需要时间，更需要耐心&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;生命实在是这样奇妙的东西，万千矛盾集于一体&lt;/p&gt;
+&lt;p&gt;摘自 The Wilderness&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
+        <title>为小米平板 2 刷入 Windows 11 或 10</title>
+        <link>http://localhost:1313/p/xiaomipad2/</link>
+        <pubDate>Sat, 28 Oct 2023 19:54:45 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/xiaomipad2/</guid>
+        <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;
+&lt;p&gt;本文将介绍如何将 Windows 10 &amp;amp; 11 刷入 Xiaomi Pad 2&lt;br&gt;
+此外 &lt;a class=&#34;link&#34; href=&#34;https://mirror.nalanyinyun.top/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nalanyinyun&amp;rsquo;s OneDrive&lt;/a&gt; 将提供本文所需所有文件的镜像&lt;br&gt;
+
+
+
+&lt;div class=&#34;notice notice-tip&#34; &gt;
+    &lt;div class=&#34;notice-title&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; height=&#34;24&#34; viewBox=&#34;0 -960 960 960&#34; width=&#34;24&#34;&gt;&lt;path d=&#34;m438-452-58-57q-11-11-27.5-11T324-508q-11 11-11 28t11 28l86 86q12 12 28 12t28-12l170-170q12-12 11.5-28T636-592q-12-12-28.5-12.5T579-593L438-452ZM326-90l-58-98-110-24q-15-3-24-15.5t-7-27.5l11-113-75-86q-10-11-10-26t10-26l75-86-11-113q-2-15 7-27.5t24-15.5l110-24 58-98q8-13 22-17.5t28 1.5l104 44 104-44q14-6 28-1.5t22 17.5l58 98 110 24q15 3 24 15.5t7 27.5l-11 113 75 86q10 11 10 26t-10 26l-75 86 11 113q2 15-7 27.5T802-212l-110 24-58 98q-8 13-22 17.5T584-74l-104-44-104 44q-14 6-28 1.5T326-90Zm52-72 102-44 104 44 56-96 110-26-10-112 74-84-74-86 10-112-110-24-58-96-102 44-104-44-56 96-110 24 10 112-74 86 74 84-10 114 110 24 58 96Zm102-318Z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;&lt;p&gt;The Nalanyinyun&amp;rsquo;s OneDrive is a mirror for lots of sources, it&amp;rsquo;s free, fast, no trick.&lt;br&gt;
+Nalanyinyun&amp;rsquo;s OneDrive 是专为源提供的镜像，免费，高速 &lt;br&gt;
+我们不需要你关注任何公众号，也无需付费或感受糟糕的下载体验&lt;/p&gt;&lt;/div&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;准备工作&#34;&gt;准备工作&lt;/h1&gt;
+&lt;p&gt;所需物品&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个不小于 8GB 的 &lt;strong&gt;FAT32&lt;/strong&gt; 格式的外置存储设备&lt;/li&gt;
+&lt;li&gt;键盘和鼠标，必须可以通过 USB 方式连接到电脑&lt;/li&gt;
+&lt;li&gt;一个 OTG 转接器或 USB 集线器，推荐至少有两个接口并可外置供电&lt;/li&gt;
+&lt;li&gt;你要安装的系统镜像，提前存至存储设备中 *我非常推荐你使用 Windows LTSC 2021 或 2019 你可以在 MSDN 上找到它们&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;div class=&#34;notice notice-warning&#34; &gt;
+    &lt;div class=&#34;notice-title&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; height=&#34;24&#34; viewBox=&#34;0 -960 960 960&#34; width=&#34;24&#34;&gt;&lt;path d=&#34;m326-90-58-98-110-24q-15-3-24-15.5t-7-27.5l11-113-75-86q-10-11-10-26t10-26l75-86-11-113q-2-15 7-27.5t24-15.5l110-24 58-98q8-13 22-17.5t28 1.5l104 44 104-44q14-6 28-1.5t22 17.5l58 98 110 24q15 3 24 15.5t7 27.5l-11 113 75 86q10 11 10 26t-10 26l-75 86 11 113q2 15-7 27.5T802-212l-110 24-58 98q-8 13-22 17.5T584-74l-104-44-104 44q-14 6-28 1.5T326-90Zm52-72 102-44 104 44 56-96 110-26-10-112 74-84-74-86 10-112-110-24-58-96-102 44-104-44-56 96-110 24 10 112-74 86 74 84-10 114 110 24 58 96Zm102-318Zm0 200q17 0 28.5-11.5T520-320q0-17-11.5-28.5T480-360q-17 0-28.5 11.5T440-320q0 17 11.5 28.5T480-280Zm0-160q17 0 28.5-11.5T520-480v-160q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640v160q0 17 11.5 28.5T480-440Z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;&lt;p&gt;请确保设备电池的有效电量足够，低电量水平会导致失败，你很可能要再等近一个小时才能重新开始&lt;/p&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;前置步骤&#34;&gt;前置步骤&lt;/h1&gt;
+&lt;h2 id=&#34;10-在外置存储设备上安装-pe&#34;&gt;1.0 在外置存储设备上安装 PE&lt;/h2&gt;
+&lt;h3 id=&#34;101-格式化存储设备&#34;&gt;1.0.1 格式化存储设备&lt;/h3&gt;
+&lt;p&gt;首先，确认你的存储设备可以通过 USB 连接到电脑，并且格式为 FAT32 , 且只有一个分区 (推荐) 如果已经确认，请转至 1.0.2&lt;br&gt;
+打开 DiskGenius&lt;br&gt;
+&lt;img src=&#34;http://localhost:1313/DiskGenius.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;br&gt;
+选中你的移动存储设备，依次点击右上方 &lt;code&gt;磁盘&lt;/code&gt; - &lt;code&gt;删除所有分区&lt;/code&gt;&lt;br&gt;
+保存更改&lt;br&gt;
+点击 &lt;code&gt;新建分区&lt;/code&gt; , 然后在 &lt;code&gt;请选择文件系统类型:&lt;/code&gt; 中选择 &lt;code&gt;FAT32&lt;/code&gt; 并确认&lt;/p&gt;
+&lt;h3 id=&#34;102-安装-pe&#34;&gt;1.0.2 安装 PE&lt;/h3&gt;
+&lt;p&gt;下载 &lt;a class=&#34;link&#34; href=&#34;https://mirror.nalanyinyun.top/zh-CN/The%20Mirror%20of%20Source/Xiaomi%20Pad%20Source/Xiaomi%20Pad%202%20Touchable%20PE.7z&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Xiaomi Pad 2 Touchable PE&lt;/a&gt;&lt;br&gt;
+将压缩包内所有文件解压至存储设备&lt;strong&gt;根目录&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;103-准备驱动&#34;&gt;1.0.3 准备驱动&lt;/h3&gt;
+&lt;p&gt;下载 &lt;a class=&#34;link&#34; href=&#34;https://mirror.nalanyinyun.top/zh-CN/The%20Mirror%20of%20Source/Xiaomi%20Pad%20Source/Xiaomi%20Pad%202%20Drivers.7z&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Xiaomi Pad 2 Drives&lt;/a&gt;&lt;br&gt;
+
+
+
+&lt;div class=&#34;notice notice-warning&#34; &gt;
+    &lt;div class=&#34;notice-title&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; height=&#34;24&#34; viewBox=&#34;0 -960 960 960&#34; width=&#34;24&#34;&gt;&lt;path d=&#34;m326-90-58-98-110-24q-15-3-24-15.5t-7-27.5l11-113-75-86q-10-11-10-26t10-26l75-86-11-113q-2-15 7-27.5t24-15.5l110-24 58-98q8-13 22-17.5t28 1.5l104 44 104-44q14-6 28-1.5t22 17.5l58 98 110 24q15 3 24 15.5t7 27.5l-11 113 75 86q10 11 10 26t-10 26l-75 86 11 113q2 15-7 27.5T802-212l-110 24-58 98q-8 13-22 17.5T584-74l-104-44-104 44q-14 6-28 1.5T326-90Zm52-72 102-44 104 44 56-96 110-26-10-112 74-84-74-86 10-112-110-24-58-96-102 44-104-44-56 96-110 24 10 112-74 86 74 84-10 114 110 24 58 96Zm102-318Zm0 200q17 0 28.5-11.5T520-320q0-17-11.5-28.5T480-360q-17 0-28.5 11.5T440-320q0 17 11.5 28.5T480-280Zm0-160q17 0 28.5-11.5T520-480v-160q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640v160q0 17 11.5 28.5T480-440Z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;&lt;p&gt;最好在电脑上提前解压驱动，否则的你将花费超过 5 分钟在平板上解压&lt;/p&gt;&lt;/div&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;104-确认&#34;&gt;1.0.4 确认&lt;/h3&gt;
+&lt;p&gt;确认你的文件结构正常，如果你没有把驱动解压至根目录，他的结构看起来应该是这样&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Markdown&#34; data-lang=&#34;Markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Length Name  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;------ ----  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;LOST.DIR  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Boot  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;efi  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sources  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;附件  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bootmgfw.efi  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bootmgr.efi  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h1 id=&#34;在平板上操作&#34;&gt;在平板上操作&lt;/h1&gt;
+&lt;h2 id=&#34;10-进入-pe&#34;&gt;1.0 进入 PE&lt;/h2&gt;
+&lt;p&gt;将存储设备连接至平板并重启，如果提示 &lt;code&gt;Shim UEFI key mangement&lt;/code&gt; 此类提示，按下电源键进入 BIOS&lt;br&gt;
+接入键盘，依次操作 &lt;code&gt;Boot Manager&lt;/code&gt; - &lt;code&gt;System Setup&lt;/code&gt; 关闭 &lt;code&gt;Secure Boot&lt;/code&gt;&lt;br&gt;
+按下 ESC, 拔下键盘插入存储设备，用音量键选择 &lt;code&gt;Commit Change and reboot&lt;/code&gt; 按电源键确认。&lt;br&gt;
+重启后即可进入 PE, 你可能每次进入 PE 都需要执行此操作&lt;/p&gt;
+&lt;h2 id=&#34;11-操作分区&#34;&gt;1.1 操作分区&lt;/h2&gt;
+&lt;p&gt;在 DiskGenius 中按照 1.0.1 的步骤删除 本地硬盘 中的所有分区，注意 新建分区时应选择 NTFS 格式，勾选创建 ESP 分区&lt;/p&gt;
+&lt;h2 id=&#34;12-安装系统&#34;&gt;1.2 安装系统&lt;/h2&gt;
+&lt;p&gt;打开 Dism++ , 依次点击 右上方 &lt;code&gt;文件&lt;/code&gt; - &lt;code&gt;释放镜像&lt;/code&gt; 选择你的镜像和释放目录，勾选&lt;code&gt;格式化&lt;/code&gt;,&lt;code&gt;添加引导&lt;/code&gt;&lt;br&gt;
+点击确认，等待释放完成&lt;br&gt;
+完成后点击 &lt;code&gt;打开会话&lt;/code&gt; - &lt;code&gt;驱动管理&lt;/code&gt; - &lt;code&gt;添加驱动&lt;/code&gt; 选择你在 1.0.3 中解压的文件，注意，是&lt;strong&gt;整个文件夹&lt;/strong&gt;, 即 &lt;code&gt;Xiaomi Pad 2 Drivers&lt;/code&gt; 文件夹&lt;br&gt;
+等待添加完成，点击重启并在屏幕熄灭后迅速拔下存储设备&lt;/p&gt;
+&lt;h2 id=&#34;13-oobe&#34;&gt;1.3 OOBE&lt;/h2&gt;
+&lt;p&gt;完成 Windows 引导即可享受&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>标准 CAT6E 网线水晶头接法</title>
+        <link>http://localhost:1313/p/%E6%A0%87%E5%87%86-cat6e-%E7%BD%91%E7%BA%BF%E6%B0%B4%E6%99%B6%E5%A4%B4%E6%8E%A5%E6%B3%95/</link>
+        <pubDate>Sat, 21 Oct 2023 23:54:56 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/%E6%A0%87%E5%87%86-cat6e-%E7%BD%91%E7%BA%BF%E6%B0%B4%E6%99%B6%E5%A4%B4%E6%8E%A5%E6%B3%95/</guid>
+        <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;p&gt;本文将介绍 标准 CAT6E 网线 水晶头接法，包括 TIA/EIA 568A 和 TIA/EIA 568B.&lt;/p&gt;
+&lt;h2 id=&#34;准备工具&#34;&gt;准备工具&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;一根 CAT6E 网线&lt;/li&gt;
+&lt;li&gt;若干 六类水晶头，五类水晶头对于标准 CAT6E 网线可能会无法插入&lt;/li&gt;
+&lt;li&gt;一把 网线钳&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;步骤&#34;&gt;步骤&lt;/h2&gt;
+&lt;h3 id=&#34;10-准备工作&#34;&gt;1.0 准备工作&lt;/h3&gt;
+&lt;p&gt;用网线钳或剥线器剥去适当长度的网线外皮&lt;br&gt;
+解开所有缠绕的线缆，用剪刀剪去中间的塑料骨架，按照 TIA/EIA-568B(推荐) 或 TIA/EIA-568A 标准整理线缆&lt;br&gt;
+&lt;strong&gt;六类网线线缆非常硬，不要过度用力以免折断线缆&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;11-接入水晶头&#34;&gt;1.1 接入水晶头&lt;/h2&gt;
+&lt;p&gt;核对线序，取出水晶头，并将先前整理的线缆剪去一部分，必须保证剪去后的各条线缆长度相当&lt;/p&gt;
+&lt;p&gt;将各条线缆整理，将其插入水晶头，其有金属片的一面朝向你，最左边的线缆颜色为 白橙，插入水晶头&lt;br&gt;
+从水晶头的侧面和背面观察，再次核对线序，核对无误后检查各条线缆是否已进入到水晶头顶端金属片下，检查无误后将水晶头放入网线钳后按压&lt;br&gt;
+最好保证网线皮在水晶头的卡口下，这样会更加牢固&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;适当即可，不要把网线钳压到底！&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;20-检查线缆&#34;&gt;2.0 检查线缆&lt;/h2&gt;
+&lt;p&gt;将网线接入对线仪，检查线序，用手轻轻拉扯水晶头和网线，检查连接是否牢固，将网线插入测试设备，检查网线可用性，如不可用，检查水晶头内线缆是否有未到头的情况，如有，剪去网线，重新连接水晶头&lt;/p&gt;
+&lt;h2 id=&#34;end&#34;&gt;End&lt;/h2&gt;
+&lt;p&gt;五类水晶头也可以连接 CAT6E 网线，但可能会难以插入线缆，甚至损坏线缆，不推荐使用&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Apodidae 停止维护公告</title>
+        <link>http://localhost:1313/p/stop_maintenance/</link>
+        <pubDate>Mon, 03 Jul 2023 15:32:26 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/stop_maintenance/</guid>
+        <description>&lt;p&gt;经过考虑 (也没什么可考虑的), 我们 (LilyWorks) 准备停止 Apodidae 的一切维护工作，包括 开发博客 官方网站 以及 Apodidae 本体&lt;br&gt;
+其实停止维护的理由很简单，一共就这两点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;玩腻了&lt;/li&gt;
+&lt;li&gt;主流的 MediaTek 设备已经提供稳定适配&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;LilyWorks 不会就此解散，我们准备继续找点别的玩，也可能暂时先不找，因为最近要处理的事情实在有点多&lt;br&gt;
+这是我们已经完成的所有措施：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;关闭 Apodidae DevBlog, 后续公告由本博客提供&lt;/li&gt;
+&lt;li&gt;同步本公告至 GitHub Discussions&lt;/li&gt;
+&lt;li&gt;停止接受任何渠道的任何反馈&lt;/li&gt;
+&lt;li&gt;归档 Apodidae 仓库&lt;/li&gt;
+&lt;li&gt;更新官网信息，Apodidae 官网不会被关闭&lt;/li&gt;
+&lt;li&gt;关闭 ApodidaeMirror, 不再提供 Release 镜像&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;感谢诸位从 2023-02-07 17:21:03 开始至今的一切支持！LilyWorks 不会忘记支持我们近半年的用户们&lt;/p&gt;
+&lt;p&gt;对了，我最近在学 Python, 那就送大家一段最最简单的 Python 代码吧&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;print(&amp;#34;Farewell!&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
