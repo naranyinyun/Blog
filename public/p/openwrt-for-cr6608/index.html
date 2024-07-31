@@ -219,12 +219,16 @@
             <nav id="TableOfContents">
   <ol>
     <li><a href="#准备">准备</a></li>
-    <li><a href="#获取-ssh-权限并刷入-pb-boot">获取 SSH 权限并刷入 pb-boot</a></li>
-    <li><a href="#辅助设备准备">辅助设备准备</a>
+    <li><a href="#获取-ssh-权限并刷入-pb-boot">获取 SSH 权限并刷入 pb-boot</a>
       <ol>
+        <li><a href="#辅助设备准备">辅助设备准备</a></li>
         <li><a href="#降级">降级</a></li>
+        <li><a href="#获取-ssh">获取 SSH</a></li>
+        <li><a href="#刷入-pb-boot">刷入 pb-boot</a></li>
+        <li><a href="#刷入-openwrt">刷入 Openwrt</a></li>
       </ol>
     </li>
+    <li><a href="#尾语">尾语</a></li>
   </ol>
 </nav>
         </div>
@@ -315,7 +319,7 @@
 <li>一台 CR6608</li>
 </ol>
 <h2 id="获取-ssh-权限并刷入-pb-boot">获取 SSH 权限并刷入 pb-boot</h2>
-<h2 id="辅助设备准备">辅助设备准备</h2>
+<h3 id="辅助设备准备">辅助设备准备</h3>
 <p>将 <a class="link" href="https://mirror.nalanyinyun.top/zh-CN/The%20Mirror%20of%20Source/CR660X%20Source/xqsystem.lua"  target="_blank" rel="noopener"
     >xqsystem.lua</a> 上传至辅助路由器的<code>/usr/lib/lua/luci/controller/admin/</code></p>
 <div class="highlight"><div class="chroma">
@@ -326,10 +330,85 @@
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">scp -O <span class="o">[</span>path xqsystem.lua<span class="o">]</span> <span class="o">[</span>username<span class="o">]</span>@<span class="o">[</span>router ip<span class="o">]</span>:/usr/lib/lua/luci/controller/admin/
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>上传后关闭辅助路由器的 DHCP 服务</p>
+</div><p>上传后关闭辅助路由器的 DHCP 服务，将 LAN 口 IP 改为 <code>169.254.31.1</code></p>
 <h3 id="降级">降级</h3>
 <p>使用小米的路由器刷写工具刷入<a class="link" href="https://mirror.nalanyinyun.top/zh-CN/The%20Mirror%20of%20Source/CR660X%20Source/%E9%99%8D%E7%BA%A7%E5%9B%BA%E4%BB%B6/miwifi_cr6608_all_c11bb_1.0.100_2.bin"  target="_blank" rel="noopener"
-    >此固件</a></p>
+    >此固件</a>
+
+
+
+<div class="notice notice-tip" >
+    <div class="notice-title"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m438-452-58-57q-11-11-27.5-11T324-508q-11 11-11 28t11 28l86 86q12 12 28 12t28-12l170-170q12-12 11.5-28T636-592q-12-12-28.5-12.5T579-593L438-452ZM326-90l-58-98-110-24q-15-3-24-15.5t-7-27.5l11-113-75-86q-10-11-10-26t10-26l75-86-11-113q-2-15 7-27.5t24-15.5l110-24 58-98q8-13 22-17.5t28 1.5l104 44 104-44q14-6 28-1.5t22 17.5l58 98 110 24q15 3 24 15.5t7 27.5l-11 113 75 86q10 11 10 26t-10 26l-75 86 11 113q2 15-7 27.5T802-212l-110 24-58 98q-8 13-22 17.5T584-74l-104-44-104 44q-14 6-28 1.5T326-90Zm52-72 102-44 104 44 56-96 110-26-10-112 74-84-74-86 10-112-110-24-58-96-102 44-104-44-56 96-110 24 10 112-74 86 74 84-10 114 110 24 58 96Zm102-318Z"/></svg></div><p>即便你刷了红米 AX1600 的固件，你依旧可以使用此固件获取 SSH</p></div>
+</p>
+<h3 id="获取-ssh">获取 SSH</h3>
+<p>对于 CR6608 设备，你可以直接使用路由器铭牌上的密码登录路由器后台。CR6609 也可。CR6606 需要进行 <a class="link" href="https://miwifi.dev/ssh"  target="_blank" rel="noopener"
+    >SSH 密码计算</a></p>
+<p>登录路由器后台后，保存好 URL 中的 STOK 片段，例如</p>
+<blockquote>
+<p>http://192.168.31.1/cgi-bin/luci/;stok=[6b718c43fcad63e808594111ad4a4cb4]/web/home#router</p>
+</blockquote>
+<p>方括号的部分即为 STOK
+
+
+
+<div class="notice notice-warning" >
+    <div class="notice-title"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m326-90-58-98-110-24q-15-3-24-15.5t-7-27.5l11-113-75-86q-10-11-10-26t10-26l75-86-11-113q-2-15 7-27.5t24-15.5l110-24 58-98q8-13 22-17.5t28 1.5l104 44 104-44q14-6 28-1.5t22 17.5l58 98 110 24q15 3 24 15.5t7 27.5l-11 113 75 86q10 11 10 26t-10 26l-75 86 11 113q2 15-7 27.5T802-212l-110 24-58 98q-8 13-22 17.5T584-74l-104-44-104 44q-14 6-28 1.5T326-90Zm52-72 102-44 104 44 56-96 110-26-10-112 74-84-74-86 10-112-110-24-58-96-102 44-104-44-56 96-110 24 10 112-74 86 74 84-10 114 110 24 58 96Zm102-318Zm0 200q17 0 28.5-11.5T520-320q0-17-11.5-28.5T480-360q-17 0-28.5 11.5T440-320q0 17 11.5 28.5T480-280Zm0-160q17 0 28.5-11.5T520-480v-160q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640v160q0 17 11.5 28.5T480-440Z"/></svg></div><p>STOK 每次登录都会变化，请尽快完成接下来的操作</p></div>
+</p>
+<p>接下来，访问如下两个 URL</p>
+<blockquote>
+<p>http://[CR6608 IP]/cgi-bin/luci/;stok=[STOK]/api/misystem/extendwifi_connect?ssid=[辅助设备网络 SSID]&amp;password=[辅助设备网络密码]</p>
+<p>http://[CR6608 IP]/cgi-bin/luci/;stok=[STOK]/api/xqsystem/oneclick_get_remote_token?username=xxx&amp;password=xxx&amp;nonce=xxx</p>
+</blockquote>
+<p>如果一切正常，两个 URL 均应返回 <code>code 0</code>. 如报错，请检查辅助设备配置并重试以上步骤</p>
+<h3 id="刷入-pb-boot">刷入 pb-boot</h3>
+<p>通过 SSH 连接 CR6608</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ssh root@<span class="o">[</span>CR6608 IP<span class="o">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>密码即为路由器管理密码</p>
+<p>下载<a class="link" href="https://mirror.nalanyinyun.top/zh-CN/The%20Mirror%20of%20Source/CR660X%20Source/pb-boot/pb-boot.img"  target="_blank" rel="noopener"
+    >pb-boot</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">scp -O <span class="o">[</span>pb-boot path<span class="o">]</span> root@<span class="o">[</span>CR6608 IP<span class="o">]</span>:/tmp
+</span></span><span class="line"><span class="cl">ssh root@<span class="o">[</span>CR6608 IP<span class="o">]</span>
+</span></span><span class="line"><span class="cl">mtd write /tmp/pb-boot.img Bootloader
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="刷入-openwrt">刷入 Openwrt</h3>
+<p>如果一切正常，断开路由器电源，然后按住 <code>reset</code> 并插入电源，直到路由器面板灯呈呼吸灯状
+
+
+
+<div class="notice notice-tip" >
+    <div class="notice-title"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m438-452-58-57q-11-11-27.5-11T324-508q-11 11-11 28t11 28l86 86q12 12 28 12t28-12l170-170q12-12 11.5-28T636-592q-12-12-28.5-12.5T579-593L438-452ZM326-90l-58-98-110-24q-15-3-24-15.5t-7-27.5l11-113-75-86q-10-11-10-26t10-26l75-86-11-113q-2-15 7-27.5t24-15.5l110-24 58-98q8-13 22-17.5t28 1.5l104 44 104-44q14-6 28-1.5t22 17.5l58 98 110 24q15 3 24 15.5t7 27.5l-11 113 75 86q10 11 10 26t-10 26l-75 86 11 113q2 15-7 27.5T802-212l-110 24-58 98q-8 13-22 17.5T584-74l-104-44-104 44q-14 6-28 1.5T326-90Zm52-72 102-44 104 44 56-96 110-26-10-112 74-84-74-86 10-112-110-24-58-96-102 44-104-44-56 96-110 24 10 112-74 86 74 84-10 114 110 24 58 96Zm102-318Z"/></svg></div><p>请使用网线连接 CR6608</p></div>
+</p>
+<p>打开 192.168.1.1 , 选择恢复固件，你可以刷入 <code>Kernel</code> 进行安装，也可以直接安装 <code>Factory</code></p>
+<p>如果你刷入 <code>Kernel</code> 镜像，进入后选择<code>系统</code>&gt;<code>备份与升级</code>&gt;<code>刷写新的固件</code>
+
+
+
+<div class="notice notice-warning" >
+    <div class="notice-title"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m326-90-58-98-110-24q-15-3-24-15.5t-7-27.5l11-113-75-86q-10-11-10-26t10-26l75-86-11-113q-2-15 7-27.5t24-15.5l110-24 58-98q8-13 22-17.5t28 1.5l104 44 104-44q14-6 28-1.5t22 17.5l58 98 110 24q15 3 24 15.5t7 27.5l-11 113 75 86q10 11 10 26t-10 26l-75 86 11 113q2 15-7 27.5T802-212l-110 24-58 98q-8 13-22 17.5T584-74l-104-44-104 44q-14 6-28 1.5T326-90Zm52-72 102-44 104 44 56-96 110-26-10-112 74-84-74-86 10-112-110-24-58-96-102 44-104-44-56 96-110 24 10 112-74 86 74 84-10 114 110 24 58 96Zm102-318Zm0 200q17 0 28.5-11.5T520-320q0-17-11.5-28.5T480-360q-17 0-28.5 11.5T440-320q0 17 11.5 28.5T480-280Zm0-160q17 0 28.5-11.5T520-480v-160q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640v160q0 17 11.5 28.5T480-440Z"/></svg></div><p>请选择 Sysupgrade 镜像，如果你安装最新版的 Openwrt, 提示镜像校验失败是正常的，请忽略并刷入但
+<strong>必须确保你的镜像型号正确才能这么做！</strong></p></div>
+</p>
+<h2 id="尾语">尾语</h2>
+
+
+
+<div class="notice notice-warning" >
+    <div class="notice-title"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m326-90-58-98-110-24q-15-3-24-15.5t-7-27.5l11-113-75-86q-10-11-10-26t10-26l75-86-11-113q-2-15 7-27.5t24-15.5l110-24 58-98q8-13 22-17.5t28 1.5l104 44 104-44q14-6 28-1.5t22 17.5l58 98 110 24q15 3 24 15.5t7 27.5l-11 113 75 86q10 11 10 26t-10 26l-75 86 11 113q2 15-7 27.5T802-212l-110 24-58 98q-8 13-22 17.5T584-74l-104-44-104 44q-14 6-28 1.5T326-90Zm52-72 102-44 104 44 56-96 110-26-10-112 74-84-74-86 10-112-110-24-58-96-102 44-104-44-56 96-110 24 10 112-74 86 74 84-10 114 110 24 58 96Zm102-318Zm0 200q17 0 28.5-11.5T520-320q0-17-11.5-28.5T480-360q-17 0-28.5 11.5T440-320q0 17 11.5 28.5T480-280Zm0-160q17 0 28.5-11.5T520-480v-160q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640v160q0 17 11.5 28.5T480-440Z"/></svg></div><p>Openwrt 最新稳定版可能无法连接 SSH , 如遇此情况，切换到 Snapshot 版本即可</p></div>
+
 
 </section>
 

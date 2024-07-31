@@ -28,10 +28,19 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scp -O [path xqsystem.lua] [username]@[router ip]:/usr/lib/lua/luci/controller/admin/
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scp -O &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;path xqsystem.lua&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;username&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;@&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;router ip&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;:/usr/lib/lua/luci/controller/admin/
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;降级&#34;&gt;降级&lt;/h3&gt;
+&lt;/div&gt;&lt;p&gt;上传后关闭辅助路由器的 DHCP 服务&lt;/p&gt;
+&lt;h3 id=&#34;降级&#34;&gt;降级&lt;/h3&gt;
+&lt;p&gt;使用小米的路由器刷写工具刷入&lt;a class=&#34;link&#34; href=&#34;https://mirror.nalanyinyun.top/zh-CN/The%20Mirror%20of%20Source/CR660X%20Source/%E9%99%8D%E7%BA%A7%E5%9B%BA%E4%BB%B6/miwifi_cr6608_all_c11bb_1.0.100_2.bin&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;此固件&lt;/a&gt;
+
+
+
+&lt;div class=&#34;notice notice-tip&#34; &gt;
+    &lt;div class=&#34;notice-title&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; height=&#34;24&#34; viewBox=&#34;0 -960 960 960&#34; width=&#34;24&#34;&gt;&lt;path d=&#34;m438-452-58-57q-11-11-27.5-11T324-508q-11 11-11 28t11 28l86 86q12 12 28 12t28-12l170-170q12-12 11.5-28T636-592q-12-12-28.5-12.5T579-593L438-452ZM326-90l-58-98-110-24q-15-3-24-15.5t-7-27.5l11-113-75-86q-10-11-10-26t10-26l75-86-11-113q-2-15 7-27.5t24-15.5l110-24 58-98q8-13 22-17.5t28 1.5l104 44 104-44q14-6 28-1.5t22 17.5l58 98 110 24q15 3 24 15.5t7 27.5l-11 113 75 86q10 11 10 26t-10 26l-75 86 11 113q2 15-7 27.5T802-212l-110 24-58 98q-8 13-22 17.5T584-74l-104-44-104 44q-14 6-28 1.5T326-90Zm52-72 102-44 104 44 56-96 110-26-10-112 74-84-74-86 10-112-110-24-58-96-102 44-104-44-56 96-110 24 10 112-74 86 74 84-10 114 110 24 58 96Zm102-318Z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;&lt;p&gt;即便你刷了红米 AX1600 的固件，你依旧可以使用此固件获取 SSH&lt;/p&gt;&lt;/div&gt;
+&lt;/p&gt;
 </description>
         </item>
         <item>

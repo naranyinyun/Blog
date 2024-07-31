@@ -20,7 +20,7 @@
 &lt;li&gt;一台 CR6608&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;获取-ssh-权限并刷入-pb-boot&#34;&gt;获取 SSH 权限并刷入 pb-boot&lt;/h2&gt;
-&lt;h2 id=&#34;辅助设备准备&#34;&gt;辅助设备准备&lt;/h2&gt;
+&lt;h3 id=&#34;辅助设备准备&#34;&gt;辅助设备准备&lt;/h3&gt;
 &lt;p&gt;将 &lt;a class=&#34;link&#34; href=&#34;https://mirror.nalanyinyun.top/zh-CN/The%20Mirror%20of%20Source/CR660X%20Source/xqsystem.lua&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;xqsystem.lua&lt;/a&gt; 上传至辅助路由器的&lt;code&gt;/usr/lib/lua/luci/controller/admin/&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -31,10 +31,85 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scp -O &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;path xqsystem.lua&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;username&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;@&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;router ip&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;:/usr/lib/lua/luci/controller/admin/
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;上传后关闭辅助路由器的 DHCP 服务&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;上传后关闭辅助路由器的 DHCP 服务，将 LAN 口 IP 改为 &lt;code&gt;169.254.31.1&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;降级&#34;&gt;降级&lt;/h3&gt;
 &lt;p&gt;使用小米的路由器刷写工具刷入&lt;a class=&#34;link&#34; href=&#34;https://mirror.nalanyinyun.top/zh-CN/The%20Mirror%20of%20Source/CR660X%20Source/%E9%99%8D%E7%BA%A7%E5%9B%BA%E4%BB%B6/miwifi_cr6608_all_c11bb_1.0.100_2.bin&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;此固件&lt;/a&gt;&lt;/p&gt;
+    &gt;此固件&lt;/a&gt;
+
+
+
+&lt;div class=&#34;notice notice-tip&#34; &gt;
+    &lt;div class=&#34;notice-title&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; height=&#34;24&#34; viewBox=&#34;0 -960 960 960&#34; width=&#34;24&#34;&gt;&lt;path d=&#34;m438-452-58-57q-11-11-27.5-11T324-508q-11 11-11 28t11 28l86 86q12 12 28 12t28-12l170-170q12-12 11.5-28T636-592q-12-12-28.5-12.5T579-593L438-452ZM326-90l-58-98-110-24q-15-3-24-15.5t-7-27.5l11-113-75-86q-10-11-10-26t10-26l75-86-11-113q-2-15 7-27.5t24-15.5l110-24 58-98q8-13 22-17.5t28 1.5l104 44 104-44q14-6 28-1.5t22 17.5l58 98 110 24q15 3 24 15.5t7 27.5l-11 113 75 86q10 11 10 26t-10 26l-75 86 11 113q2 15-7 27.5T802-212l-110 24-58 98q-8 13-22 17.5T584-74l-104-44-104 44q-14 6-28 1.5T326-90Zm52-72 102-44 104 44 56-96 110-26-10-112 74-84-74-86 10-112-110-24-58-96-102 44-104-44-56 96-110 24 10 112-74 86 74 84-10 114 110 24 58 96Zm102-318Z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;&lt;p&gt;即便你刷了红米 AX1600 的固件，你依旧可以使用此固件获取 SSH&lt;/p&gt;&lt;/div&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;获取-ssh&#34;&gt;获取 SSH&lt;/h3&gt;
+&lt;p&gt;对于 CR6608 设备，你可以直接使用路由器铭牌上的密码登录路由器后台。CR6609 也可。CR6606 需要进行 &lt;a class=&#34;link&#34; href=&#34;https://miwifi.dev/ssh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SSH 密码计算&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;登录路由器后台后，保存好 URL 中的 STOK 片段，例如&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;http://192.168.31.1/cgi-bin/luci/;stok=[6b718c43fcad63e808594111ad4a4cb4]/web/home#router&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;方括号的部分即为 STOK
+
+
+
+&lt;div class=&#34;notice notice-warning&#34; &gt;
+    &lt;div class=&#34;notice-title&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; height=&#34;24&#34; viewBox=&#34;0 -960 960 960&#34; width=&#34;24&#34;&gt;&lt;path d=&#34;m326-90-58-98-110-24q-15-3-24-15.5t-7-27.5l11-113-75-86q-10-11-10-26t10-26l75-86-11-113q-2-15 7-27.5t24-15.5l110-24 58-98q8-13 22-17.5t28 1.5l104 44 104-44q14-6 28-1.5t22 17.5l58 98 110 24q15 3 24 15.5t7 27.5l-11 113 75 86q10 11 10 26t-10 26l-75 86 11 113q2 15-7 27.5T802-212l-110 24-58 98q-8 13-22 17.5T584-74l-104-44-104 44q-14 6-28 1.5T326-90Zm52-72 102-44 104 44 56-96 110-26-10-112 74-84-74-86 10-112-110-24-58-96-102 44-104-44-56 96-110 24 10 112-74 86 74 84-10 114 110 24 58 96Zm102-318Zm0 200q17 0 28.5-11.5T520-320q0-17-11.5-28.5T480-360q-17 0-28.5 11.5T440-320q0 17 11.5 28.5T480-280Zm0-160q17 0 28.5-11.5T520-480v-160q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640v160q0 17 11.5 28.5T480-440Z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;&lt;p&gt;STOK 每次登录都会变化，请尽快完成接下来的操作&lt;/p&gt;&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;接下来，访问如下两个 URL&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;http://[CR6608 IP]/cgi-bin/luci/;stok=[STOK]/api/misystem/extendwifi_connect?ssid=[辅助设备网络 SSID]&amp;amp;password=[辅助设备网络密码]&lt;/p&gt;
+&lt;p&gt;http://[CR6608 IP]/cgi-bin/luci/;stok=[STOK]/api/xqsystem/oneclick_get_remote_token?username=xxx&amp;amp;password=xxx&amp;amp;nonce=xxx&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如果一切正常，两个 URL 均应返回 &lt;code&gt;code 0&lt;/code&gt;. 如报错，请检查辅助设备配置并重试以上步骤&lt;/p&gt;
+&lt;h3 id=&#34;刷入-pb-boot&#34;&gt;刷入 pb-boot&lt;/h3&gt;
+&lt;p&gt;通过 SSH 连接 CR6608&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh root@&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;CR6608 IP&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;密码即为路由器管理密码&lt;/p&gt;
+&lt;p&gt;下载&lt;a class=&#34;link&#34; href=&#34;https://mirror.nalanyinyun.top/zh-CN/The%20Mirror%20of%20Source/CR660X%20Source/pb-boot/pb-boot.img&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pb-boot&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scp -O &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;pb-boot path&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; root@&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;CR6608 IP&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;:/tmp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh root@&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;CR6608 IP&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mtd write /tmp/pb-boot.img Bootloader
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;刷入-openwrt&#34;&gt;刷入 Openwrt&lt;/h3&gt;
+&lt;p&gt;如果一切正常，断开路由器电源，然后按住 &lt;code&gt;reset&lt;/code&gt; 并插入电源，直到路由器面板灯呈呼吸灯状
+
+
+
+&lt;div class=&#34;notice notice-tip&#34; &gt;
+    &lt;div class=&#34;notice-title&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; height=&#34;24&#34; viewBox=&#34;0 -960 960 960&#34; width=&#34;24&#34;&gt;&lt;path d=&#34;m438-452-58-57q-11-11-27.5-11T324-508q-11 11-11 28t11 28l86 86q12 12 28 12t28-12l170-170q12-12 11.5-28T636-592q-12-12-28.5-12.5T579-593L438-452ZM326-90l-58-98-110-24q-15-3-24-15.5t-7-27.5l11-113-75-86q-10-11-10-26t10-26l75-86-11-113q-2-15 7-27.5t24-15.5l110-24 58-98q8-13 22-17.5t28 1.5l104 44 104-44q14-6 28-1.5t22 17.5l58 98 110 24q15 3 24 15.5t7 27.5l-11 113 75 86q10 11 10 26t-10 26l-75 86 11 113q2 15-7 27.5T802-212l-110 24-58 98q-8 13-22 17.5T584-74l-104-44-104 44q-14 6-28 1.5T326-90Zm52-72 102-44 104 44 56-96 110-26-10-112 74-84-74-86 10-112-110-24-58-96-102 44-104-44-56 96-110 24 10 112-74 86 74 84-10 114 110 24 58 96Zm102-318Z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;&lt;p&gt;请使用网线连接 CR6608&lt;/p&gt;&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;打开 192.168.1.1 , 选择恢复固件，你可以刷入 &lt;code&gt;Kernel&lt;/code&gt; 进行安装，也可以直接安装 &lt;code&gt;Factory&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;如果你刷入 &lt;code&gt;Kernel&lt;/code&gt; 镜像，进入后选择&lt;code&gt;系统&lt;/code&gt;&amp;gt;&lt;code&gt;备份与升级&lt;/code&gt;&amp;gt;&lt;code&gt;刷写新的固件&lt;/code&gt;
+
+
+
+&lt;div class=&#34;notice notice-warning&#34; &gt;
+    &lt;div class=&#34;notice-title&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; height=&#34;24&#34; viewBox=&#34;0 -960 960 960&#34; width=&#34;24&#34;&gt;&lt;path d=&#34;m326-90-58-98-110-24q-15-3-24-15.5t-7-27.5l11-113-75-86q-10-11-10-26t10-26l75-86-11-113q-2-15 7-27.5t24-15.5l110-24 58-98q8-13 22-17.5t28 1.5l104 44 104-44q14-6 28-1.5t22 17.5l58 98 110 24q15 3 24 15.5t7 27.5l-11 113 75 86q10 11 10 26t-10 26l-75 86 11 113q2 15-7 27.5T802-212l-110 24-58 98q-8 13-22 17.5T584-74l-104-44-104 44q-14 6-28 1.5T326-90Zm52-72 102-44 104 44 56-96 110-26-10-112 74-84-74-86 10-112-110-24-58-96-102 44-104-44-56 96-110 24 10 112-74 86 74 84-10 114 110 24 58 96Zm102-318Zm0 200q17 0 28.5-11.5T520-320q0-17-11.5-28.5T480-360q-17 0-28.5 11.5T440-320q0 17 11.5 28.5T480-280Zm0-160q17 0 28.5-11.5T520-480v-160q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640v160q0 17 11.5 28.5T480-440Z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;&lt;p&gt;请选择 Sysupgrade 镜像，如果你安装最新版的 Openwrt, 提示镜像校验失败是正常的，请忽略并刷入但
+&lt;strong&gt;必须确保你的镜像型号正确才能这么做！&lt;/strong&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;尾语&#34;&gt;尾语&lt;/h2&gt;
+
+
+
+&lt;div class=&#34;notice notice-warning&#34; &gt;
+    &lt;div class=&#34;notice-title&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; height=&#34;24&#34; viewBox=&#34;0 -960 960 960&#34; width=&#34;24&#34;&gt;&lt;path d=&#34;m326-90-58-98-110-24q-15-3-24-15.5t-7-27.5l11-113-75-86q-10-11-10-26t10-26l75-86-11-113q-2-15 7-27.5t24-15.5l110-24 58-98q8-13 22-17.5t28 1.5l104 44 104-44q14-6 28-1.5t22 17.5l58 98 110 24q15 3 24 15.5t7 27.5l-11 113 75 86q10 11 10 26t-10 26l-75 86 11 113q2 15-7 27.5T802-212l-110 24-58 98q-8 13-22 17.5T584-74l-104-44-104 44q-14 6-28 1.5T326-90Zm52-72 102-44 104 44 56-96 110-26-10-112 74-84-74-86 10-112-110-24-58-96-102 44-104-44-56 96-110 24 10 112-74 86 74 84-10 114 110 24 58 96Zm102-318Zm0 200q17 0 28.5-11.5T520-320q0-17-11.5-28.5T480-360q-17 0-28.5 11.5T440-320q0 17 11.5 28.5T480-280Zm0-160q17 0 28.5-11.5T520-480v-160q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640v160q0 17 11.5 28.5T480-440Z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;&lt;p&gt;Openwrt 最新稳定版可能无法连接 SSH , 如遇此情况，切换到 Snapshot 版本即可&lt;/p&gt;&lt;/div&gt;
+
 </description>
         </item>
         <item>
